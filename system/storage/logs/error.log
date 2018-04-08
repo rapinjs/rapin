@@ -1,0 +1,6 @@
+2018-04-08 21:48:15 - connect ECONNREFUSED 127.0.0.1:3306
+2018-04-08 21:48:15 - Cannot read property 'query' of undefined
+2018-04-08 21:48:48 - connect ECONNREFUSED 127.0.0.1:3306
+2018-04-08 21:48:48 - Cannot read property 'query' of undefined
+2018-04-08 21:49:04 - connect ECONNREFUSED 127.0.0.1:3306
+2018-04-08 21:49:04 - Cannot read property 'query' of undefined

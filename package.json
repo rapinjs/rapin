@@ -1,0 +1,38 @@
+{
+  "name": "rapin",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "babel-node --presets es2015 system/startup.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cookie-parser": "^1.4.3",
+    "express": "^4.16.3",
+    "fs": "0.0.1-security",
+    "lodash": "^4.17.5",
+    "module-alias": "^2.0.6",
+    "moment": "^2.22.0",
+    "multer": "^1.3.0",
+    "mysql": "^2.15.0",
+    "sync": "^0.2.5",
+    "sync-mysql": "^3.0.1"
+  },
+  "_moduleAliases": {
+    "@system": "system",
+    "@config": "system/config",
+    "@controller": "src/controller",
+    "@language": "src/language",
+    "@model": "src/model"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-decorators": "^6.24.1",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "babel-preset-es2015": "^6.24.1"
+  }
+}
