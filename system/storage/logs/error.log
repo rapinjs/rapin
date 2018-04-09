@@ -4,3 +4,48 @@
 2018-04-08 21:48:48 - Cannot read property 'query' of undefined
 2018-04-08 21:49:04 - connect ECONNREFUSED 127.0.0.1:3306
 2018-04-08 21:49:04 - Cannot read property 'query' of undefined
+2018-04-09 14:54:24 - connect ECONNREFUSED 127.0.0.1:3306
+2018-04-09 14:54:24 - Cannot read property 'query' of undefined
+2018-04-09 14:54:26 - connect ECONNREFUSED 127.0.0.1:3306
+2018-04-09 15:00:05 - connect ECONNREFUSED 127.0.0.1:3306
+2018-04-09 15:00:06 - Cannot read property 'query' of undefined
+2018-04-09 15:00:36 - connect ECONNREFUSED 127.0.0.1:3306
+2018-04-09 15:00:36 - Cannot read property 'query' of undefined
+2018-04-09 15:01:21 - connect ECONNREFUSED 127.0.0.1:3306
+2018-04-09 15:01:21 - Cannot read property 'query' of undefined
+2018-04-09 15:01:35 - connect ECONNREFUSED 127.0.0.1:3306
+2018-04-09 15:01:35 - Cannot read property 'query' of undefined
+2018-04-09 15:03:56 - connect ECONNREFUSED 127.0.0.1:3306
+2018-04-09 15:03:56 - Cannot read property 'query' of undefined
+2018-04-09 15:09:20 - connect ECONNREFUSED 127.0.0.1:3306
+2018-04-09 15:09:20 - Cannot read property 'query' of undefined
+2018-04-09 15:10:05 - connect ECONNREFUSED 127.0.0.1:3306
+2018-04-09 15:10:05 - Cannot read property 'query' of undefined
+2018-04-09 15:14:20 - connect ECONNREFUSED 127.0.0.1:3306
+2018-04-09 15:14:20 - Cannot read property 'query' of undefined
+2018-04-09 15:14:38 - connect ECONNREFUSED 127.0.0.1:3306
+2018-04-09 15:14:38 - Cannot read property 'query' of undefined
+2018-04-09 15:31:13 - path must be a string or Buffer
+2018-04-09 15:32:04 - path must be a string or Buffer
+2018-04-09 15:33:17 - path must be a string or BufferTypeError: path must be a string or Buffer
+    at Object.fs.openSync (fs.js:646:18)
+    at Object.fs.readFileSync (fs.js:551:33)
+    at File.get (D:/webserver/nodejs/rapin/system/library/cache/file.js:26:32)
+    at Cache.get (D:/webserver/nodejs/rapin/system/library/cache.js:12:27)
+    at Proxy.getPosts (D:/webserver/nodejs/rapin/src/model/blog/post.js:13:34)
+    at Proxy.list (D:/webserver/nodejs/rapin/src/controller/blog/post.js:18:44)
+    at Action.execute (D:/webserver/nodejs/rapin/system/engine/action.js:26:16)
+    at Router.postRequest (D:/webserver/nodejs/rapin/system/engine/router.js:66:20)
+    at D:/webserver/nodejs/rapin/system/engine/router.js:27:56
+    at Layer.handle [as handle_request] (D:\webserver\nodejs\rapin\node_modules\express\lib\router\layer.js:95:5)
+2018-04-09 15:34:21 - path must be a string or BufferTypeError: path must be a string or Buffer
+    at Object.fs.openSync (fs.js:646:18)
+    at Object.fs.readFileSync (fs.js:551:33)
+    at File.get (D:/webserver/nodejs/rapin/system/library/cache/file.js:27:32)
+    at Cache.get (D:/webserver/nodejs/rapin/system/library/cache.js:12:27)
+    at Proxy.getPosts (D:/webserver/nodejs/rapin/src/model/blog/post.js:13:34)
+    at Proxy.list (D:/webserver/nodejs/rapin/src/controller/blog/post.js:18:44)
+    at Action.execute (D:/webserver/nodejs/rapin/system/engine/action.js:26:16)
+    at Router.postRequest (D:/webserver/nodejs/rapin/system/engine/router.js:66:20)
+    at D:/webserver/nodejs/rapin/system/engine/router.js:27:56
+    at Layer.handle [as handle_request] (D:\webserver\nodejs\rapin\node_modules\express\lib\router\layer.js:95:5)

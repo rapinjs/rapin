@@ -19,7 +19,6 @@ export default class mysql {
 
     query(sql) {
         if(this.connection) {
-            console.log(sql)
             const results = this.connection.query(sql)
 
             let query = {

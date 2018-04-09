@@ -9,7 +9,20 @@ export default class ModelBlogPost extends Model {
         return query.row
     }
     getPosts() {
-        const query = this.db.query(`SELECT * FROM oc_post`)
-        return query.rows
+
+        const cache = this.cache.get('blog_posts')
+
+        let results = []
+
+        if(!cache) {
+            const query = this.db.query(`SELECT * FROM oc_post`)
+            results = query.rows
+            this.cache.set('blog_posts', results)
+        } else {
+            results = cache
+        }
+
+        return results
+
     }
 }

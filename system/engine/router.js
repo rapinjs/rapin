@@ -8,6 +8,7 @@ import Request from "@system/library/request";
 import Response from "@system/library/response";
 import DB from "@system/library/db";
 import Log from "@system/library/log";
+import Cache from "@system/library/cache";
 import Registry from "./registry";
 import Loader from "./loader";
 import Config from "@system/library/config";
@@ -47,15 +48,16 @@ export default class Router {
         this.registry.set('load', new Loader(this.registry))
         this.registry.get('config').load('default')
         const defaultConfig = this.registry.get('config').get('defaultConfig')
-        const {db_engine, db_hostname, db_username, db_password, db_database, db_port, error_filename} = defaultConfig
+        const {db_engine, db_hostname, db_username, db_password, db_database, db_port, error_filename, cache_engine, cache_expire} = defaultConfig
         this.registry.set('log', new Log(error_filename))
-        try {
+        this.registry.set('cache', new Cache(cache_engine, cache_expire))
+         try {
             this.registry.set('db', new DB(db_engine, db_hostname, db_username, db_password, db_database, db_port))
-        } catch(e){
-            this.handleError(e)
-        }
+         } catch(e){
+             this.handleError(e)
+         }
 
-        next();
+         next();
     }
 
     postRequest(req, res, route) {
@@ -69,6 +71,6 @@ export default class Router {
     }
 
     handleError(err) {
-        this.registry.get('log').write(err.message);
+        this.registry.get('log').write(err.message + err.stack);
     }
 }
