@@ -1,3 +1,4 @@
+import _ from 'lodash'
 export default class ControllerBlogPost extends Controller {
     create(){
         this.load.model('blog/post')
@@ -42,5 +43,22 @@ export default class ControllerBlogPost extends Controller {
         }
 
         this.response.setOutput(data)
+    }
+    image(){
+        if(!_.isUndefined(this.request.files.file)) {
+            this.load.model('blog/post')
+
+            let post_info = this.model_blog_post.getPost(this.request.params.postId)
+
+            post_info.image ='/posts/'+Math.random().toString(36).substring(2, 15)+'.jpg'
+
+            this.request.files.file.mv(DIR_IMAGE + post_info.image , function(err) {
+                console.log(err)
+            });
+
+            this.response.setOutput(post_info)
+        } else {
+            this.response.setOutput({status: 404, message: 'Missing file'})
+        }
     }
 }

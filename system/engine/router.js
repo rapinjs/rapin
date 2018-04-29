@@ -1,6 +1,7 @@
 import {forEach} from "lodash";
 import express from 'express'
 import cookieParser from 'cookie-parser'
+const fileUpload = require('express-fileupload');
 
 import Action from "./action";
 import {routes} from '@config/routes'
@@ -18,6 +19,7 @@ export default class Router {
     constructor () {
         this.app = express();
         this.app.use(express.json());
+        this.app.use(fileUpload());
         this.app.use(cookieParser());
     }
     start() {
@@ -72,5 +74,6 @@ export default class Router {
 
     handleError(err) {
         this.registry.get('log').write(err.message + err.stack);
+        this.registry.get('response').setOutput({status: 500, message: err.message})
     }
 }

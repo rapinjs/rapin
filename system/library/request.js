@@ -12,6 +12,9 @@ export default class Request {
     get cookie(){
         return this.req.cookies
     }
+    get files(){
+        return this.req.files
+    }
     get params(){
         return this.req.params
     }

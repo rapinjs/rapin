@@ -49,3 +49,316 @@
     at Router.postRequest (D:/webserver/nodejs/rapin/system/engine/router.js:66:20)
     at D:/webserver/nodejs/rapin/system/engine/router.js:27:56
     at Layer.handle [as handle_request] (D:\webserver\nodejs\rapin\node_modules\express\lib\router\layer.js:95:5)
+2018-04-29 10:08:59 - D:/webserver/nodejs/rapin/src/controller/blog/post.js: Unexpected token, expected , (49:8)SyntaxError: D:/webserver/nodejs/rapin/src/controller/blog/post.js: Unexpected token, expected , (49:8)
+[0m [90m 47 | [39m    image(){
+ [90m 48 | [39m        console[33m.[39mlog(([36mthis[39m[33m.[39mrequest[33m.[39mfiles)
+[31m[1m>[22m[39m[90m 49 | [39m        [36mif[39m(_[33m.[39misUndefined([36mthis[39m[33m.[39mrequest[33m.[39mfiles[[32m'file'[39m])) {
+ [90m    | [39m        [31m[1m^[22m[39m
+ [90m 50 | [39m            [36mconst[39m post_info [33m=[39m [36mthis[39m[33m.[39mmodel_blog_post[33m.[39mgetPost([36mthis[39m[33m.[39mrequest[33m.[39mparams[33m.[39mpostId)
+ [90m 51 | [39m
+ [90m 52 | [39m            [36mthis[39m[33m.[39mresponse[33m.[39msetOutput(post_info)[0m
+    at Parser.pp$5.raise (D:\webserver\nodejs\rapin\node_modules\babylon\lib\index.js:4454:13)
+    at Parser.pp.unexpected (D:\webserver\nodejs\rapin\node_modules\babylon\lib\index.js:1761:8)
+    at Parser.pp.expect (D:\webserver\nodejs\rapin\node_modules\babylon\lib\index.js:1749:33)
+    at Parser.pp$3.parseCallExpressionArguments (D:\webserver\nodejs\rapin\node_modules\babylon\lib\index.js:3564:12)
+    at Parser.pp$3.parseSubscripts (D:\webserver\nodejs\rapin\node_modules\babylon\lib\index.js:3533:31)
+    at Parser.pp$3.parseExprSubscripts (D:\webserver\nodejs\rapin\node_modules\babylon\lib\index.js:3504:15)
+    at Parser.pp$3.parseMaybeUnary (D:\webserver\nodejs\rapin\node_modules\babylon\lib\index.js:3474:19)
+    at Parser.pp$3.parseExprOps (D:\webserver\nodejs\rapin\node_modules\babylon\lib\index.js:3404:19)
+    at Parser.pp$3.parseMaybeConditional (D:\webserver\nodejs\rapin\node_modules\babylon\lib\index.js:3381:19)
+    at Parser.pp$3.parseMaybeAssign (D:\webserver\nodejs\rapin\node_modules\babylon\lib\index.js:3344:19)
+2018-04-29 10:09:15 - D:/webserver/nodejs/rapin/src/controller/blog/post.js: Unexpected token, expected , (49:8)SyntaxError: D:/webserver/nodejs/rapin/src/controller/blog/post.js: Unexpected token, expected , (49:8)
+[0m [90m 47 | [39m    image(){
+ [90m 48 | [39m        console[33m.[39mlog(([36mthis[39m[33m.[39mrequest[33m.[39mfiles)
+[31m[1m>[22m[39m[90m 49 | [39m        [36mif[39m(_[33m.[39misUndefined([36mthis[39m[33m.[39mrequest[33m.[39mfiles[[32m'file'[39m])) {
+ [90m    | [39m        [31m[1m^[22m[39m
+ [90m 50 | [39m            [36mconst[39m post_info [33m=[39m [36mthis[39m[33m.[39mmodel_blog_post[33m.[39mgetPost([36mthis[39m[33m.[39mrequest[33m.[39mparams[33m.[39mpostId)
+ [90m 51 | [39m
+ [90m 52 | [39m            [36mthis[39m[33m.[39mresponse[33m.[39msetOutput(post_info)[0m
+    at Parser.pp$5.raise (D:\webserver\nodejs\rapin\node_modules\babylon\lib\index.js:4454:13)
+    at Parser.pp.unexpected (D:\webserver\nodejs\rapin\node_modules\babylon\lib\index.js:1761:8)
+    at Parser.pp.expect (D:\webserver\nodejs\rapin\node_modules\babylon\lib\index.js:1749:33)
+    at Parser.pp$3.parseCallExpressionArguments (D:\webserver\nodejs\rapin\node_modules\babylon\lib\index.js:3564:12)
+    at Parser.pp$3.parseSubscripts (D:\webserver\nodejs\rapin\node_modules\babylon\lib\index.js:3533:31)
+    at Parser.pp$3.parseExprSubscripts (D:\webserver\nodejs\rapin\node_modules\babylon\lib\index.js:3504:15)
+    at Parser.pp$3.parseMaybeUnary (D:\webserver\nodejs\rapin\node_modules\babylon\lib\index.js:3474:19)
+    at Parser.pp$3.parseExprOps (D:\webserver\nodejs\rapin\node_modules\babylon\lib\index.js:3404:19)
+    at Parser.pp$3.parseMaybeConditional (D:\webserver\nodejs\rapin\node_modules\babylon\lib\index.js:3381:19)
+    at Parser.pp$3.parseMaybeAssign (D:\webserver\nodejs\rapin\node_modules\babylon\lib\index.js:3344:19)
+2018-04-29 11:12:48 - connect ECONNREFUSED 127.0.0.1:3306Error: connect ECONNREFUSED 127.0.0.1:3306
+    at extractValue (D:\webserver\nodejs\rapin\node_modules\sync-rpc\lib\index.js:144:19)
+    at Connection._client (D:\webserver\nodejs\rapin\node_modules\sync-rpc\lib\index.js:154:12)
+    at Connection.query (D:\webserver\nodejs\rapin\node_modules\sync-mysql\lib\index.js:68:19)
+    at new mysql (D:/webserver/nodejs/rapin/system/library/db/mysql.js:14:25)
+    at new DB (D:/webserver/nodejs/rapin/system/library/db.js:8:28)
+    at Router.preRequest (D:/webserver/nodejs/rapin/system/engine/router.js:57:37)
+    at D:/webserver/nodejs/rapin/system/engine/router.js:26:42
+    at Layer.handle [as handle_request] (D:\webserver\nodejs\rapin\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\webserver\nodejs\rapin\node_modules\express\lib\router\index.js:317:13)
+    at D:\webserver\nodejs\rapin\node_modules\express\lib\router\index.js:284:7
+2018-04-29 11:12:48 - D:/webserver/nodejs/rapin/src/controller/blog/post.js: Unexpected token, expected , (49:8)SyntaxError: D:/webserver/nodejs/rapin/src/controller/blog/post.js: Unexpected token, expected , (49:8)
+[0m [90m 47 | [39m    image(){
+ [90m 48 | [39m        console[33m.[39mlog(([36mthis[39m[33m.[39mrequest[33m.[39mfiles)
+[31m[1m>[22m[39m[90m 49 | [39m        [36mif[39m(_[33m.[39misUndefined([36mthis[39m[33m.[39mrequest[33m.[39mfiles[[32m'file'[39m])) {
+ [90m    | [39m        [31m[1m^[22m[39m
+ [90m 50 | [39m            [36mconst[39m post_info [33m=[39m [36mthis[39m[33m.[39mmodel_blog_post[33m.[39mgetPost([36mthis[39m[33m.[39mrequest[33m.[39mparams[33m.[39mpostId)
+ [90m 51 | [39m
+ [90m 52 | [39m            [36mthis[39m[33m.[39mresponse[33m.[39msetOutput(post_info)[0m
+    at Parser.pp$5.raise (D:\webserver\nodejs\rapin\node_modules\babylon\lib\index.js:4454:13)
+    at Parser.pp.unexpected (D:\webserver\nodejs\rapin\node_modules\babylon\lib\index.js:1761:8)
+    at Parser.pp.expect (D:\webserver\nodejs\rapin\node_modules\babylon\lib\index.js:1749:33)
+    at Parser.pp$3.parseCallExpressionArguments (D:\webserver\nodejs\rapin\node_modules\babylon\lib\index.js:3564:12)
+    at Parser.pp$3.parseSubscripts (D:\webserver\nodejs\rapin\node_modules\babylon\lib\index.js:3533:31)
+    at Parser.pp$3.parseExprSubscripts (D:\webserver\nodejs\rapin\node_modules\babylon\lib\index.js:3504:15)
+    at Parser.pp$3.parseMaybeUnary (D:\webserver\nodejs\rapin\node_modules\babylon\lib\index.js:3474:19)
+    at Parser.pp$3.parseExprOps (D:\webserver\nodejs\rapin\node_modules\babylon\lib\index.js:3404:19)
+    at Parser.pp$3.parseMaybeConditional (D:\webserver\nodejs\rapin\node_modules\babylon\lib\index.js:3381:19)
+    at Parser.pp$3.parseMaybeAssign (D:\webserver\nodejs\rapin\node_modules\babylon\lib\index.js:3344:19)
+2018-04-29 11:13:25 - connect ECONNREFUSED 127.0.0.1:3306Error: connect ECONNREFUSED 127.0.0.1:3306
+    at extractValue (D:\webserver\nodejs\rapin\node_modules\sync-rpc\lib\index.js:144:19)
+    at Connection._client (D:\webserver\nodejs\rapin\node_modules\sync-rpc\lib\index.js:154:12)
+    at Connection.query (D:\webserver\nodejs\rapin\node_modules\sync-mysql\lib\index.js:68:19)
+    at new mysql (D:/webserver/nodejs/rapin/system/library/db/mysql.js:14:25)
+    at new DB (D:/webserver/nodejs/rapin/system/library/db.js:8:28)
+    at Router.preRequest (D:/webserver/nodejs/rapin/system/engine/router.js:57:37)
+    at D:/webserver/nodejs/rapin/system/engine/router.js:26:42
+    at Layer.handle [as handle_request] (D:\webserver\nodejs\rapin\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\webserver\nodejs\rapin\node_modules\express\lib\router\index.js:317:13)
+    at D:\webserver\nodejs\rapin\node_modules\express\lib\router\index.js:284:7
+2018-04-29 11:13:25 - D:/webserver/nodejs/rapin/src/controller/blog/post.js: Unexpected token, expected , (49:8)SyntaxError: D:/webserver/nodejs/rapin/src/controller/blog/post.js: Unexpected token, expected , (49:8)
+[0m [90m 47 | [39m    image(){
+ [90m 48 | [39m        console[33m.[39mlog(([36mthis[39m[33m.[39mrequest[33m.[39mfiles)
+[31m[1m>[22m[39m[90m 49 | [39m        [36mif[39m(_[33m.[39misUndefined([36mthis[39m[33m.[39mrequest[33m.[39mfiles[[32m'file'[39m])) {
+ [90m    | [39m        [31m[1m^[22m[39m
+ [90m 50 | [39m            [36mconst[39m post_info [33m=[39m [36mthis[39m[33m.[39mmodel_blog_post[33m.[39mgetPost([36mthis[39m[33m.[39mrequest[33m.[39mparams[33m.[39mpostId)
+ [90m 51 | [39m
+ [90m 52 | [39m            [36mthis[39m[33m.[39mresponse[33m.[39msetOutput(post_info)[0m
+    at Parser.pp$5.raise (D:\webserver\nodejs\rapin\node_modules\babylon\lib\index.js:4454:13)
+    at Parser.pp.unexpected (D:\webserver\nodejs\rapin\node_modules\babylon\lib\index.js:1761:8)
+    at Parser.pp.expect (D:\webserver\nodejs\rapin\node_modules\babylon\lib\index.js:1749:33)
+    at Parser.pp$3.parseCallExpressionArguments (D:\webserver\nodejs\rapin\node_modules\babylon\lib\index.js:3564:12)
+    at Parser.pp$3.parseSubscripts (D:\webserver\nodejs\rapin\node_modules\babylon\lib\index.js:3533:31)
+    at Parser.pp$3.parseExprSubscripts (D:\webserver\nodejs\rapin\node_modules\babylon\lib\index.js:3504:15)
+    at Parser.pp$3.parseMaybeUnary (D:\webserver\nodejs\rapin\node_modules\babylon\lib\index.js:3474:19)
+    at Parser.pp$3.parseExprOps (D:\webserver\nodejs\rapin\node_modules\babylon\lib\index.js:3404:19)
+    at Parser.pp$3.parseMaybeConditional (D:\webserver\nodejs\rapin\node_modules\babylon\lib\index.js:3381:19)
+    at Parser.pp$3.parseMaybeAssign (D:\webserver\nodejs\rapin\node_modules\babylon\lib\index.js:3344:19)
+2018-04-29 11:13:41 - connect ECONNREFUSED 127.0.0.1:3306Error: connect ECONNREFUSED 127.0.0.1:3306
+    at extractValue (D:\webserver\nodejs\rapin\node_modules\sync-rpc\lib\index.js:144:19)
+    at Connection._client (D:\webserver\nodejs\rapin\node_modules\sync-rpc\lib\index.js:154:12)
+    at Connection.query (D:\webserver\nodejs\rapin\node_modules\sync-mysql\lib\index.js:68:19)
+    at new mysql (D:/webserver/nodejs/rapin/system/library/db/mysql.js:14:25)
+    at new DB (D:/webserver/nodejs/rapin/system/library/db.js:8:28)
+    at Router.preRequest (D:/webserver/nodejs/rapin/system/engine/router.js:57:37)
+    at D:/webserver/nodejs/rapin/system/engine/router.js:26:42
+    at Layer.handle [as handle_request] (D:\webserver\nodejs\rapin\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\webserver\nodejs\rapin\node_modules\express\lib\router\index.js:317:13)
+    at D:\webserver\nodejs\rapin\node_modules\express\lib\router\index.js:284:7
+2018-04-29 11:13:41 - D:/webserver/nodejs/rapin/src/controller/blog/post.js: Unexpected token, expected , (49:8)SyntaxError: D:/webserver/nodejs/rapin/src/controller/blog/post.js: Unexpected token, expected , (49:8)
+[0m [90m 47 | [39m    image(){
+ [90m 48 | [39m        console[33m.[39mlog(([36mthis[39m[33m.[39mrequest[33m.[39mfiles)
+[31m[1m>[22m[39m[90m 49 | [39m        [36mif[39m(_[33m.[39misUndefined([36mthis[39m[33m.[39mrequest[33m.[39mfiles[[32m'file'[39m])) {
+ [90m    | [39m        [31m[1m^[22m[39m
+ [90m 50 | [39m            [36mconst[39m post_info [33m=[39m [36mthis[39m[33m.[39mmodel_blog_post[33m.[39mgetPost([36mthis[39m[33m.[39mrequest[33m.[39mparams[33m.[39mpostId)
+ [90m 51 | [39m
+ [90m 52 | [39m            [36mthis[39m[33m.[39mresponse[33m.[39msetOutput(post_info)[0m
+    at Parser.pp$5.raise (D:\webserver\nodejs\rapin\node_modules\babylon\lib\index.js:4454:13)
+    at Parser.pp.unexpected (D:\webserver\nodejs\rapin\node_modules\babylon\lib\index.js:1761:8)
+    at Parser.pp.expect (D:\webserver\nodejs\rapin\node_modules\babylon\lib\index.js:1749:33)
+    at Parser.pp$3.parseCallExpressionArguments (D:\webserver\nodejs\rapin\node_modules\babylon\lib\index.js:3564:12)
+    at Parser.pp$3.parseSubscripts (D:\webserver\nodejs\rapin\node_modules\babylon\lib\index.js:3533:31)
+    at Parser.pp$3.parseExprSubscripts (D:\webserver\nodejs\rapin\node_modules\babylon\lib\index.js:3504:15)
+    at Parser.pp$3.parseMaybeUnary (D:\webserver\nodejs\rapin\node_modules\babylon\lib\index.js:3474:19)
+    at Parser.pp$3.parseExprOps (D:\webserver\nodejs\rapin\node_modules\babylon\lib\index.js:3404:19)
+    at Parser.pp$3.parseMaybeConditional (D:\webserver\nodejs\rapin\node_modules\babylon\lib\index.js:3381:19)
+    at Parser.pp$3.parseMaybeAssign (D:\webserver\nodejs\rapin\node_modules\babylon\lib\index.js:3344:19)
+2018-04-29 11:14:12 - connect ECONNREFUSED 127.0.0.1:3306Error: connect ECONNREFUSED 127.0.0.1:3306
+    at extractValue (D:\webserver\nodejs\rapin\node_modules\sync-rpc\lib\index.js:144:19)
+    at Connection._client (D:\webserver\nodejs\rapin\node_modules\sync-rpc\lib\index.js:154:12)
+    at Connection.query (D:\webserver\nodejs\rapin\node_modules\sync-mysql\lib\index.js:68:19)
+    at new mysql (D:/webserver/nodejs/rapin/system/library/db/mysql.js:14:25)
+    at new DB (D:/webserver/nodejs/rapin/system/library/db.js:8:28)
+    at Router.preRequest (D:/webserver/nodejs/rapin/system/engine/router.js:57:37)
+    at D:/webserver/nodejs/rapin/system/engine/router.js:26:42
+    at Layer.handle [as handle_request] (D:\webserver\nodejs\rapin\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\webserver\nodejs\rapin\node_modules\express\lib\router\index.js:317:13)
+    at D:\webserver\nodejs\rapin\node_modules\express\lib\router\index.js:284:7
+2018-04-29 11:14:12 - D:/webserver/nodejs/rapin/src/controller/blog/post.js: Unexpected token, expected , (49:12)SyntaxError: D:/webserver/nodejs/rapin/src/controller/blog/post.js: Unexpected token, expected , (49:12)
+[0m [90m 47 | [39m    image(){
+ [90m 48 | [39m        console[33m.[39mlog(([36mthis[39m[33m.[39mrequest[33m.[39mfiles)
+[31m[1m>[22m[39m[90m 49 | [39m            console[33m.[39mlog([32m'123'[39m)
+ [90m    | [39m            [31m[1m^[22m[39m
+ [90m 50 | [39m        [36mif[39m(_[33m.[39misUndefined([36mthis[39m[33m.[39mrequest[33m.[39mfiles[[32m'file'[39m])) {
+ [90m 51 | [39m            [36mconst[39m post_info [33m=[39m [36mthis[39m[33m.[39mmodel_blog_post[33m.[39mgetPost([36mthis[39m[33m.[39mrequest[33m.[39mparams[33m.[39mpostId)
+ [90m 52 | [39m[0m
+    at Parser.pp$5.raise (D:\webserver\nodejs\rapin\node_modules\babylon\lib\index.js:4454:13)
+    at Parser.pp.unexpected (D:\webserver\nodejs\rapin\node_modules\babylon\lib\index.js:1761:8)
+    at Parser.pp.expect (D:\webserver\nodejs\rapin\node_modules\babylon\lib\index.js:1749:33)
+    at Parser.pp$3.parseCallExpressionArguments (D:\webserver\nodejs\rapin\node_modules\babylon\lib\index.js:3564:12)
+    at Parser.pp$3.parseSubscripts (D:\webserver\nodejs\rapin\node_modules\babylon\lib\index.js:3533:31)
+    at Parser.pp$3.parseExprSubscripts (D:\webserver\nodejs\rapin\node_modules\babylon\lib\index.js:3504:15)
+    at Parser.pp$3.parseMaybeUnary (D:\webserver\nodejs\rapin\node_modules\babylon\lib\index.js:3474:19)
+    at Parser.pp$3.parseExprOps (D:\webserver\nodejs\rapin\node_modules\babylon\lib\index.js:3404:19)
+    at Parser.pp$3.parseMaybeConditional (D:\webserver\nodejs\rapin\node_modules\babylon\lib\index.js:3381:19)
+    at Parser.pp$3.parseMaybeAssign (D:\webserver\nodejs\rapin\node_modules\babylon\lib\index.js:3344:19)
+2018-04-29 11:14:54 - connect ECONNREFUSED 127.0.0.1:3306Error: connect ECONNREFUSED 127.0.0.1:3306
+    at extractValue (D:\webserver\nodejs\rapin\node_modules\sync-rpc\lib\index.js:144:19)
+    at Connection._client (D:\webserver\nodejs\rapin\node_modules\sync-rpc\lib\index.js:154:12)
+    at Connection.query (D:\webserver\nodejs\rapin\node_modules\sync-mysql\lib\index.js:68:19)
+    at new mysql (D:/webserver/nodejs/rapin/system/library/db/mysql.js:14:25)
+    at new DB (D:/webserver/nodejs/rapin/system/library/db.js:8:28)
+    at Router.preRequest (D:/webserver/nodejs/rapin/system/engine/router.js:57:37)
+    at D:/webserver/nodejs/rapin/system/engine/router.js:26:42
+    at Layer.handle [as handle_request] (D:\webserver\nodejs\rapin\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\webserver\nodejs\rapin\node_modules\express\lib\router\index.js:317:13)
+    at D:\webserver\nodejs\rapin\node_modules\express\lib\router\index.js:284:7
+2018-04-29 11:15:10 - connect ECONNREFUSED 127.0.0.1:3306Error: connect ECONNREFUSED 127.0.0.1:3306
+    at extractValue (D:\webserver\nodejs\rapin\node_modules\sync-rpc\lib\index.js:144:19)
+    at Connection._client (D:\webserver\nodejs\rapin\node_modules\sync-rpc\lib\index.js:154:12)
+    at Connection.query (D:\webserver\nodejs\rapin\node_modules\sync-mysql\lib\index.js:68:19)
+    at new mysql (D:/webserver/nodejs/rapin/system/library/db/mysql.js:14:25)
+    at new DB (D:/webserver/nodejs/rapin/system/library/db.js:8:28)
+    at Router.preRequest (D:/webserver/nodejs/rapin/system/engine/router.js:57:37)
+    at D:/webserver/nodejs/rapin/system/engine/router.js:26:42
+    at Layer.handle [as handle_request] (D:\webserver\nodejs\rapin\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\webserver\nodejs\rapin\node_modules\express\lib\router\index.js:317:13)
+    at D:\webserver\nodejs\rapin\node_modules\express\lib\router\index.js:284:7
+2018-04-29 11:15:20 - connect ECONNREFUSED 127.0.0.1:3306Error: connect ECONNREFUSED 127.0.0.1:3306
+    at extractValue (D:\webserver\nodejs\rapin\node_modules\sync-rpc\lib\index.js:144:19)
+    at Connection._client (D:\webserver\nodejs\rapin\node_modules\sync-rpc\lib\index.js:154:12)
+    at Connection.query (D:\webserver\nodejs\rapin\node_modules\sync-mysql\lib\index.js:68:19)
+    at new mysql (D:/webserver/nodejs/rapin/system/library/db/mysql.js:14:25)
+    at new DB (D:/webserver/nodejs/rapin/system/library/db.js:8:28)
+    at Router.preRequest (D:/webserver/nodejs/rapin/system/engine/router.js:57:37)
+    at D:/webserver/nodejs/rapin/system/engine/router.js:26:42
+    at Layer.handle [as handle_request] (D:\webserver\nodejs\rapin\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\webserver\nodejs\rapin\node_modules\express\lib\router\index.js:317:13)
+    at D:\webserver\nodejs\rapin\node_modules\express\lib\router\index.js:284:7
+2018-04-29 11:15:31 - connect ECONNREFUSED 127.0.0.1:3306Error: connect ECONNREFUSED 127.0.0.1:3306
+    at extractValue (D:\webserver\nodejs\rapin\node_modules\sync-rpc\lib\index.js:144:19)
+    at Connection._client (D:\webserver\nodejs\rapin\node_modules\sync-rpc\lib\index.js:154:12)
+    at Connection.query (D:\webserver\nodejs\rapin\node_modules\sync-mysql\lib\index.js:68:19)
+    at new mysql (D:/webserver/nodejs/rapin/system/library/db/mysql.js:14:25)
+    at new DB (D:/webserver/nodejs/rapin/system/library/db.js:8:28)
+    at Router.preRequest (D:/webserver/nodejs/rapin/system/engine/router.js:57:37)
+    at D:/webserver/nodejs/rapin/system/engine/router.js:26:42
+    at Layer.handle [as handle_request] (D:\webserver\nodejs\rapin\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\webserver\nodejs\rapin\node_modules\express\lib\router\index.js:317:13)
+    at D:\webserver\nodejs\rapin\node_modules\express\lib\router\index.js:284:7
+2018-04-29 11:15:45 - connect ECONNREFUSED 127.0.0.1:3306Error: connect ECONNREFUSED 127.0.0.1:3306
+    at extractValue (D:\webserver\nodejs\rapin\node_modules\sync-rpc\lib\index.js:144:19)
+    at Connection._client (D:\webserver\nodejs\rapin\node_modules\sync-rpc\lib\index.js:154:12)
+    at Connection.query (D:\webserver\nodejs\rapin\node_modules\sync-mysql\lib\index.js:68:19)
+    at new mysql (D:/webserver/nodejs/rapin/system/library/db/mysql.js:14:25)
+    at new DB (D:/webserver/nodejs/rapin/system/library/db.js:8:28)
+    at Router.preRequest (D:/webserver/nodejs/rapin/system/engine/router.js:57:37)
+    at D:/webserver/nodejs/rapin/system/engine/router.js:26:42
+    at Layer.handle [as handle_request] (D:\webserver\nodejs\rapin\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\webserver\nodejs\rapin\node_modules\express\lib\router\index.js:317:13)
+    at D:\webserver\nodejs\rapin\node_modules\express\lib\router\index.js:284:7
+2018-04-29 11:15:56 - connect ECONNREFUSED 127.0.0.1:3306Error: connect ECONNREFUSED 127.0.0.1:3306
+    at extractValue (D:\webserver\nodejs\rapin\node_modules\sync-rpc\lib\index.js:144:19)
+    at Connection._client (D:\webserver\nodejs\rapin\node_modules\sync-rpc\lib\index.js:154:12)
+    at Connection.query (D:\webserver\nodejs\rapin\node_modules\sync-mysql\lib\index.js:68:19)
+    at new mysql (D:/webserver/nodejs/rapin/system/library/db/mysql.js:14:25)
+    at new DB (D:/webserver/nodejs/rapin/system/library/db.js:8:28)
+    at Router.preRequest (D:/webserver/nodejs/rapin/system/engine/router.js:57:37)
+    at D:/webserver/nodejs/rapin/system/engine/router.js:26:42
+    at Layer.handle [as handle_request] (D:\webserver\nodejs\rapin\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\webserver\nodejs\rapin\node_modules\express\lib\router\index.js:317:13)
+    at D:\webserver\nodejs\rapin\node_modules\express\lib\router\index.js:284:7
+2018-04-29 11:15:56 - Cannot read property 'getPost' of undefinedTypeError: Cannot read property 'getPost' of undefined
+    at Proxy.image (D:/webserver/nodejs/rapin/src/controller/blog/post.js:49:52)
+    at Action.execute (D:/webserver/nodejs/rapin/system/engine/action.js:26:16)
+    at Router.postRequest (D:/webserver/nodejs/rapin/system/engine/router.js:68:20)
+    at D:/webserver/nodejs/rapin/system/engine/router.js:32:57
+    at Layer.handle [as handle_request] (D:\webserver\nodejs\rapin\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\webserver\nodejs\rapin\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (D:\webserver\nodejs\rapin\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (D:\webserver\nodejs\rapin\node_modules\express\lib\router\layer.js:95:5)
+    at D:\webserver\nodejs\rapin\node_modules\express\lib\router\index.js:281:22
+    at param (D:\webserver\nodejs\rapin\node_modules\express\lib\router\index.js:354:14)
+2018-04-29 11:17:03 - connect ECONNREFUSED 127.0.0.1:3306Error: connect ECONNREFUSED 127.0.0.1:3306
+    at extractValue (D:\webserver\nodejs\rapin\node_modules\sync-rpc\lib\index.js:144:19)
+    at Connection._client (D:\webserver\nodejs\rapin\node_modules\sync-rpc\lib\index.js:154:12)
+    at Connection.query (D:\webserver\nodejs\rapin\node_modules\sync-mysql\lib\index.js:68:19)
+    at new mysql (D:/webserver/nodejs/rapin/system/library/db/mysql.js:14:25)
+    at new DB (D:/webserver/nodejs/rapin/system/library/db.js:8:28)
+    at Router.preRequest (D:/webserver/nodejs/rapin/system/engine/router.js:57:37)
+    at D:/webserver/nodejs/rapin/system/engine/router.js:26:42
+    at Layer.handle [as handle_request] (D:\webserver\nodejs\rapin\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\webserver\nodejs\rapin\node_modules\express\lib\router\index.js:317:13)
+    at D:\webserver\nodejs\rapin\node_modules\express\lib\router\index.js:284:7
+2018-04-29 11:17:41 - connect ECONNREFUSED 127.0.0.1:3306Error: connect ECONNREFUSED 127.0.0.1:3306
+    at extractValue (D:\webserver\nodejs\rapin\node_modules\sync-rpc\lib\index.js:144:19)
+    at Connection._client (D:\webserver\nodejs\rapin\node_modules\sync-rpc\lib\index.js:154:12)
+    at Connection.query (D:\webserver\nodejs\rapin\node_modules\sync-mysql\lib\index.js:68:19)
+    at new mysql (D:/webserver/nodejs/rapin/system/library/db/mysql.js:14:25)
+    at new DB (D:/webserver/nodejs/rapin/system/library/db.js:8:28)
+    at Router.preRequest (D:/webserver/nodejs/rapin/system/engine/router.js:57:37)
+    at D:/webserver/nodejs/rapin/system/engine/router.js:26:42
+    at Layer.handle [as handle_request] (D:\webserver\nodejs\rapin\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\webserver\nodejs\rapin\node_modules\express\lib\router\index.js:317:13)
+    at D:\webserver\nodejs\rapin\node_modules\express\lib\router\index.js:284:7
+2018-04-29 11:17:41 - Cannot read property 'getPost' of undefinedTypeError: Cannot read property 'getPost' of undefined
+    at Proxy.image (D:/webserver/nodejs/rapin/src/controller/blog/post.js:49:52)
+    at Action.execute (D:/webserver/nodejs/rapin/system/engine/action.js:26:16)
+    at Router.postRequest (D:/webserver/nodejs/rapin/system/engine/router.js:68:20)
+    at D:/webserver/nodejs/rapin/system/engine/router.js:32:57
+    at Layer.handle [as handle_request] (D:\webserver\nodejs\rapin\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\webserver\nodejs\rapin\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (D:\webserver\nodejs\rapin\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (D:\webserver\nodejs\rapin\node_modules\express\lib\router\layer.js:95:5)
+    at D:\webserver\nodejs\rapin\node_modules\express\lib\router\index.js:281:22
+    at param (D:\webserver\nodejs\rapin\node_modules\express\lib\router\index.js:354:14)
+2018-04-29 11:18:23 - connect ECONNREFUSED 127.0.0.1:3306Error: connect ECONNREFUSED 127.0.0.1:3306
+    at extractValue (D:\webserver\nodejs\rapin\node_modules\sync-rpc\lib\index.js:144:19)
+    at Connection._client (D:\webserver\nodejs\rapin\node_modules\sync-rpc\lib\index.js:154:12)
+    at Connection.query (D:\webserver\nodejs\rapin\node_modules\sync-mysql\lib\index.js:68:19)
+    at new mysql (D:/webserver/nodejs/rapin/system/library/db/mysql.js:14:25)
+    at new DB (D:/webserver/nodejs/rapin/system/library/db.js:8:28)
+    at Router.preRequest (D:/webserver/nodejs/rapin/system/engine/router.js:57:37)
+    at D:/webserver/nodejs/rapin/system/engine/router.js:26:42
+    at Layer.handle [as handle_request] (D:\webserver\nodejs\rapin\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\webserver\nodejs\rapin\node_modules\express\lib\router\index.js:317:13)
+    at D:\webserver\nodejs\rapin\node_modules\express\lib\router\index.js:284:7
+2018-04-29 11:18:23 - Cannot read property 'query' of undefinedTypeError: Cannot read property 'query' of undefined
+    at Proxy.getPost (D:/webserver/nodejs/rapin/src/model/blog/post.js:8:31)
+    at Proxy.image (D:/webserver/nodejs/rapin/src/controller/blog/post.js:50:52)
+    at Action.execute (D:/webserver/nodejs/rapin/system/engine/action.js:26:16)
+    at Router.postRequest (D:/webserver/nodejs/rapin/system/engine/router.js:68:20)
+    at D:/webserver/nodejs/rapin/system/engine/router.js:32:57
+    at Layer.handle [as handle_request] (D:\webserver\nodejs\rapin\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\webserver\nodejs\rapin\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (D:\webserver\nodejs\rapin\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (D:\webserver\nodejs\rapin\node_modules\express\lib\router\layer.js:95:5)
+    at D:\webserver\nodejs\rapin\node_modules\express\lib\router\index.js:281:22
+2018-04-29 19:43:52 - D:/webserver/nodejs/rapin/src/controller/blog/post.js: Unterminated string constant (53:83)SyntaxError: D:/webserver/nodejs/rapin/src/controller/blog/post.js: Unterminated string constant (53:83)
+[0m [90m 51 | [39m            let post_info [33m=[39m [36mthis[39m[33m.[39mmodel_blog_post[33m.[39mgetPost([36mthis[39m[33m.[39mrequest[33m.[39mparams[33m.[39mpostId)
+ [90m 52 | [39m
+[31m[1m>[22m[39m[90m 53 | [39m            post_info[33m.[39mimage [33m=[39m[32m'/posts/'[39m[33m+[39m[33mMath[39m[33m.[39mrandom()[33m.[39mtoString([35m36[39m)[33m.[39msubstring([35m2[39m[33m,[39m [35m15[39m)[33m+[39m[32m'.jpg[39m
+ [90m    | [39m                                                                                   [31m[1m^[22m[39m
+ [90m 54 | [39m
+ [90m 55 | [39m            [36mthis[39m[33m.[39mrequest[33m.[39mfiles[33m.[39mfile[33m.[39mmv([33mDIR_IMAGE[39m [33m+[39m post_info[33m.[39mimage [33m,[39m [36mfunction[39m(err) {
+ [90m 56 | [39m                console[33m.[39mlog(err)[0m
+    at Parser.pp$5.raise (D:\webserver\nodejs\rapin\node_modules\babylon\lib\index.js:4454:13)
+    at Parser.readString (D:\webserver\nodejs\rapin\node_modules\babylon\lib\index.js:1317:33)
+    at Parser.getTokenFromCode (D:\webserver\nodejs\rapin\node_modules\babylon\lib\index.js:1107:21)
+    at Parser.readToken (D:\webserver\nodejs\rapin\node_modules\babylon\lib\index.js:776:19)
+    at Parser.nextToken (D:\webserver\nodejs\rapin\node_modules\babylon\lib\index.js:766:19)
+    at Parser.next (D:\webserver\nodejs\rapin\node_modules\babylon\lib\index.js:691:10)
+    at Parser.pp$3.parseExprOp (D:\webserver\nodejs\rapin\node_modules\babylon\lib\index.js:3431:12)
+    at Parser.pp$3.parseExprOp (D:\webserver\nodejs\rapin\node_modules\babylon\lib\index.js:3438:19)
+    at Parser.pp$3.parseExprOps (D:\webserver\nodejs\rapin\node_modules\babylon\lib\index.js:3408:17)
+    at Parser.pp$3.parseMaybeConditional (D:\webserver\nodejs\rapin\node_modules\babylon\lib\index.js:3381:19)
+2018-04-29 19:44:14 - Cannot read property 'file' of undefinedTypeError: Cannot read property 'file' of undefined
+    at Proxy.image (D:/webserver/nodejs/rapin/src/controller/blog/post.js:48:46)
+    at Action.execute (D:/webserver/nodejs/rapin/system/engine/action.js:26:16)
+    at Router.postRequest (D:/webserver/nodejs/rapin/system/engine/router.js:68:20)
+    at D:/webserver/nodejs/rapin/system/engine/router.js:32:57
+    at Layer.handle [as handle_request] (D:\webserver\nodejs\rapin\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\webserver\nodejs\rapin\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (D:\webserver\nodejs\rapin\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (D:\webserver\nodejs\rapin\node_modules\express\lib\router\layer.js:95:5)
+    at D:\webserver\nodejs\rapin\node_modules\express\lib\router\index.js:281:22
+    at param (D:\webserver\nodejs\rapin\node_modules\express\lib\router\index.js:354:14)
