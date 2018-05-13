@@ -362,3 +362,542 @@
     at Layer.handle [as handle_request] (D:\webserver\nodejs\rapin\node_modules\express\lib\router\layer.js:95:5)
     at D:\webserver\nodejs\rapin\node_modules\express\lib\router\index.js:281:22
     at param (D:\webserver\nodejs\rapin\node_modules\express\lib\router\index.js:354:14)
+2018-05-10 21:40:28 - _mongoSync2.default is not a constructorTypeError: _mongoSync2.default is not a constructor
+    at new mongodb (D:/webserver/nodejs/rapin/system/library/db/mongodb.js:5:27)
+    at new DB (D:/webserver/nodejs/rapin/system/library/db.js:8:28)
+    at Router.preRequest (D:/webserver/nodejs/rapin/system/engine/router.js:57:37)
+    at D:/webserver/nodejs/rapin/system/engine/router.js:26:42
+    at Layer.handle [as handle_request] (D:\webserver\nodejs\rapin\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\webserver\nodejs\rapin\node_modules\express\lib\router\index.js:317:13)
+    at D:\webserver\nodejs\rapin\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (D:\webserver\nodejs\rapin\node_modules\express\lib\router\index.js:335:12)
+    at next (D:\webserver\nodejs\rapin\node_modules\express\lib\router\index.js:275:10)
+    at cookieParser (D:\webserver\nodejs\rapin\node_modules\cookie-parser\index.js:56:14)
+2018-05-10 21:40:28 - Cannot read property 'query' of undefinedTypeError: Cannot read property 'query' of undefined
+    at Proxy.getPosts (D:/webserver/nodejs/rapin/src/model/blog/post.js:21:35)
+    at Proxy.list (D:/webserver/nodejs/rapin/src/controller/blog/post.js:19:44)
+    at Action.execute (D:/webserver/nodejs/rapin/system/engine/action.js:26:16)
+    at Router.postRequest (D:/webserver/nodejs/rapin/system/engine/router.js:68:20)
+    at D:/webserver/nodejs/rapin/system/engine/router.js:29:56
+    at Layer.handle [as handle_request] (D:\webserver\nodejs\rapin\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\webserver\nodejs\rapin\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (D:\webserver\nodejs\rapin\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (D:\webserver\nodejs\rapin\node_modules\express\lib\router\layer.js:95:5)
+    at D:\webserver\nodejs\rapin\node_modules\express\lib\router\index.js:281:22
+2018-05-10 21:41:32 - _mongoSync2.default is not a constructorTypeError: _mongoSync2.default is not a constructor
+    at new mongodb (D:/webserver/nodejs/rapin/system/library/db/mongodb.js:5:27)
+    at new DB (D:/webserver/nodejs/rapin/system/library/db.js:8:28)
+    at Router.preRequest (D:/webserver/nodejs/rapin/system/engine/router.js:57:37)
+    at D:/webserver/nodejs/rapin/system/engine/router.js:26:42
+    at Layer.handle [as handle_request] (D:\webserver\nodejs\rapin\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\webserver\nodejs\rapin\node_modules\express\lib\router\index.js:317:13)
+    at D:\webserver\nodejs\rapin\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (D:\webserver\nodejs\rapin\node_modules\express\lib\router\index.js:335:12)
+    at next (D:\webserver\nodejs\rapin\node_modules\express\lib\router\index.js:275:10)
+    at cookieParser (D:\webserver\nodejs\rapin\node_modules\cookie-parser\index.js:56:14)
+2018-05-10 21:41:32 - Cannot read property 'query' of undefinedTypeError: Cannot read property 'query' of undefined
+    at Proxy.getPosts (D:/webserver/nodejs/rapin/src/model/blog/post.js:15:30)
+    at Proxy.list (D:/webserver/nodejs/rapin/src/controller/blog/post.js:19:44)
+    at Action.execute (D:/webserver/nodejs/rapin/system/engine/action.js:26:16)
+    at Router.postRequest (D:/webserver/nodejs/rapin/system/engine/router.js:68:20)
+    at D:/webserver/nodejs/rapin/system/engine/router.js:29:56
+    at Layer.handle [as handle_request] (D:\webserver\nodejs\rapin\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\webserver\nodejs\rapin\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (D:\webserver\nodejs\rapin\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (D:\webserver\nodejs\rapin\node_modules\express\lib\router\layer.js:95:5)
+    at D:\webserver\nodejs\rapin\node_modules\express\lib\router\index.js:281:22
+2018-05-10 21:42:07 - _mongoSync2.default is not a constructorTypeError: _mongoSync2.default is not a constructor
+    at new mongodb (D:/webserver/nodejs/rapin/system/library/db/mongodb.js:5:27)
+    at new DB (D:/webserver/nodejs/rapin/system/library/db.js:8:28)
+    at Router.preRequest (D:/webserver/nodejs/rapin/system/engine/router.js:57:37)
+    at D:/webserver/nodejs/rapin/system/engine/router.js:26:42
+    at Layer.handle [as handle_request] (D:\webserver\nodejs\rapin\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\webserver\nodejs\rapin\node_modules\express\lib\router\index.js:317:13)
+    at D:\webserver\nodejs\rapin\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (D:\webserver\nodejs\rapin\node_modules\express\lib\router\index.js:335:12)
+    at next (D:\webserver\nodejs\rapin\node_modules\express\lib\router\index.js:275:10)
+    at cookieParser (D:\webserver\nodejs\rapin\node_modules\cookie-parser\index.js:56:14)
+2018-05-10 21:42:07 - Cannot read property 'query' of undefinedTypeError: Cannot read property 'query' of undefined
+    at Proxy.getPosts (D:/webserver/nodejs/rapin/src/model/blog/post.js:15:30)
+    at Proxy.list (D:/webserver/nodejs/rapin/src/controller/blog/post.js:19:44)
+    at Action.execute (D:/webserver/nodejs/rapin/system/engine/action.js:26:16)
+    at Router.postRequest (D:/webserver/nodejs/rapin/system/engine/router.js:68:20)
+    at D:/webserver/nodejs/rapin/system/engine/router.js:29:56
+    at Layer.handle [as handle_request] (D:\webserver\nodejs\rapin\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\webserver\nodejs\rapin\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (D:\webserver\nodejs\rapin\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (D:\webserver\nodejs\rapin\node_modules\express\lib\router\layer.js:95:5)
+    at D:\webserver\nodejs\rapin\node_modules\express\lib\router\index.js:281:22
+2018-05-10 21:42:16 - _mongoSync2.default is not a constructorTypeError: _mongoSync2.default is not a constructor
+    at new mongodb (D:/webserver/nodejs/rapin/system/library/db/mongodb.js:5:27)
+    at new DB (D:/webserver/nodejs/rapin/system/library/db.js:8:28)
+    at Router.preRequest (D:/webserver/nodejs/rapin/system/engine/router.js:57:37)
+    at D:/webserver/nodejs/rapin/system/engine/router.js:26:42
+    at Layer.handle [as handle_request] (D:\webserver\nodejs\rapin\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\webserver\nodejs\rapin\node_modules\express\lib\router\index.js:317:13)
+    at D:\webserver\nodejs\rapin\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (D:\webserver\nodejs\rapin\node_modules\express\lib\router\index.js:335:12)
+    at next (D:\webserver\nodejs\rapin\node_modules\express\lib\router\index.js:275:10)
+    at cookieParser (D:\webserver\nodejs\rapin\node_modules\cookie-parser\index.js:56:14)
+2018-05-10 21:42:16 - Cannot read property 'query' of undefinedTypeError: Cannot read property 'query' of undefined
+    at Proxy.getPosts (D:/webserver/nodejs/rapin/src/model/blog/post.js:15:30)
+    at Proxy.list (D:/webserver/nodejs/rapin/src/controller/blog/post.js:20:44)
+    at Action.execute (D:/webserver/nodejs/rapin/system/engine/action.js:26:16)
+    at Router.postRequest (D:/webserver/nodejs/rapin/system/engine/router.js:68:20)
+    at D:/webserver/nodejs/rapin/system/engine/router.js:29:56
+    at Layer.handle [as handle_request] (D:\webserver\nodejs\rapin\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\webserver\nodejs\rapin\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (D:\webserver\nodejs\rapin\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (D:\webserver\nodejs\rapin\node_modules\express\lib\router\layer.js:95:5)
+    at D:\webserver\nodejs\rapin\node_modules\express\lib\router\index.js:281:22
+2018-05-10 21:42:54 - _mongoSync2.default is not a constructorTypeError: _mongoSync2.default is not a constructor
+    at new mongodb (D:/webserver/nodejs/rapin/system/library/db/mongodb.js:5:27)
+    at new DB (D:/webserver/nodejs/rapin/system/library/db.js:8:28)
+    at Router.preRequest (D:/webserver/nodejs/rapin/system/engine/router.js:57:37)
+    at D:/webserver/nodejs/rapin/system/engine/router.js:26:42
+    at Layer.handle [as handle_request] (D:\webserver\nodejs\rapin\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\webserver\nodejs\rapin\node_modules\express\lib\router\index.js:317:13)
+    at D:\webserver\nodejs\rapin\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (D:\webserver\nodejs\rapin\node_modules\express\lib\router\index.js:335:12)
+    at next (D:\webserver\nodejs\rapin\node_modules\express\lib\router\index.js:275:10)
+    at cookieParser (D:\webserver\nodejs\rapin\node_modules\cookie-parser\index.js:56:14)
+2018-05-10 21:42:54 - Cannot read property 'query' of undefinedTypeError: Cannot read property 'query' of undefined
+    at Proxy.getPosts (D:/webserver/nodejs/rapin/src/model/blog/post.js:15:30)
+    at Proxy.list (D:/webserver/nodejs/rapin/src/controller/blog/post.js:19:44)
+    at Action.execute (D:/webserver/nodejs/rapin/system/engine/action.js:26:16)
+    at Router.postRequest (D:/webserver/nodejs/rapin/system/engine/router.js:68:20)
+    at D:/webserver/nodejs/rapin/system/engine/router.js:29:56
+    at Layer.handle [as handle_request] (D:\webserver\nodejs\rapin\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\webserver\nodejs\rapin\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (D:\webserver\nodejs\rapin\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (D:\webserver\nodejs\rapin\node_modules\express\lib\router\layer.js:95:5)
+    at D:\webserver\nodejs\rapin\node_modules\express\lib\router\index.js:281:22
+2018-05-10 21:43:33 - _mongoSync2.default is not a constructorTypeError: _mongoSync2.default is not a constructor
+    at new mongodb (D:/webserver/nodejs/rapin/system/library/db/mongodb.js:5:27)
+    at new DB (D:/webserver/nodejs/rapin/system/library/db.js:9:28)
+    at Router.preRequest (D:/webserver/nodejs/rapin/system/engine/router.js:57:37)
+    at D:/webserver/nodejs/rapin/system/engine/router.js:26:42
+    at Layer.handle [as handle_request] (D:\webserver\nodejs\rapin\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\webserver\nodejs\rapin\node_modules\express\lib\router\index.js:317:13)
+    at D:\webserver\nodejs\rapin\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (D:\webserver\nodejs\rapin\node_modules\express\lib\router\index.js:335:12)
+    at next (D:\webserver\nodejs\rapin\node_modules\express\lib\router\index.js:275:10)
+    at cookieParser (D:\webserver\nodejs\rapin\node_modules\cookie-parser\index.js:56:14)
+2018-05-10 21:43:33 - Cannot read property 'query' of undefinedTypeError: Cannot read property 'query' of undefined
+    at Proxy.getPosts (D:/webserver/nodejs/rapin/src/model/blog/post.js:15:30)
+    at Proxy.list (D:/webserver/nodejs/rapin/src/controller/blog/post.js:19:44)
+    at Action.execute (D:/webserver/nodejs/rapin/system/engine/action.js:26:16)
+    at Router.postRequest (D:/webserver/nodejs/rapin/system/engine/router.js:68:20)
+    at D:/webserver/nodejs/rapin/system/engine/router.js:29:56
+    at Layer.handle [as handle_request] (D:\webserver\nodejs\rapin\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\webserver\nodejs\rapin\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (D:\webserver\nodejs\rapin\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (D:\webserver\nodejs\rapin\node_modules\express\lib\router\layer.js:95:5)
+    at D:\webserver\nodejs\rapin\node_modules\express\lib\router\index.js:281:22
+2018-05-10 21:44:13 - _mongoSync2.default is not a constructorTypeError: _mongoSync2.default is not a constructor
+    at new mongodb (D:/webserver/nodejs/rapin/system/library/db/mongodb.js:5:27)
+    at new DB (D:/webserver/nodejs/rapin/system/library/db.js:9:28)
+    at Router.preRequest (D:/webserver/nodejs/rapin/system/engine/router.js:57:37)
+    at D:/webserver/nodejs/rapin/system/engine/router.js:26:42
+    at Layer.handle [as handle_request] (D:\webserver\nodejs\rapin\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\webserver\nodejs\rapin\node_modules\express\lib\router\index.js:317:13)
+    at D:\webserver\nodejs\rapin\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (D:\webserver\nodejs\rapin\node_modules\express\lib\router\index.js:335:12)
+    at next (D:\webserver\nodejs\rapin\node_modules\express\lib\router\index.js:275:10)
+    at cookieParser (D:\webserver\nodejs\rapin\node_modules\cookie-parser\index.js:56:14)
+2018-05-10 21:44:13 - Cannot read property 'query' of undefinedTypeError: Cannot read property 'query' of undefined
+    at Proxy.getPosts (D:/webserver/nodejs/rapin/src/model/blog/post.js:15:30)
+    at Proxy.list (D:/webserver/nodejs/rapin/src/controller/blog/post.js:19:44)
+    at Action.execute (D:/webserver/nodejs/rapin/system/engine/action.js:26:16)
+    at Router.postRequest (D:/webserver/nodejs/rapin/system/engine/router.js:68:20)
+    at D:/webserver/nodejs/rapin/system/engine/router.js:29:56
+    at Layer.handle [as handle_request] (D:\webserver\nodejs\rapin\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\webserver\nodejs\rapin\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (D:\webserver\nodejs\rapin\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (D:\webserver\nodejs\rapin\node_modules\express\lib\router\layer.js:95:5)
+    at D:\webserver\nodejs\rapin\node_modules\express\lib\router\index.js:281:22
+2018-05-10 21:44:55 - _mongoSync2.default is not a constructorTypeError: _mongoSync2.default is not a constructor
+    at new mongodb (D:/webserver/nodejs/rapin/system/library/db/mongodb.js:5:27)
+    at new DB (D:/webserver/nodejs/rapin/system/library/db.js:9:28)
+    at Router.preRequest (D:/webserver/nodejs/rapin/system/engine/router.js:57:37)
+    at D:/webserver/nodejs/rapin/system/engine/router.js:26:42
+    at Layer.handle [as handle_request] (D:\webserver\nodejs\rapin\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\webserver\nodejs\rapin\node_modules\express\lib\router\index.js:317:13)
+    at D:\webserver\nodejs\rapin\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (D:\webserver\nodejs\rapin\node_modules\express\lib\router\index.js:335:12)
+    at next (D:\webserver\nodejs\rapin\node_modules\express\lib\router\index.js:275:10)
+    at cookieParser (D:\webserver\nodejs\rapin\node_modules\cookie-parser\index.js:56:14)
+2018-05-10 21:44:55 - Cannot read property 'query' of undefinedTypeError: Cannot read property 'query' of undefined
+    at Proxy.getPosts (D:/webserver/nodejs/rapin/src/model/blog/post.js:15:30)
+    at Proxy.list (D:/webserver/nodejs/rapin/src/controller/blog/post.js:19:44)
+    at Action.execute (D:/webserver/nodejs/rapin/system/engine/action.js:26:16)
+    at Router.postRequest (D:/webserver/nodejs/rapin/system/engine/router.js:68:20)
+    at D:/webserver/nodejs/rapin/system/engine/router.js:29:56
+    at Layer.handle [as handle_request] (D:\webserver\nodejs\rapin\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\webserver\nodejs\rapin\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (D:\webserver\nodejs\rapin\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (D:\webserver\nodejs\rapin\node_modules\express\lib\router\layer.js:95:5)
+    at D:\webserver\nodejs\rapin\node_modules\express\lib\router\index.js:281:22
+2018-05-10 21:45:04 - _mongoSync2.default is not a constructorTypeError: _mongoSync2.default is not a constructor
+    at new mongodb (D:/webserver/nodejs/rapin/system/library/db/mongodb.js:5:27)
+    at new DB (D:/webserver/nodejs/rapin/system/library/db.js:10:28)
+    at Router.preRequest (D:/webserver/nodejs/rapin/system/engine/router.js:57:37)
+    at D:/webserver/nodejs/rapin/system/engine/router.js:26:42
+    at Layer.handle [as handle_request] (D:\webserver\nodejs\rapin\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\webserver\nodejs\rapin\node_modules\express\lib\router\index.js:317:13)
+    at D:\webserver\nodejs\rapin\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (D:\webserver\nodejs\rapin\node_modules\express\lib\router\index.js:335:12)
+    at next (D:\webserver\nodejs\rapin\node_modules\express\lib\router\index.js:275:10)
+    at cookieParser (D:\webserver\nodejs\rapin\node_modules\cookie-parser\index.js:56:14)
+2018-05-10 21:45:04 - Cannot read property 'query' of undefinedTypeError: Cannot read property 'query' of undefined
+    at Proxy.getPosts (D:/webserver/nodejs/rapin/src/model/blog/post.js:15:30)
+    at Proxy.list (D:/webserver/nodejs/rapin/src/controller/blog/post.js:19:44)
+    at Action.execute (D:/webserver/nodejs/rapin/system/engine/action.js:26:16)
+    at Router.postRequest (D:/webserver/nodejs/rapin/system/engine/router.js:68:20)
+    at D:/webserver/nodejs/rapin/system/engine/router.js:29:56
+    at Layer.handle [as handle_request] (D:\webserver\nodejs\rapin\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\webserver\nodejs\rapin\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (D:\webserver\nodejs\rapin\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (D:\webserver\nodejs\rapin\node_modules\express\lib\router\layer.js:95:5)
+    at D:\webserver\nodejs\rapin\node_modules\express\lib\router\index.js:281:22
+2018-05-10 21:47:29 - _mongoSync2.default is not a constructorTypeError: _mongoSync2.default is not a constructor
+    at new mongodb (D:/webserver/nodejs/rapin/system/library/db/mongodb.js:6:27)
+    at new DB (D:/webserver/nodejs/rapin/system/library/db.js:10:28)
+    at Router.preRequest (D:/webserver/nodejs/rapin/system/engine/router.js:57:37)
+    at D:/webserver/nodejs/rapin/system/engine/router.js:26:42
+    at Layer.handle [as handle_request] (D:\webserver\nodejs\rapin\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\webserver\nodejs\rapin\node_modules\express\lib\router\index.js:317:13)
+    at D:\webserver\nodejs\rapin\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (D:\webserver\nodejs\rapin\node_modules\express\lib\router\index.js:335:12)
+    at next (D:\webserver\nodejs\rapin\node_modules\express\lib\router\index.js:275:10)
+    at cookieParser (D:\webserver\nodejs\rapin\node_modules\cookie-parser\index.js:56:14)
+2018-05-10 21:47:29 - Cannot read property 'query' of undefinedTypeError: Cannot read property 'query' of undefined
+    at Proxy.getPosts (D:/webserver/nodejs/rapin/src/model/blog/post.js:15:30)
+    at Proxy.list (D:/webserver/nodejs/rapin/src/controller/blog/post.js:19:44)
+    at Action.execute (D:/webserver/nodejs/rapin/system/engine/action.js:26:16)
+    at Router.postRequest (D:/webserver/nodejs/rapin/system/engine/router.js:68:20)
+    at D:/webserver/nodejs/rapin/system/engine/router.js:29:56
+    at Layer.handle [as handle_request] (D:\webserver\nodejs\rapin\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\webserver\nodejs\rapin\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (D:\webserver\nodejs\rapin\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (D:\webserver\nodejs\rapin\node_modules\express\lib\router\layer.js:95:5)
+    at D:\webserver\nodejs\rapin\node_modules\express\lib\router\index.js:281:22
+2018-05-10 21:47:59 - _mongoSync2.default is not a constructorTypeError: _mongoSync2.default is not a constructor
+    at new mongodb (D:/webserver/nodejs/rapin/system/library/db/mongodb.js:6:27)
+    at new DB (D:/webserver/nodejs/rapin/system/library/db.js:11:28)
+    at Router.preRequest (D:/webserver/nodejs/rapin/system/engine/router.js:57:37)
+    at D:/webserver/nodejs/rapin/system/engine/router.js:26:42
+    at Layer.handle [as handle_request] (D:\webserver\nodejs\rapin\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\webserver\nodejs\rapin\node_modules\express\lib\router\index.js:317:13)
+    at D:\webserver\nodejs\rapin\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (D:\webserver\nodejs\rapin\node_modules\express\lib\router\index.js:335:12)
+    at next (D:\webserver\nodejs\rapin\node_modules\express\lib\router\index.js:275:10)
+    at cookieParser (D:\webserver\nodejs\rapin\node_modules\cookie-parser\index.js:56:14)
+2018-05-10 21:47:59 - Cannot read property 'query' of undefinedTypeError: Cannot read property 'query' of undefined
+    at Proxy.getPosts (D:/webserver/nodejs/rapin/src/model/blog/post.js:15:30)
+    at Proxy.list (D:/webserver/nodejs/rapin/src/controller/blog/post.js:19:44)
+    at Action.execute (D:/webserver/nodejs/rapin/system/engine/action.js:26:16)
+    at Router.postRequest (D:/webserver/nodejs/rapin/system/engine/router.js:68:20)
+    at D:/webserver/nodejs/rapin/system/engine/router.js:29:56
+    at Layer.handle [as handle_request] (D:\webserver\nodejs\rapin\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\webserver\nodejs\rapin\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (D:\webserver\nodejs\rapin\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (D:\webserver\nodejs\rapin\node_modules\express\lib\router\layer.js:95:5)
+    at D:\webserver\nodejs\rapin\node_modules\express\lib\router\index.js:281:22
+2018-05-10 21:48:54 - yield() called with no fiber runningError: yield() called with no fiber running
+    at Function.yield (D:\webserver\nodejs\rapin\node_modules\fibers\fibers.js:89:16)
+    at DB.open (D:\webserver\nodejs\rapin\node_modules\mongo-sync\lib\mongo-sync.js:24:18)
+    at Server.db (D:\webserver\nodejs\rapin\node_modules\mongo-sync\lib\mongo-sync.js:50:10)
+    at new mongodb (D:/webserver/nodejs/rapin/system/library/db/mongodb.js:8:43)
+    at new DB (D:/webserver/nodejs/rapin/system/library/db.js:11:28)
+    at Router.preRequest (D:/webserver/nodejs/rapin/system/engine/router.js:57:37)
+    at D:/webserver/nodejs/rapin/system/engine/router.js:26:42
+    at Layer.handle [as handle_request] (D:\webserver\nodejs\rapin\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\webserver\nodejs\rapin\node_modules\express\lib\router\index.js:317:13)
+    at D:\webserver\nodejs\rapin\node_modules\express\lib\router\index.js:284:7
+2018-05-10 21:48:54 - Cannot read property 'query' of undefinedTypeError: Cannot read property 'query' of undefined
+    at Proxy.getPosts (D:/webserver/nodejs/rapin/src/model/blog/post.js:15:30)
+    at Proxy.list (D:/webserver/nodejs/rapin/src/controller/blog/post.js:19:44)
+    at Action.execute (D:/webserver/nodejs/rapin/system/engine/action.js:26:16)
+    at Router.postRequest (D:/webserver/nodejs/rapin/system/engine/router.js:68:20)
+    at D:/webserver/nodejs/rapin/system/engine/router.js:29:56
+    at Layer.handle [as handle_request] (D:\webserver\nodejs\rapin\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\webserver\nodejs\rapin\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (D:\webserver\nodejs\rapin\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (D:\webserver\nodejs\rapin\node_modules\express\lib\router\layer.js:95:5)
+    at D:\webserver\nodejs\rapin\node_modules\express\lib\router\index.js:281:22
+2018-05-10 21:49:59 - yield() called with no fiber runningError: yield() called with no fiber running
+    at Function.yield (D:\webserver\nodejs\rapin\node_modules\fibers\fibers.js:89:16)
+    at DB.open (D:\webserver\nodejs\rapin\node_modules\mongo-sync\lib\mongo-sync.js:24:18)
+    at Server.db (D:\webserver\nodejs\rapin\node_modules\mongo-sync\lib\mongo-sync.js:50:10)
+    at new mongodb (D:/webserver/nodejs/rapin/system/library/db/mongodb.js:8:43)
+    at new DB (D:/webserver/nodejs/rapin/system/library/db.js:11:28)
+    at Router.preRequest (D:/webserver/nodejs/rapin/system/engine/router.js:57:37)
+    at D:/webserver/nodejs/rapin/system/engine/router.js:26:42
+    at Layer.handle [as handle_request] (D:\webserver\nodejs\rapin\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\webserver\nodejs\rapin\node_modules\express\lib\router\index.js:317:13)
+    at D:\webserver\nodejs\rapin\node_modules\express\lib\router\index.js:284:7
+2018-05-10 21:50:00 - Cannot read property 'query' of undefinedTypeError: Cannot read property 'query' of undefined
+    at Proxy.getPosts (D:/webserver/nodejs/rapin/src/model/blog/post.js:15:30)
+    at Proxy.list (D:/webserver/nodejs/rapin/src/controller/blog/post.js:19:44)
+    at Action.execute (D:/webserver/nodejs/rapin/system/engine/action.js:26:16)
+    at Router.postRequest (D:/webserver/nodejs/rapin/system/engine/router.js:68:20)
+    at D:/webserver/nodejs/rapin/system/engine/router.js:29:56
+    at Layer.handle [as handle_request] (D:\webserver\nodejs\rapin\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\webserver\nodejs\rapin\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (D:\webserver\nodejs\rapin\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (D:\webserver\nodejs\rapin\node_modules\express\lib\router\layer.js:95:5)
+    at D:\webserver\nodejs\rapin\node_modules\express\lib\router\index.js:281:22
+2018-05-10 21:50:08 - yield() called with no fiber runningError: yield() called with no fiber running
+    at Function.yield (D:\webserver\nodejs\rapin\node_modules\fibers\fibers.js:89:16)
+    at DB.open (D:\webserver\nodejs\rapin\node_modules\mongo-sync\lib\mongo-sync.js:24:18)
+    at Server.db (D:\webserver\nodejs\rapin\node_modules\mongo-sync\lib\mongo-sync.js:50:10)
+    at new mongodb (D:/webserver/nodejs/rapin/system/library/db/mongodb.js:8:43)
+    at new DB (D:/webserver/nodejs/rapin/system/library/db.js:11:28)
+    at Router.preRequest (D:/webserver/nodejs/rapin/system/engine/router.js:57:37)
+    at D:/webserver/nodejs/rapin/system/engine/router.js:26:42
+    at Layer.handle [as handle_request] (D:\webserver\nodejs\rapin\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\webserver\nodejs\rapin\node_modules\express\lib\router\index.js:317:13)
+    at D:\webserver\nodejs\rapin\node_modules\express\lib\router\index.js:284:7
+2018-05-10 21:50:08 - Cannot read property 'query' of undefinedTypeError: Cannot read property 'query' of undefined
+    at Proxy.getPosts (D:/webserver/nodejs/rapin/src/model/blog/post.js:15:30)
+    at Proxy.list (D:/webserver/nodejs/rapin/src/controller/blog/post.js:19:44)
+    at Action.execute (D:/webserver/nodejs/rapin/system/engine/action.js:26:16)
+    at Router.postRequest (D:/webserver/nodejs/rapin/system/engine/router.js:68:20)
+    at D:/webserver/nodejs/rapin/system/engine/router.js:29:56
+    at Layer.handle [as handle_request] (D:\webserver\nodejs\rapin\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\webserver\nodejs\rapin\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (D:\webserver\nodejs\rapin\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (D:\webserver\nodejs\rapin\node_modules\express\lib\router\layer.js:95:5)
+    at D:\webserver\nodejs\rapin\node_modules\express\lib\router\index.js:281:22
+2018-05-10 21:50:33 - yield() called with no fiber runningError: yield() called with no fiber running
+    at Function.yield (D:\webserver\nodejs\rapin\node_modules\fibers\fibers.js:89:16)
+    at DB.open (D:\webserver\nodejs\rapin\node_modules\mongo-sync\lib\mongo-sync.js:24:18)
+    at Server.db (D:\webserver\nodejs\rapin\node_modules\mongo-sync\lib\mongo-sync.js:50:10)
+    at new mongodb (D:/webserver/nodejs/rapin/system/library/db/mongodb.js:8:43)
+    at new DB (D:/webserver/nodejs/rapin/system/library/db.js:11:28)
+    at Router.preRequest (D:/webserver/nodejs/rapin/system/engine/router.js:57:37)
+    at D:/webserver/nodejs/rapin/system/engine/router.js:26:42
+    at Layer.handle [as handle_request] (D:\webserver\nodejs\rapin\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\webserver\nodejs\rapin\node_modules\express\lib\router\index.js:317:13)
+    at D:\webserver\nodejs\rapin\node_modules\express\lib\router\index.js:284:7
+2018-05-10 21:50:33 - Cannot read property 'query' of undefinedTypeError: Cannot read property 'query' of undefined
+    at Proxy.getPosts (D:/webserver/nodejs/rapin/src/model/blog/post.js:15:30)
+    at Proxy.list (D:/webserver/nodejs/rapin/src/controller/blog/post.js:19:44)
+    at Action.execute (D:/webserver/nodejs/rapin/system/engine/action.js:26:16)
+    at Router.postRequest (D:/webserver/nodejs/rapin/system/engine/router.js:68:20)
+    at D:/webserver/nodejs/rapin/system/engine/router.js:29:56
+    at Layer.handle [as handle_request] (D:\webserver\nodejs\rapin\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\webserver\nodejs\rapin\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (D:\webserver\nodejs\rapin\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (D:\webserver\nodejs\rapin\node_modules\express\lib\router\layer.js:95:5)
+    at D:\webserver\nodejs\rapin\node_modules\express\lib\router\index.js:281:22
+2018-05-10 21:50:39 - yield() called with no fiber runningError: yield() called with no fiber running
+    at Function.yield (D:\webserver\nodejs\rapin\node_modules\fibers\fibers.js:89:16)
+    at DB.open (D:\webserver\nodejs\rapin\node_modules\mongo-sync\lib\mongo-sync.js:24:18)
+    at Server.db (D:\webserver\nodejs\rapin\node_modules\mongo-sync\lib\mongo-sync.js:50:10)
+    at new mongodb (D:/webserver/nodejs/rapin/system/library/db/mongodb.js:8:43)
+    at new DB (D:/webserver/nodejs/rapin/system/library/db.js:11:28)
+    at Router.preRequest (D:/webserver/nodejs/rapin/system/engine/router.js:57:37)
+    at D:/webserver/nodejs/rapin/system/engine/router.js:26:42
+    at Layer.handle [as handle_request] (D:\webserver\nodejs\rapin\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\webserver\nodejs\rapin\node_modules\express\lib\router\index.js:317:13)
+    at D:\webserver\nodejs\rapin\node_modules\express\lib\router\index.js:284:7
+2018-05-10 21:50:39 - Cannot read property 'query' of undefinedTypeError: Cannot read property 'query' of undefined
+    at Proxy.getPosts (D:/webserver/nodejs/rapin/src/model/blog/post.js:15:30)
+    at Proxy.list (D:/webserver/nodejs/rapin/src/controller/blog/post.js:19:44)
+    at Action.execute (D:/webserver/nodejs/rapin/system/engine/action.js:26:16)
+    at Router.postRequest (D:/webserver/nodejs/rapin/system/engine/router.js:68:20)
+    at D:/webserver/nodejs/rapin/system/engine/router.js:29:56
+    at Layer.handle [as handle_request] (D:\webserver\nodejs\rapin\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\webserver\nodejs\rapin\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (D:\webserver\nodejs\rapin\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (D:\webserver\nodejs\rapin\node_modules\express\lib\router\layer.js:95:5)
+    at D:\webserver\nodejs\rapin\node_modules\express\lib\router\index.js:281:22
+2018-05-13 16:06:19 - find is not definedReferenceError: find is not defined
+    at Proxy.getPosts (D:/webserver/nodejs/rapin/src/model/blog/post.js:15:43)
+    at Proxy.list (D:/webserver/nodejs/rapin/src/controller/blog/post.js:19:44)
+    at Action.execute (D:/webserver/nodejs/rapin/system/engine/action.js:26:16)
+    at Router.postRequest (D:/webserver/nodejs/rapin/system/engine/router.js:68:20)
+    at D:/webserver/nodejs/rapin/system/engine/router.js:29:56
+    at Layer.handle [as handle_request] (D:\webserver\nodejs\rapin\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\webserver\nodejs\rapin\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (D:\webserver\nodejs\rapin\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (D:\webserver\nodejs\rapin\node_modules\express\lib\router\layer.js:95:5)
+    at D:\webserver\nodejs\rapin\node_modules\express\lib\router\index.js:281:22
+2018-05-13 16:07:17 - find is not definedReferenceError: find is not defined
+    at Proxy.getPosts (D:/webserver/nodejs/rapin/src/model/blog/post.js:15:43)
+    at Proxy.list (D:/webserver/nodejs/rapin/src/controller/blog/post.js:19:44)
+    at Action.execute (D:/webserver/nodejs/rapin/system/engine/action.js:26:16)
+    at Router.postRequest (D:/webserver/nodejs/rapin/system/engine/router.js:68:20)
+    at D:/webserver/nodejs/rapin/system/engine/router.js:29:56
+    at Layer.handle [as handle_request] (D:\webserver\nodejs\rapin\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\webserver\nodejs\rapin\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (D:\webserver\nodejs\rapin\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (D:\webserver\nodejs\rapin\node_modules\express\lib\router\layer.js:95:5)
+    at D:\webserver\nodejs\rapin\node_modules\express\lib\router\index.js:281:22
+2018-05-13 16:19:06 - Cannot find module 'co'Error: Cannot find module 'co'
+    at Function.Module._resolveFilename (module.js:538:15)
+    at Function.Module._resolveFilename (D:\webserver\nodejs\rapin\node_modules\module-alias\index.js:43:29)
+    at Function.Module._load (module.js:468:25)
+    at Module.require (module.js:587:17)
+    at require (internal/module.js:11:18)
+    at Object.<anonymous> (D:/webserver/nodejs/rapin/system/library/db/mongodb.js:2:1)
+    at Module._compile (module.js:643:30)
+    at loader (D:\webserver\nodejs\rapin\node_modules\babel-register\lib\node.js:144:5)
+    at Object.require.extensions.(anonymous function) [as .js] (D:\webserver\nodejs\rapin\node_modules\babel-register\lib\node.js:154:7)
+    at Module.load (module.js:556:32)
+2018-05-13 16:19:06 - Cannot read property 'query' of undefinedTypeError: Cannot read property 'query' of undefined
+    at Proxy.getPosts (D:/webserver/nodejs/rapin/src/model/blog/post.js:15:30)
+    at Proxy.list (D:/webserver/nodejs/rapin/src/controller/blog/post.js:19:44)
+    at Action.execute (D:/webserver/nodejs/rapin/system/engine/action.js:26:16)
+    at Router.postRequest (D:/webserver/nodejs/rapin/system/engine/router.js:68:20)
+    at D:/webserver/nodejs/rapin/system/engine/router.js:29:56
+    at Layer.handle [as handle_request] (D:\webserver\nodejs\rapin\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\webserver\nodejs\rapin\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (D:\webserver\nodejs\rapin\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (D:\webserver\nodejs\rapin\node_modules\express\lib\router\layer.js:95:5)
+    at D:\webserver\nodejs\rapin\node_modules\express\lib\router\index.js:281:22
+2018-05-13 16:19:44 - Cannot find module 'co'Error: Cannot find module 'co'
+    at Function.Module._resolveFilename (module.js:538:15)
+    at Function.Module._resolveFilename (D:\webserver\nodejs\rapin\node_modules\module-alias\index.js:43:29)
+    at Function.Module._load (module.js:468:25)
+    at Module.require (module.js:587:17)
+    at require (internal/module.js:11:18)
+    at Object.<anonymous> (D:/webserver/nodejs/rapin/system/library/db/mongodb.js:2:1)
+    at Module._compile (module.js:643:30)
+    at loader (D:\webserver\nodejs\rapin\node_modules\babel-register\lib\node.js:144:5)
+    at Object.require.extensions.(anonymous function) [as .js] (D:\webserver\nodejs\rapin\node_modules\babel-register\lib\node.js:154:7)
+    at Module.load (module.js:556:32)
+2018-05-13 16:19:44 - Cannot read property 'query' of undefinedTypeError: Cannot read property 'query' of undefined
+    at Proxy.getPosts (D:/webserver/nodejs/rapin/src/model/blog/post.js:15:30)
+    at Proxy.list (D:/webserver/nodejs/rapin/src/controller/blog/post.js:19:44)
+    at Action.execute (D:/webserver/nodejs/rapin/system/engine/action.js:26:16)
+    at Router.postRequest (D:/webserver/nodejs/rapin/system/engine/router.js:68:20)
+    at D:/webserver/nodejs/rapin/system/engine/router.js:29:56
+    at Layer.handle [as handle_request] (D:\webserver\nodejs\rapin\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\webserver\nodejs\rapin\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (D:\webserver\nodejs\rapin\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (D:\webserver\nodejs\rapin\node_modules\express\lib\router\layer.js:95:5)
+    at D:\webserver\nodejs\rapin\node_modules\express\lib\router\index.js:281:22
+2018-05-13 16:20:41 - Cannot find module 'co'Error: Cannot find module 'co'
+    at Function.Module._resolveFilename (module.js:538:15)
+    at Function.Module._resolveFilename (D:\webserver\nodejs\rapin\node_modules\module-alias\index.js:43:29)
+    at Function.Module._load (module.js:468:25)
+    at Module.require (module.js:587:17)
+    at require (internal/module.js:11:18)
+    at Object.<anonymous> (D:/webserver/nodejs/rapin/system/library/db/mongodb.js:2:1)
+    at Module._compile (module.js:643:30)
+    at loader (D:\webserver\nodejs\rapin\node_modules\babel-register\lib\node.js:144:5)
+    at Object.require.extensions.(anonymous function) [as .js] (D:\webserver\nodejs\rapin\node_modules\babel-register\lib\node.js:154:7)
+    at Module.load (module.js:556:32)
+2018-05-13 16:20:41 - Cannot read property 'query' of undefinedTypeError: Cannot read property 'query' of undefined
+    at Proxy.getPosts (D:/webserver/nodejs/rapin/src/model/blog/post.js:15:30)
+    at Proxy.list (D:/webserver/nodejs/rapin/src/controller/blog/post.js:19:44)
+    at Action.execute (D:/webserver/nodejs/rapin/system/engine/action.js:26:16)
+    at Router.postRequest (D:/webserver/nodejs/rapin/system/engine/router.js:68:20)
+    at D:/webserver/nodejs/rapin/system/engine/router.js:29:56
+    at Layer.handle [as handle_request] (D:\webserver\nodejs\rapin\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\webserver\nodejs\rapin\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (D:\webserver\nodejs\rapin\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (D:\webserver\nodejs\rapin\node_modules\express\lib\router\layer.js:95:5)
+    at D:\webserver\nodejs\rapin\node_modules\express\lib\router\index.js:281:22
+2018-05-13 16:21:13 - Cannot find module 'co'Error: Cannot find module 'co'
+    at Function.Module._resolveFilename (module.js:538:15)
+    at Function.Module._resolveFilename (D:\webserver\nodejs\rapin\node_modules\module-alias\index.js:43:29)
+    at Function.Module._load (module.js:468:25)
+    at Module.require (module.js:587:17)
+    at require (internal/module.js:11:18)
+    at Object.<anonymous> (D:/webserver/nodejs/rapin/system/library/db/mongodb.js:2:1)
+    at Module._compile (module.js:643:30)
+    at loader (D:\webserver\nodejs\rapin\node_modules\babel-register\lib\node.js:144:5)
+    at Object.require.extensions.(anonymous function) [as .js] (D:\webserver\nodejs\rapin\node_modules\babel-register\lib\node.js:154:7)
+    at Module.load (module.js:556:32)
+2018-05-13 16:21:13 - Cannot read property 'query' of undefinedTypeError: Cannot read property 'query' of undefined
+    at Proxy.getPosts (D:/webserver/nodejs/rapin/src/model/blog/post.js:15:30)
+    at Proxy.list (D:/webserver/nodejs/rapin/src/controller/blog/post.js:19:44)
+    at Action.execute (D:/webserver/nodejs/rapin/system/engine/action.js:26:16)
+    at Router.postRequest (D:/webserver/nodejs/rapin/system/engine/router.js:68:20)
+    at D:/webserver/nodejs/rapin/system/engine/router.js:29:56
+    at Layer.handle [as handle_request] (D:\webserver\nodejs\rapin\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\webserver\nodejs\rapin\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (D:\webserver\nodejs\rapin\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (D:\webserver\nodejs\rapin\node_modules\express\lib\router\layer.js:95:5)
+    at D:\webserver\nodejs\rapin\node_modules\express\lib\router\index.js:281:22
+2018-05-13 16:21:59 - url is not definedReferenceError: url is not defined
+    at new mongodb (D:/webserver/nodejs/rapin/system/library/db/mongodb.js:7:72)
+    at new DB (D:/webserver/nodejs/rapin/system/library/db.js:8:28)
+    at Router.preRequest (D:/webserver/nodejs/rapin/system/engine/router.js:57:37)
+    at D:/webserver/nodejs/rapin/system/engine/router.js:26:42
+    at Layer.handle [as handle_request] (D:\webserver\nodejs\rapin\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\webserver\nodejs\rapin\node_modules\express\lib\router\index.js:317:13)
+    at D:\webserver\nodejs\rapin\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (D:\webserver\nodejs\rapin\node_modules\express\lib\router\index.js:335:12)
+    at next (D:\webserver\nodejs\rapin\node_modules\express\lib\router\index.js:275:10)
+    at cookieParser (D:\webserver\nodejs\rapin\node_modules\cookie-parser\index.js:56:14)
+2018-05-13 16:21:59 - Cannot read property 'query' of undefinedTypeError: Cannot read property 'query' of undefined
+    at Proxy.getPosts (D:/webserver/nodejs/rapin/src/model/blog/post.js:15:30)
+    at Proxy.list (D:/webserver/nodejs/rapin/src/controller/blog/post.js:19:44)
+    at Action.execute (D:/webserver/nodejs/rapin/system/engine/action.js:26:16)
+    at Router.postRequest (D:/webserver/nodejs/rapin/system/engine/router.js:68:20)
+    at D:/webserver/nodejs/rapin/system/engine/router.js:29:56
+    at Layer.handle [as handle_request] (D:\webserver\nodejs\rapin\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\webserver\nodejs\rapin\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (D:\webserver\nodejs\rapin\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (D:\webserver\nodejs\rapin\node_modules\express\lib\router\layer.js:95:5)
+    at D:\webserver\nodejs\rapin\node_modules\express\lib\router\index.js:281:22
+2018-05-13 16:26:42 - url is not definedReferenceError: url is not defined
+    at new mongodb (D:/webserver/nodejs/rapin/system/library/db/mongodb.js:8:72)
+    at new DB (D:/webserver/nodejs/rapin/system/library/db.js:8:28)
+    at Router.preRequest (D:/webserver/nodejs/rapin/system/engine/router.js:57:37)
+    at D:/webserver/nodejs/rapin/system/engine/router.js:26:42
+    at Layer.handle [as handle_request] (D:\webserver\nodejs\rapin\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\webserver\nodejs\rapin\node_modules\express\lib\router\index.js:317:13)
+    at D:\webserver\nodejs\rapin\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (D:\webserver\nodejs\rapin\node_modules\express\lib\router\index.js:335:12)
+    at next (D:\webserver\nodejs\rapin\node_modules\express\lib\router\index.js:275:10)
+    at cookieParser (D:\webserver\nodejs\rapin\node_modules\cookie-parser\index.js:56:14)
+2018-05-13 16:26:42 - Cannot read property 'query' of undefinedTypeError: Cannot read property 'query' of undefined
+    at Proxy.getPosts (D:/webserver/nodejs/rapin/src/model/blog/post.js:15:30)
+    at Proxy.list (D:/webserver/nodejs/rapin/src/controller/blog/post.js:19:44)
+    at Action.execute (D:/webserver/nodejs/rapin/system/engine/action.js:26:16)
+    at Router.postRequest (D:/webserver/nodejs/rapin/system/engine/router.js:68:20)
+    at D:/webserver/nodejs/rapin/system/engine/router.js:29:56
+    at Layer.handle [as handle_request] (D:\webserver\nodejs\rapin\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\webserver\nodejs\rapin\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (D:\webserver\nodejs\rapin\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (D:\webserver\nodejs\rapin\node_modules\express\lib\router\layer.js:95:5)
+    at D:\webserver\nodejs\rapin\node_modules\express\lib\router\index.js:281:22
+2018-05-13 16:28:47 - collection is not definedReferenceError: collection is not defined
+    at mongodb.query (D:/webserver/nodejs/rapin/system/library/db/mongodb.js:27:66)
+    at DB.query (D:/webserver/nodejs/rapin/system/library/db.js:12:29)
+    at Proxy.getPosts (D:/webserver/nodejs/rapin/src/model/blog/post.js:15:30)
+    at Proxy.list (D:/webserver/nodejs/rapin/src/controller/blog/post.js:19:44)
+    at Action.execute (D:/webserver/nodejs/rapin/system/engine/action.js:26:16)
+    at Router.postRequest (D:/webserver/nodejs/rapin/system/engine/router.js:68:20)
+    at D:/webserver/nodejs/rapin/system/engine/router.js:29:56
+    at Layer.handle [as handle_request] (D:\webserver\nodejs\rapin\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\webserver\nodejs\rapin\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (D:\webserver\nodejs\rapin\node_modules\express\lib\router\route.js:112:3)
+2018-05-13 16:29:18 - this.connection.collection is not a functionTypeError: this.connection.collection is not a function
+    at mongodb.query (D:/webserver/nodejs/rapin/system/library/db/mongodb.js:27:55)
+    at DB.query (D:/webserver/nodejs/rapin/system/library/db.js:12:29)
+    at Proxy.getPosts (D:/webserver/nodejs/rapin/src/model/blog/post.js:15:30)
+    at Proxy.list (D:/webserver/nodejs/rapin/src/controller/blog/post.js:19:44)
+    at Action.execute (D:/webserver/nodejs/rapin/system/engine/action.js:26:16)
+    at Router.postRequest (D:/webserver/nodejs/rapin/system/engine/router.js:68:20)
+    at D:/webserver/nodejs/rapin/system/engine/router.js:29:56
+    at Layer.handle [as handle_request] (D:\webserver\nodejs\rapin\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\webserver\nodejs\rapin\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (D:\webserver\nodejs\rapin\node_modules\express\lib\router\route.js:112:3)
+2018-05-13 16:32:05 - this.connection.collection(...)[type](...).toArray is not a functionTypeError: this.connection.collection(...)[type](...).toArray is not a function
+    at mongodb.query (D:/webserver/nodejs/rapin/system/library/db/mongodb.js:28:90)
+    at DB.query (D:/webserver/nodejs/rapin/system/library/db.js:12:29)
+    at Proxy.getPosts (D:/webserver/nodejs/rapin/src/model/blog/post.js:15:30)
+    at Proxy.list (D:/webserver/nodejs/rapin/src/controller/blog/post.js:19:44)
+    at Action.execute (D:/webserver/nodejs/rapin/system/engine/action.js:26:16)
+    at Router.postRequest (D:/webserver/nodejs/rapin/system/engine/router.js:68:20)
+    at D:/webserver/nodejs/rapin/system/engine/router.js:29:56
+    at Layer.handle [as handle_request] (D:\webserver\nodejs\rapin\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\webserver\nodejs\rapin\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (D:\webserver\nodejs\rapin\node_modules\express\lib\router\route.js:112:3)

@@ -12,7 +12,6 @@ export default class ModelBlogPost extends Model {
         return query.row
     }
     getPosts() {
-
         const cache = this.cache.get('blog_posts')
 
         let results = []
@@ -26,6 +25,5 @@ export default class ModelBlogPost extends Model {
         }
 
         return results
-
     }
 }

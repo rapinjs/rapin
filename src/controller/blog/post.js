@@ -20,6 +20,7 @@ export default class ControllerBlogPost extends Controller {
         this.response.setOutput(posts)
     }
     post(){
+
         this.load.language('blog/post')
 
         this.load.model('blog/post')

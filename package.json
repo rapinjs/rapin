@@ -17,8 +17,10 @@
     "lodash": "^4.17.5",
     "module-alias": "^2.0.6",
     "moment": "^2.22.0",
+    "mongodb": "^3.1.0-beta4",
     "mysql": "^2.15.0",
-    "sync-mysql": "^3.0.1"
+    "sync-mysql": "^3.0.1",
+    "wait-for-stuff": "^1.4.0"
   },
   "_moduleAliases": {
     "@system": "system",
