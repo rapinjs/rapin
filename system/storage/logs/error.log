@@ -1162,3 +1162,708 @@ unknown filter ":javascript"
     at Compiler.visitTag (D:\webserver\nodejs\rapin\node_modules\jade\lib\compiler.js:480:12)
     at Compiler.visitNode (D:\webserver\nodejs\rapin\node_modules\jade\lib\compiler.js:225:37)
     at Compiler.visit (D:\webserver\nodejs\rapin\node_modules\jade\lib\compiler.js:212:10)
+2018-05-13 17:47:10 - You must pass a string or Handlebars AST to Handlebars.compile. You passed <!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Pug</title>
+    <script type="text/javascript">
+        if (foo) bar(1 + 5)
+    </script>
+</head>
+<body>
+<h1>Pug - node template engine</h1>
+<div id="container" class="col">
+    <p>You are amazing</p>
+    <p>Pug is a terse and simple templating language with a strong focus on performance and powerful features.</p>
+</div>
+</body>
+</html>Error: You must pass a string or Handlebars AST to Handlebars.compile. You passed <!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Pug</title>
+    <script type="text/javascript">
+        if (foo) bar(1 + 5)
+    </script>
+</head>
+<body>
+<h1>Pug - node template engine</h1>
+<div id="container" class="col">
+    <p>You are amazing</p>
+    <p>Pug is a terse and simple templating language with a strong focus on performance and powerful features.</p>
+</div>
+</body>
+</html>
+    at Object.compile (D:\webserver\nodejs\rapin\node_modules\Handlebars\lib\handlebars\compiler\compiler.js:488:11)
+    at HandlebarsEnvironment.hb.compile (D:\webserver\nodejs\rapin\node_modules\Handlebars\lib\handlebars.js:17:12)
+    at Handlebars.render (D:/webserver/nodejs/rapin/system/library/template/handlebars.js:15:43)
+    at Template.render (D:/webserver/nodejs/rapin/system/library/template.js:18:29)
+    at Loader.view (D:/webserver/nodejs/rapin/system/engine/loader.js:34:33)
+    at Proxy.index (D:/webserver/nodejs/rapin/src/controller/common/home.js:3:43)
+    at Action.execute (D:/webserver/nodejs/rapin/system/engine/action.js:26:16)
+    at Router.postRequest (D:/webserver/nodejs/rapin/system/engine/router.js:68:20)
+    at D:/webserver/nodejs/rapin/system/engine/router.js:29:56
+    at Layer.handle [as handle_request] (D:\webserver\nodejs\rapin\node_modules\express\lib\router\layer.js:95:5)
+2018-05-13 17:47:36 - You must pass a string or Handlebars AST to Handlebars.compile. You passed <!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Pug</title>
+</head>
+<body>
+<h1>Handlebars - node template engine</h1>
+<div id="container" class="col">
+    <p>You are amazing</p>
+    <p>Handlebars is a terse and simple templating language with a strong focus on performance and powerful features.</p>
+</div>
+</body>
+</html>Error: You must pass a string or Handlebars AST to Handlebars.compile. You passed <!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Pug</title>
+</head>
+<body>
+<h1>Handlebars - node template engine</h1>
+<div id="container" class="col">
+    <p>You are amazing</p>
+    <p>Handlebars is a terse and simple templating language with a strong focus on performance and powerful features.</p>
+</div>
+</body>
+</html>
+    at Object.compile (D:\webserver\nodejs\rapin\node_modules\Handlebars\lib\handlebars\compiler\compiler.js:488:11)
+    at HandlebarsEnvironment.hb.compile (D:\webserver\nodejs\rapin\node_modules\Handlebars\lib\handlebars.js:17:12)
+    at Handlebars.render (D:/webserver/nodejs/rapin/system/library/template/handlebars.js:15:43)
+    at Template.render (D:/webserver/nodejs/rapin/system/library/template.js:18:29)
+    at Loader.view (D:/webserver/nodejs/rapin/system/engine/loader.js:34:33)
+    at Proxy.index (D:/webserver/nodejs/rapin/src/controller/common/home.js:3:43)
+    at Action.execute (D:/webserver/nodejs/rapin/system/engine/action.js:26:16)
+    at Router.postRequest (D:/webserver/nodejs/rapin/system/engine/router.js:68:20)
+    at D:/webserver/nodejs/rapin/system/engine/router.js:29:56
+    at Layer.handle [as handle_request] (D:\webserver\nodejs\rapin\node_modules\express\lib\router\layer.js:95:5)
+2018-05-13 17:48:20 - You must pass a string or Handlebars AST to Handlebars.compile. You passed <html lang="en">
+<head>
+    <title>Pug</title>
+</head>
+<body>
+<h1>Handlebars - node template engine</h1>
+<div id="container" class="col">
+    <p>You are amazing</p>
+    <p>Handlebars is a terse and simple templating language with a strong focus on performance and powerful features.</p>
+</div>
+</body>
+</html>Error: You must pass a string or Handlebars AST to Handlebars.compile. You passed <html lang="en">
+<head>
+    <title>Pug</title>
+</head>
+<body>
+<h1>Handlebars - node template engine</h1>
+<div id="container" class="col">
+    <p>You are amazing</p>
+    <p>Handlebars is a terse and simple templating language with a strong focus on performance and powerful features.</p>
+</div>
+</body>
+</html>
+    at Object.compile (D:\webserver\nodejs\rapin\node_modules\Handlebars\lib\handlebars\compiler\compiler.js:488:11)
+    at HandlebarsEnvironment.hb.compile (D:\webserver\nodejs\rapin\node_modules\Handlebars\lib\handlebars.js:17:12)
+    at Handlebars.render (D:/webserver/nodejs/rapin/system/library/template/handlebars.js:15:43)
+    at Template.render (D:/webserver/nodejs/rapin/system/library/template.js:18:29)
+    at Loader.view (D:/webserver/nodejs/rapin/system/engine/loader.js:34:33)
+    at Proxy.index (D:/webserver/nodejs/rapin/src/controller/common/home.js:3:43)
+    at Action.execute (D:/webserver/nodejs/rapin/system/engine/action.js:26:16)
+    at Router.postRequest (D:/webserver/nodejs/rapin/system/engine/router.js:68:20)
+    at D:/webserver/nodejs/rapin/system/engine/router.js:29:56
+    at Layer.handle [as handle_request] (D:\webserver\nodejs\rapin\node_modules\express\lib\router\layer.js:95:5)
+2018-05-13 17:50:12 - You must pass a string or Handlebars AST to Handlebars.compile. You passed <html lang="en">
+<head>
+    <title>Pug</title>
+</head>
+<body>
+<h1>Handlebars - node template engine</h1>
+<div id="container" class="col">
+    <p>You are amazing</p>
+    <p>Handlebars is a terse and simple templating language with a strong focus on performance and powerful features.</p>
+</div>
+</body>
+</html>Error: You must pass a string or Handlebars AST to Handlebars.compile. You passed <html lang="en">
+<head>
+    <title>Pug</title>
+</head>
+<body>
+<h1>Handlebars - node template engine</h1>
+<div id="container" class="col">
+    <p>You are amazing</p>
+    <p>Handlebars is a terse and simple templating language with a strong focus on performance and powerful features.</p>
+</div>
+</body>
+</html>
+    at Object.compile (D:\webserver\nodejs\rapin\node_modules\Handlebars\lib\handlebars\compiler\compiler.js:488:11)
+    at HandlebarsEnvironment.hb.compile (D:\webserver\nodejs\rapin\node_modules\Handlebars\lib\handlebars.js:17:12)
+    at Handlebars.render (D:/webserver/nodejs/rapin/system/library/template/handlebars.js:15:43)
+    at Template.render (D:/webserver/nodejs/rapin/system/library/template.js:18:29)
+    at Loader.view (D:/webserver/nodejs/rapin/system/engine/loader.js:34:33)
+    at Proxy.index (D:/webserver/nodejs/rapin/src/controller/common/home.js:3:43)
+    at Action.execute (D:/webserver/nodejs/rapin/system/engine/action.js:26:16)
+    at Router.postRequest (D:/webserver/nodejs/rapin/system/engine/router.js:68:20)
+    at D:/webserver/nodejs/rapin/system/engine/router.js:29:56
+    at Layer.handle [as handle_request] (D:\webserver\nodejs\rapin\node_modules\express\lib\router\layer.js:95:5)
+2018-05-13 17:50:24 - You must pass a string or Handlebars AST to Handlebars.compile. You passed Error: You must pass a string or Handlebars AST to Handlebars.compile. You passed 
+    at Object.compile (D:\webserver\nodejs\rapin\node_modules\Handlebars\lib\handlebars\compiler\compiler.js:488:11)
+    at HandlebarsEnvironment.hb.compile (D:\webserver\nodejs\rapin\node_modules\Handlebars\lib\handlebars.js:17:12)
+    at Handlebars.render (D:/webserver/nodejs/rapin/system/library/template/handlebars.js:15:43)
+    at Template.render (D:/webserver/nodejs/rapin/system/library/template.js:18:29)
+    at Loader.view (D:/webserver/nodejs/rapin/system/engine/loader.js:34:33)
+    at Proxy.index (D:/webserver/nodejs/rapin/src/controller/common/home.js:3:43)
+    at Action.execute (D:/webserver/nodejs/rapin/system/engine/action.js:26:16)
+    at Router.postRequest (D:/webserver/nodejs/rapin/system/engine/router.js:68:20)
+    at D:/webserver/nodejs/rapin/system/engine/router.js:29:56
+    at Layer.handle [as handle_request] (D:\webserver\nodejs\rapin\node_modules\express\lib\router\layer.js:95:5)
+2018-05-13 17:51:06 - You must pass a string or Handlebars AST to Handlebars.compile. You passed Error: You must pass a string or Handlebars AST to Handlebars.compile. You passed 
+    at Object.compile (D:\webserver\nodejs\rapin\node_modules\Handlebars\lib\handlebars\compiler\compiler.js:488:11)
+    at HandlebarsEnvironment.hb.compile (D:\webserver\nodejs\rapin\node_modules\Handlebars\lib\handlebars.js:17:12)
+    at Handlebars.render (D:/webserver/nodejs/rapin/system/library/template/handlebars.js:16:43)
+    at Template.render (D:/webserver/nodejs/rapin/system/library/template.js:18:29)
+    at Loader.view (D:/webserver/nodejs/rapin/system/engine/loader.js:34:33)
+    at Proxy.index (D:/webserver/nodejs/rapin/src/controller/common/home.js:3:43)
+    at Action.execute (D:/webserver/nodejs/rapin/system/engine/action.js:26:16)
+    at Router.postRequest (D:/webserver/nodejs/rapin/system/engine/router.js:68:20)
+    at D:/webserver/nodejs/rapin/system/engine/router.js:29:56
+    at Layer.handle [as handle_request] (D:\webserver\nodejs\rapin\node_modules\express\lib\router\layer.js:95:5)
+2018-05-13 17:53:04 - You must pass a string or Handlebars AST to Handlebars.compile. You passed <p>Hello, my name is . I am from . I have </p>Error: You must pass a string or Handlebars AST to Handlebars.compile. You passed <p>Hello, my name is . I am from . I have </p>
+    at Object.compile (D:\webserver\nodejs\rapin\node_modules\Handlebars\lib\handlebars\compiler\compiler.js:488:11)
+    at HandlebarsEnvironment.hb.compile (D:\webserver\nodejs\rapin\node_modules\Handlebars\lib\handlebars.js:17:12)
+    at Handlebars.render (D:/webserver/nodejs/rapin/system/library/template/handlebars.js:16:43)
+    at Template.render (D:/webserver/nodejs/rapin/system/library/template.js:18:29)
+    at Loader.view (D:/webserver/nodejs/rapin/system/engine/loader.js:34:33)
+    at Proxy.index (D:/webserver/nodejs/rapin/src/controller/common/home.js:3:43)
+    at Action.execute (D:/webserver/nodejs/rapin/system/engine/action.js:26:16)
+    at Router.postRequest (D:/webserver/nodejs/rapin/system/engine/router.js:68:20)
+    at D:/webserver/nodejs/rapin/system/engine/router.js:29:56
+    at Layer.handle [as handle_request] (D:\webserver\nodejs\rapin\node_modules\express\lib\router\layer.js:95:5)
+2018-05-13 17:57:19 - (0 , _twig2.default) is not a functionTypeError: (0 , _twig2.default) is not a function
+    at Twig.render (D:/webserver/nodejs/rapin/system/library/template/twig.js:16:24)
+    at Template.render (D:/webserver/nodejs/rapin/system/library/template.js:18:29)
+    at Loader.view (D:/webserver/nodejs/rapin/system/engine/loader.js:34:33)
+    at Proxy.index (D:/webserver/nodejs/rapin/src/controller/common/home.js:3:43)
+    at Action.execute (D:/webserver/nodejs/rapin/system/engine/action.js:26:16)
+    at Router.postRequest (D:/webserver/nodejs/rapin/system/engine/router.js:68:20)
+    at D:/webserver/nodejs/rapin/system/engine/router.js:29:56
+    at Layer.handle [as handle_request] (D:\webserver\nodejs\rapin\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\webserver\nodejs\rapin\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (D:\webserver\nodejs\rapin\node_modules\express\lib\router\route.js:112:3)
+2018-05-13 18:00:16 - wait.for.promise(..) :: invalid <promise> argument undefinedError: wait.for.promise(..) :: invalid <promise> argument undefined
+    at Object.$wait.use.promise (D:\webserver\nodejs\rapin\node_modules\wait-for-stuff\index.js:143:15)
+    at Twig.render (D:/webserver/nodejs/rapin/system/library/template/twig.js:17:31)
+    at Template.render (D:/webserver/nodejs/rapin/system/library/template.js:18:29)
+    at Loader.view (D:/webserver/nodejs/rapin/system/engine/loader.js:34:33)
+    at Proxy.index (D:/webserver/nodejs/rapin/src/controller/common/home.js:3:43)
+    at Action.execute (D:/webserver/nodejs/rapin/system/engine/action.js:26:16)
+    at Router.postRequest (D:/webserver/nodejs/rapin/system/engine/router.js:68:20)
+    at D:/webserver/nodejs/rapin/system/engine/router.js:29:56
+    at Layer.handle [as handle_request] (D:\webserver\nodejs\rapin\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\webserver\nodejs\rapin\node_modules\express\lib\router\route.js:137:13)
+2018-05-13 18:02:28 - Cannot read property 'filename' of undefinedTypeError: Cannot read property 'filename' of undefined
+    at Object.Twig.exports.compile (D:\webserver\nodejs\rapin\node_modules\twig\twig.js:7817:27)
+    at Twig.render (D:/webserver/nodejs/rapin/system/library/template/twig.js:17:35)
+    at Template.render (D:/webserver/nodejs/rapin/system/library/template.js:18:29)
+    at Loader.view (D:/webserver/nodejs/rapin/system/engine/loader.js:34:33)
+    at Proxy.index (D:/webserver/nodejs/rapin/src/controller/common/home.js:3:43)
+    at Action.execute (D:/webserver/nodejs/rapin/system/engine/action.js:26:16)
+    at Router.postRequest (D:/webserver/nodejs/rapin/system/engine/router.js:68:20)
+    at D:/webserver/nodejs/rapin/system/engine/router.js:29:56
+    at Layer.handle [as handle_request] (D:\webserver\nodejs\rapin\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\webserver\nodejs\rapin\node_modules\express\lib\router\route.js:137:13)
+2018-05-13 18:03:41 - Cannot read property 'filename' of undefinedTypeError: Cannot read property 'filename' of undefined
+    at Object.Twig.exports.compile (D:\webserver\nodejs\rapin\node_modules\twig\twig.js:7817:27)
+    at Twig.render (D:/webserver/nodejs/rapin/system/library/template/twig.js:17:35)
+    at Template.render (D:/webserver/nodejs/rapin/system/library/template.js:18:29)
+    at Loader.view (D:/webserver/nodejs/rapin/system/engine/loader.js:34:33)
+    at Proxy.index (D:/webserver/nodejs/rapin/src/controller/common/home.js:3:43)
+    at Action.execute (D:/webserver/nodejs/rapin/system/engine/action.js:26:16)
+    at Router.postRequest (D:/webserver/nodejs/rapin/system/engine/router.js:68:20)
+    at D:/webserver/nodejs/rapin/system/engine/router.js:29:56
+    at Layer.handle [as handle_request] (D:\webserver\nodejs\rapin\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\webserver\nodejs\rapin\node_modules\express\lib\router\route.js:137:13)
+2018-05-13 18:03:55 - Cannot read property 'filename' of undefinedTypeError: Cannot read property 'filename' of undefined
+    at Object.Twig.exports.compile (D:\webserver\nodejs\rapin\node_modules\twig\twig.js:7817:27)
+    at Twig.render (D:/webserver/nodejs/rapin/system/library/template/twig.js:17:35)
+    at Template.render (D:/webserver/nodejs/rapin/system/library/template.js:18:29)
+    at Loader.view (D:/webserver/nodejs/rapin/system/engine/loader.js:34:33)
+    at Proxy.index (D:/webserver/nodejs/rapin/src/controller/common/home.js:3:43)
+    at Action.execute (D:/webserver/nodejs/rapin/system/engine/action.js:26:16)
+    at Router.postRequest (D:/webserver/nodejs/rapin/system/engine/router.js:68:20)
+    at D:/webserver/nodejs/rapin/system/engine/router.js:29:56
+    at Layer.handle [as handle_request] (D:\webserver\nodejs\rapin\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\webserver\nodejs\rapin\node_modules\express\lib\router\route.js:137:13)
+2018-05-13 18:04:05 - Cannot read property 'filename' of undefinedTypeError: Cannot read property 'filename' of undefined
+    at Object.Twig.exports.compile (D:\webserver\nodejs\rapin\node_modules\twig\twig.js:7817:27)
+    at Twig.render (D:/webserver/nodejs/rapin/system/library/template/twig.js:17:35)
+    at Template.render (D:/webserver/nodejs/rapin/system/library/template.js:18:29)
+    at Loader.view (D:/webserver/nodejs/rapin/system/engine/loader.js:34:33)
+    at Proxy.index (D:/webserver/nodejs/rapin/src/controller/common/home.js:3:43)
+    at Action.execute (D:/webserver/nodejs/rapin/system/engine/action.js:26:16)
+    at Router.postRequest (D:/webserver/nodejs/rapin/system/engine/router.js:68:20)
+    at D:/webserver/nodejs/rapin/system/engine/router.js:29:56
+    at Layer.handle [as handle_request] (D:\webserver\nodejs\rapin\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\webserver\nodejs\rapin\node_modules\express\lib\router\route.js:137:13)
+2018-05-13 18:05:02 - wait.for.promise(..) :: invalid <promise> argument undefinedError: wait.for.promise(..) :: invalid <promise> argument undefined
+    at Object.$wait.use.promise (D:\webserver\nodejs\rapin\node_modules\wait-for-stuff\index.js:143:15)
+    at Twig.render (D:/webserver/nodejs/rapin/system/library/template/twig.js:17:31)
+    at Template.render (D:/webserver/nodejs/rapin/system/library/template.js:18:29)
+    at Loader.view (D:/webserver/nodejs/rapin/system/engine/loader.js:34:33)
+    at Proxy.index (D:/webserver/nodejs/rapin/src/controller/common/home.js:3:43)
+    at Action.execute (D:/webserver/nodejs/rapin/system/engine/action.js:26:16)
+    at Router.postRequest (D:/webserver/nodejs/rapin/system/engine/router.js:68:20)
+    at D:/webserver/nodejs/rapin/system/engine/router.js:29:56
+    at Layer.handle [as handle_request] (D:\webserver\nodejs\rapin\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\webserver\nodejs\rapin\node_modules\express\lib\router\route.js:137:13)
+2018-05-13 18:09:22 - Twing is not definedReferenceError: Twing is not defined
+    at Twig.render (D:/webserver/nodejs/rapin/system/library/template/twig.js:17:22)
+    at Template.render (D:/webserver/nodejs/rapin/system/library/template.js:18:29)
+    at Loader.view (D:/webserver/nodejs/rapin/system/engine/loader.js:34:33)
+    at Proxy.index (D:/webserver/nodejs/rapin/src/controller/common/home.js:3:43)
+    at Action.execute (D:/webserver/nodejs/rapin/system/engine/action.js:26:16)
+    at Router.postRequest (D:/webserver/nodejs/rapin/system/engine/router.js:68:20)
+    at D:/webserver/nodejs/rapin/system/engine/router.js:29:56
+    at Layer.handle [as handle_request] (D:\webserver\nodejs\rapin\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\webserver\nodejs\rapin\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (D:\webserver\nodejs\rapin\node_modules\express\lib\router\route.js:112:3)
+2018-05-13 18:09:37 - Template "index.twig" is not defined.TwingErrorLoader: Template "index.twig" is not defined.
+    at TwingLoaderArray.getCacheKey (D:\webserver\nodejs\rapin\node_modules\twing\lib\twing\loader\array.js:47:19)
+    at TwingEnvironment.getTemplateClass (D:\webserver\nodejs\rapin\node_modules\twing\lib\twing\environment.js:210:36)
+    at TwingEnvironment.loadTemplate (D:\webserver\nodejs\rapin\node_modules\twing\lib\twing\environment.js:274:24)
+    at TwingEnvironment.render (D:\webserver\nodejs\rapin\node_modules\twing\lib\twing\environment.js:221:21)
+    at Twig.render (D:/webserver/nodejs/rapin/system/library/template/twig.js:19:28)
+    at Template.render (D:/webserver/nodejs/rapin/system/library/template.js:18:29)
+    at Loader.view (D:/webserver/nodejs/rapin/system/engine/loader.js:34:33)
+    at Proxy.index (D:/webserver/nodejs/rapin/src/controller/common/home.js:3:43)
+    at Action.execute (D:/webserver/nodejs/rapin/system/engine/action.js:26:16)
+    at Router.postRequest (D:/webserver/nodejs/rapin/system/engine/router.js:68:20)
+2018-05-13 18:10:07 - An exception has been thrown during the compilation of a template ("null is not a function!") in "default".TwingErrorSyntax: An exception has been thrown during the compilation of a template ("null is not a function!").
+    at TwingEnvironment.compileSource (D:\webserver\nodejs\rapin\node_modules\twing\lib\twing\environment.js:477:23)
+    at TwingEnvironment.loadTemplate (D:\webserver\nodejs\rapin\node_modules\twing\lib\twing\environment.js:291:32)
+    at TwingEnvironment.render (D:\webserver\nodejs\rapin\node_modules\twing\lib\twing\environment.js:221:21)
+    at Twig.render (D:/webserver/nodejs/rapin/system/library/template/twig.js:19:28)
+    at Template.render (D:/webserver/nodejs/rapin/system/library/template.js:18:29)
+    at Loader.view (D:/webserver/nodejs/rapin/system/engine/loader.js:34:33)
+    at Proxy.index (D:/webserver/nodejs/rapin/src/controller/common/home.js:3:43)
+    at Action.execute (D:/webserver/nodejs/rapin/system/engine/action.js:26:16)
+    at Router.postRequest (D:/webserver/nodejs/rapin/system/engine/router.js:68:20)
+    at D:/webserver/nodejs/rapin/system/engine/router.js:29:56
+2018-05-13 18:10:31 - An exception has been thrown during the compilation of a template ("null is not a function!") in "default".TwingErrorSyntax: An exception has been thrown during the compilation of a template ("null is not a function!").
+    at TwingEnvironment.compileSource (D:\webserver\nodejs\rapin\node_modules\twing\lib\twing\environment.js:477:23)
+    at TwingEnvironment.loadTemplate (D:\webserver\nodejs\rapin\node_modules\twing\lib\twing\environment.js:291:32)
+    at TwingEnvironment.render (D:\webserver\nodejs\rapin\node_modules\twing\lib\twing\environment.js:221:21)
+    at Twig.render (D:/webserver/nodejs/rapin/system/library/template/twig.js:19:28)
+    at Template.render (D:/webserver/nodejs/rapin/system/library/template.js:18:29)
+    at Loader.view (D:/webserver/nodejs/rapin/system/engine/loader.js:34:33)
+    at Proxy.index (D:/webserver/nodejs/rapin/src/controller/common/home.js:3:43)
+    at Action.execute (D:/webserver/nodejs/rapin/system/engine/action.js:26:16)
+    at Router.postRequest (D:/webserver/nodejs/rapin/system/engine/router.js:68:20)
+    at D:/webserver/nodejs/rapin/system/engine/router.js:29:56
+2018-05-13 18:11:03 - An exception has been thrown during the compilation of a template ("null is not a function!") in "default".TwingErrorSyntax: An exception has been thrown during the compilation of a template ("null is not a function!").
+    at TwingEnvironment.compileSource (D:\webserver\nodejs\rapin\node_modules\twing\lib\twing\environment.js:477:23)
+    at TwingEnvironment.loadTemplate (D:\webserver\nodejs\rapin\node_modules\twing\lib\twing\environment.js:291:32)
+    at TwingEnvironment.render (D:\webserver\nodejs\rapin\node_modules\twing\lib\twing\environment.js:221:21)
+    at Twig.render (D:/webserver/nodejs/rapin/system/library/template/twig.js:20:28)
+    at Template.render (D:/webserver/nodejs/rapin/system/library/template.js:18:29)
+    at Loader.view (D:/webserver/nodejs/rapin/system/engine/loader.js:34:33)
+    at Proxy.index (D:/webserver/nodejs/rapin/src/controller/common/home.js:3:43)
+    at Action.execute (D:/webserver/nodejs/rapin/system/engine/action.js:26:16)
+    at Router.postRequest (D:/webserver/nodejs/rapin/system/engine/router.js:68:20)
+    at D:/webserver/nodejs/rapin/system/engine/router.js:29:56
+2018-05-13 18:11:15 - An exception has been thrown during the compilation of a template ("null is not a function!") in "default".TwingErrorSyntax: An exception has been thrown during the compilation of a template ("null is not a function!").
+    at TwingEnvironment.compileSource (D:\webserver\nodejs\rapin\node_modules\twing\lib\twing\environment.js:477:23)
+    at TwingEnvironment.loadTemplate (D:\webserver\nodejs\rapin\node_modules\twing\lib\twing\environment.js:291:32)
+    at TwingEnvironment.render (D:\webserver\nodejs\rapin\node_modules\twing\lib\twing\environment.js:221:21)
+    at Twig.render (D:/webserver/nodejs/rapin/system/library/template/twig.js:20:28)
+    at Template.render (D:/webserver/nodejs/rapin/system/library/template.js:18:29)
+    at Loader.view (D:/webserver/nodejs/rapin/system/engine/loader.js:34:33)
+    at Proxy.index (D:/webserver/nodejs/rapin/src/controller/common/home.js:3:43)
+    at Action.execute (D:/webserver/nodejs/rapin/system/engine/action.js:26:16)
+    at Router.postRequest (D:/webserver/nodejs/rapin/system/engine/router.js:68:20)
+    at D:/webserver/nodejs/rapin/system/engine/router.js:29:56
+2018-05-13 18:12:51 - An exception has been thrown during the compilation of a template ("null is not a function!") in "default".TwingErrorSyntax: An exception has been thrown during the compilation of a template ("null is not a function!").
+    at TwingEnvironment.compileSource (D:\webserver\nodejs\rapin\node_modules\twing\lib\twing\environment.js:477:23)
+    at TwingEnvironment.loadTemplate (D:\webserver\nodejs\rapin\node_modules\twing\lib\twing\environment.js:291:32)
+    at TwingEnvironment.render (D:\webserver\nodejs\rapin\node_modules\twing\lib\twing\environment.js:221:21)
+    at Twig.render (D:/webserver/nodejs/rapin/system/library/template/twig.js:19:28)
+    at Template.render (D:/webserver/nodejs/rapin/system/library/template.js:18:29)
+    at Loader.view (D:/webserver/nodejs/rapin/system/engine/loader.js:34:33)
+    at Proxy.index (D:/webserver/nodejs/rapin/src/controller/common/home.js:3:43)
+    at Action.execute (D:/webserver/nodejs/rapin/system/engine/action.js:26:16)
+    at Router.postRequest (D:/webserver/nodejs/rapin/system/engine/router.js:68:20)
+    at D:/webserver/nodejs/rapin/system/engine/router.js:29:56
+2018-05-13 18:13:03 - An exception has been thrown during the compilation of a template ("null is not a function!") in "default".TwingErrorSyntax: An exception has been thrown during the compilation of a template ("null is not a function!").
+    at TwingEnvironment.compileSource (D:\webserver\nodejs\rapin\node_modules\twing\lib\twing\environment.js:477:23)
+    at TwingEnvironment.loadTemplate (D:\webserver\nodejs\rapin\node_modules\twing\lib\twing\environment.js:291:32)
+    at TwingEnvironment.render (D:\webserver\nodejs\rapin\node_modules\twing\lib\twing\environment.js:221:21)
+    at Twig.render (D:/webserver/nodejs/rapin/system/library/template/twig.js:19:28)
+    at Template.render (D:/webserver/nodejs/rapin/system/library/template.js:18:29)
+    at Loader.view (D:/webserver/nodejs/rapin/system/engine/loader.js:34:33)
+    at Proxy.index (D:/webserver/nodejs/rapin/src/controller/common/home.js:3:43)
+    at Action.execute (D:/webserver/nodejs/rapin/system/engine/action.js:26:16)
+    at Router.postRequest (D:/webserver/nodejs/rapin/system/engine/router.js:68:20)
+    at D:/webserver/nodejs/rapin/system/engine/router.js:29:56
+2018-05-13 18:14:44 - twing is not definedReferenceError: twing is not defined
+    at Twig.render (D:/webserver/nodejs/rapin/system/library/template/twig.js:16:28)
+    at Template.render (D:/webserver/nodejs/rapin/system/library/template.js:18:29)
+    at Loader.view (D:/webserver/nodejs/rapin/system/engine/loader.js:34:33)
+    at Proxy.index (D:/webserver/nodejs/rapin/src/controller/common/home.js:3:43)
+    at Action.execute (D:/webserver/nodejs/rapin/system/engine/action.js:26:16)
+    at Router.postRequest (D:/webserver/nodejs/rapin/system/engine/router.js:68:20)
+    at D:/webserver/nodejs/rapin/system/engine/router.js:29:56
+    at Layer.handle [as handle_request] (D:\webserver\nodejs\rapin\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\webserver\nodejs\rapin\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (D:\webserver\nodejs\rapin\node_modules\express\lib\router\route.js:112:3)
+2018-05-13 18:14:57 - _twing2.default.load is not a functionTypeError: _twing2.default.load is not a function
+    at Twig.render (D:/webserver/nodejs/rapin/system/library/template/twig.js:16:34)
+    at Template.render (D:/webserver/nodejs/rapin/system/library/template.js:18:29)
+    at Loader.view (D:/webserver/nodejs/rapin/system/engine/loader.js:34:33)
+    at Proxy.index (D:/webserver/nodejs/rapin/src/controller/common/home.js:3:43)
+    at Action.execute (D:/webserver/nodejs/rapin/system/engine/action.js:26:16)
+    at Router.postRequest (D:/webserver/nodejs/rapin/system/engine/router.js:68:20)
+    at D:/webserver/nodejs/rapin/system/engine/router.js:29:56
+    at Layer.handle [as handle_request] (D:\webserver\nodejs\rapin\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\webserver\nodejs\rapin\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (D:\webserver\nodejs\rapin\node_modules\express\lib\router\route.js:112:3)
+2018-05-13 18:17:54 - _twing2.default.load is not a functionTypeError: _twing2.default.load is not a function
+    at Twig.render (D:/webserver/nodejs/rapin/system/library/template/twig.js:14:34)
+    at Template.render (D:/webserver/nodejs/rapin/system/library/template.js:18:29)
+    at Loader.view (D:/webserver/nodejs/rapin/system/engine/loader.js:34:33)
+    at Proxy.index (D:/webserver/nodejs/rapin/src/controller/common/home.js:3:43)
+    at Action.execute (D:/webserver/nodejs/rapin/system/engine/action.js:26:16)
+    at Router.postRequest (D:/webserver/nodejs/rapin/system/engine/router.js:68:20)
+    at D:/webserver/nodejs/rapin/system/engine/router.js:29:56
+    at Layer.handle [as handle_request] (D:\webserver\nodejs\rapin\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\webserver\nodejs\rapin\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (D:\webserver\nodejs\rapin\node_modules\express\lib\router\route.js:112:3)
+2018-05-13 18:18:13 - _twing2.default.load is not a functionTypeError: _twing2.default.load is not a function
+    at Twig.render (D:/webserver/nodejs/rapin/system/library/template/twig.js:15:34)
+    at Template.render (D:/webserver/nodejs/rapin/system/library/template.js:18:29)
+    at Loader.view (D:/webserver/nodejs/rapin/system/engine/loader.js:34:33)
+    at Proxy.index (D:/webserver/nodejs/rapin/src/controller/common/home.js:3:43)
+    at Action.execute (D:/webserver/nodejs/rapin/system/engine/action.js:26:16)
+    at Router.postRequest (D:/webserver/nodejs/rapin/system/engine/router.js:68:20)
+    at D:/webserver/nodejs/rapin/system/engine/router.js:29:56
+    at Layer.handle [as handle_request] (D:\webserver\nodejs\rapin\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\webserver\nodejs\rapin\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (D:\webserver\nodejs\rapin\node_modules\express\lib\router\route.js:112:3)
+2018-05-13 18:18:30 - _twing2.default.load is not a functionTypeError: _twing2.default.load is not a function
+    at Twig.render (D:/webserver/nodejs/rapin/system/library/template/twig.js:15:34)
+    at Template.render (D:/webserver/nodejs/rapin/system/library/template.js:18:29)
+    at Loader.view (D:/webserver/nodejs/rapin/system/engine/loader.js:34:33)
+    at Proxy.index (D:/webserver/nodejs/rapin/src/controller/common/home.js:3:43)
+    at Action.execute (D:/webserver/nodejs/rapin/system/engine/action.js:26:16)
+    at Router.postRequest (D:/webserver/nodejs/rapin/system/engine/router.js:68:20)
+    at D:/webserver/nodejs/rapin/system/engine/router.js:29:56
+    at Layer.handle [as handle_request] (D:\webserver\nodejs\rapin\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\webserver\nodejs\rapin\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (D:\webserver\nodejs\rapin\node_modules\express\lib\router\route.js:112:3)
+2018-05-13 18:18:49 - _twing2.default.load is not a functionTypeError: _twing2.default.load is not a function
+    at Twig.render (D:/webserver/nodejs/rapin/system/library/template/twig.js:15:34)
+    at Template.render (D:/webserver/nodejs/rapin/system/library/template.js:18:29)
+    at Loader.view (D:/webserver/nodejs/rapin/system/engine/loader.js:34:33)
+    at Proxy.index (D:/webserver/nodejs/rapin/src/controller/common/home.js:3:43)
+    at Action.execute (D:/webserver/nodejs/rapin/system/engine/action.js:26:16)
+    at Router.postRequest (D:/webserver/nodejs/rapin/system/engine/router.js:68:20)
+    at D:/webserver/nodejs/rapin/system/engine/router.js:29:56
+    at Layer.handle [as handle_request] (D:\webserver\nodejs\rapin\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\webserver\nodejs\rapin\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (D:\webserver\nodejs\rapin\node_modules\express\lib\router\route.js:112:3)
+2018-05-13 18:21:49 - _twing2.default.load is not a functionTypeError: _twing2.default.load is not a function
+    at Twig.render (D:/webserver/nodejs/rapin/system/library/template/twig.js:14:34)
+    at Template.render (D:/webserver/nodejs/rapin/system/library/template.js:18:29)
+    at Loader.view (D:/webserver/nodejs/rapin/system/engine/loader.js:34:33)
+    at Proxy.index (D:/webserver/nodejs/rapin/src/controller/common/home.js:3:43)
+    at Action.execute (D:/webserver/nodejs/rapin/system/engine/action.js:26:16)
+    at Router.postRequest (D:/webserver/nodejs/rapin/system/engine/router.js:68:20)
+    at D:/webserver/nodejs/rapin/system/engine/router.js:29:56
+    at Layer.handle [as handle_request] (D:\webserver\nodejs\rapin\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\webserver\nodejs\rapin\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (D:\webserver\nodejs\rapin\node_modules\express\lib\router\route.js:112:3)
+2018-05-13 18:24:01 - An exception has been thrown during the compilation of a template ("null is not a function!") in "index.twig".TwingErrorSyntax: An exception has been thrown during the compilation of a template ("null is not a function!").
+    at TwingEnvironment.compileSource (D:\webserver\nodejs\rapin\node_modules\twing\lib\twing\environment.js:477:23)
+    at TwingEnvironment.loadTemplate (D:\webserver\nodejs\rapin\node_modules\twing\lib\twing\environment.js:291:32)
+    at TwingEnvironment.render (D:\webserver\nodejs\rapin\node_modules\twing\lib\twing\environment.js:221:21)
+    at Twig.render (D:/webserver/nodejs/rapin/system/library/template/twig.js:22:28)
+    at Template.render (D:/webserver/nodejs/rapin/system/library/template.js:18:29)
+    at Loader.view (D:/webserver/nodejs/rapin/system/engine/loader.js:34:33)
+    at Proxy.index (D:/webserver/nodejs/rapin/src/controller/common/home.js:3:43)
+    at Action.execute (D:/webserver/nodejs/rapin/system/engine/action.js:26:16)
+    at Router.postRequest (D:/webserver/nodejs/rapin/system/engine/router.js:68:20)
+    at D:/webserver/nodejs/rapin/system/engine/router.js:29:56
+2018-05-13 18:27:19 - output is not definedReferenceError: output is not defined
+    at Twig.render (D:/webserver/nodejs/rapin/system/library/template/twig.js:21:9)
+    at Template.render (D:/webserver/nodejs/rapin/system/library/template.js:18:29)
+    at Loader.view (D:/webserver/nodejs/rapin/system/engine/loader.js:34:33)
+    at Proxy.index (D:/webserver/nodejs/rapin/src/controller/common/home.js:3:43)
+    at Action.execute (D:/webserver/nodejs/rapin/system/engine/action.js:26:16)
+    at Router.postRequest (D:/webserver/nodejs/rapin/system/engine/router.js:68:20)
+    at D:/webserver/nodejs/rapin/system/engine/router.js:29:56
+    at Layer.handle [as handle_request] (D:\webserver\nodejs\rapin\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\webserver\nodejs\rapin\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (D:\webserver\nodejs\rapin\node_modules\express\lib\router\route.js:112:3)
+2018-05-13 18:28:05 - D:/webserver/nodejs/rapin/system/library/template/twig.js: Unexpected token, expected , (16:8)SyntaxError: D:/webserver/nodejs/rapin/system/library/template/twig.js: Unexpected token, expected , (16:8)
+[0m [90m 14 | [39m    render(template) {
+ [90m 15 | [39m        let output [33m=[39m wait[33m.[39m[36mfor[39m[33m.[39mpromise([33mTwigCompiler[39m[33m.[39mrenderFile([33mDIR_TEMPLATE[39m[33m+[39m[32m'/'[39m[33m+[39mtemplate[33m+[39m[32m'.twig'[39m[33m,[39m {foo[33m:[39m[32m'bar'[39m})
+[31m[1m>[22m[39m[90m 16 | [39m        [36mreturn[39m output
+ [90m    | [39m        [31m[1m^[22m[39m
+ [90m 17 | [39m    }
+ [90m 18 | [39m}[0m
+    at Parser.pp$5.raise (D:\webserver\nodejs\rapin\node_modules\babylon\lib\index.js:4454:13)
+    at Parser.pp.unexpected (D:\webserver\nodejs\rapin\node_modules\babylon\lib\index.js:1761:8)
+    at Parser.pp.expect (D:\webserver\nodejs\rapin\node_modules\babylon\lib\index.js:1749:33)
+    at Parser.pp$3.parseCallExpressionArguments (D:\webserver\nodejs\rapin\node_modules\babylon\lib\index.js:3564:12)
+    at Parser.pp$3.parseSubscripts (D:\webserver\nodejs\rapin\node_modules\babylon\lib\index.js:3533:31)
+    at Parser.pp$3.parseExprSubscripts (D:\webserver\nodejs\rapin\node_modules\babylon\lib\index.js:3504:15)
+    at Parser.pp$3.parseMaybeUnary (D:\webserver\nodejs\rapin\node_modules\babylon\lib\index.js:3474:19)
+    at Parser.pp$3.parseExprOps (D:\webserver\nodejs\rapin\node_modules\babylon\lib\index.js:3404:19)
+    at Parser.pp$3.parseMaybeConditional (D:\webserver\nodejs\rapin\node_modules\babylon\lib\index.js:3381:19)
+    at Parser.pp$3.parseMaybeAssign (D:\webserver\nodejs\rapin\node_modules\babylon\lib\index.js:3344:19)
+2018-05-13 18:28:23 - wait.for.promise(..) :: invalid <promise> argument undefinedError: wait.for.promise(..) :: invalid <promise> argument undefined
+    at Object.$wait.use.promise (D:\webserver\nodejs\rapin\node_modules\wait-for-stuff\index.js:143:15)
+    at Twig.render (D:/webserver/nodejs/rapin/system/library/template/twig.js:15:31)
+    at Template.render (D:/webserver/nodejs/rapin/system/library/template.js:18:29)
+    at Loader.view (D:/webserver/nodejs/rapin/system/engine/loader.js:34:33)
+    at Proxy.index (D:/webserver/nodejs/rapin/src/controller/common/home.js:3:43)
+    at Action.execute (D:/webserver/nodejs/rapin/system/engine/action.js:26:16)
+    at Router.postRequest (D:/webserver/nodejs/rapin/system/engine/router.js:68:20)
+    at D:/webserver/nodejs/rapin/system/engine/router.js:29:56
+    at Layer.handle [as handle_request] (D:\webserver\nodejs\rapin\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\webserver\nodejs\rapin\node_modules\express\lib\router\route.js:137:13)
+2018-05-13 18:28:49 - wait.for.promise(..) :: invalid <promise> argument undefinedError: wait.for.promise(..) :: invalid <promise> argument undefined
+    at Object.$wait.use.promise (D:\webserver\nodejs\rapin\node_modules\wait-for-stuff\index.js:143:15)
+    at Twig.render (D:/webserver/nodejs/rapin/system/library/template/twig.js:16:31)
+    at Template.render (D:/webserver/nodejs/rapin/system/library/template.js:18:29)
+    at Loader.view (D:/webserver/nodejs/rapin/system/engine/loader.js:34:33)
+    at Proxy.index (D:/webserver/nodejs/rapin/src/controller/common/home.js:3:43)
+    at Action.execute (D:/webserver/nodejs/rapin/system/engine/action.js:26:16)
+    at Router.postRequest (D:/webserver/nodejs/rapin/system/engine/router.js:68:20)
+    at D:/webserver/nodejs/rapin/system/engine/router.js:29:56
+    at Layer.handle [as handle_request] (D:\webserver\nodejs\rapin\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\webserver\nodejs\rapin\node_modules\express\lib\router\route.js:137:13)
+2018-05-13 18:31:07 - wait.for.promise(..) :: invalid <promise> argument [object Object]Error: wait.for.promise(..) :: invalid <promise> argument [object Object]
+    at Object.$wait.use.promise (D:\webserver\nodejs\rapin\node_modules\wait-for-stuff\index.js:143:15)
+    at Twig.render (D:/webserver/nodejs/rapin/system/library/template/twig.js:16:31)
+    at Template.render (D:/webserver/nodejs/rapin/system/library/template.js:18:29)
+    at Loader.view (D:/webserver/nodejs/rapin/system/engine/loader.js:34:33)
+    at Proxy.index (D:/webserver/nodejs/rapin/src/controller/common/home.js:3:43)
+    at Action.execute (D:/webserver/nodejs/rapin/system/engine/action.js:26:16)
+    at Router.postRequest (D:/webserver/nodejs/rapin/system/engine/router.js:68:20)
+    at D:/webserver/nodejs/rapin/system/engine/router.js:29:56
+    at Layer.handle [as handle_request] (D:\webserver\nodejs\rapin\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\webserver\nodejs\rapin\node_modules\express\lib\router\route.js:137:13)
+2018-05-13 18:40:44 - D:/webserver/nodejs/rapin/system/library/template/mustache.js: Duplicate declaration "Mustache"TypeError: D:/webserver/nodejs/rapin/system/library/template/mustache.js: Duplicate declaration "Mustache"
+[0m [90m 2 | [39m[36mimport[39m fs from [32m'fs'[39m
+ [90m 3 | [39m
+[31m[1m>[22m[39m[90m 4 | [39m[36mexport[39m [36mdefault[39m [36mclass[39m [33mMustache[39m {
+ [90m   | [39m                     [31m[1m^[22m[39m
+ [90m 5 | [39m    constructor() {
+ [90m 6 | [39m        [36mthis[39m[33m.[39mdata [33m=[39m {}
+ [90m 7 | [39m    }[0m
+    at File.buildCodeFrameError (D:\webserver\nodejs\rapin\node_modules\babel-core\lib\transformation\file\index.js:427:15)
+    at Scope.checkBlockScopedCollisions (D:\webserver\nodejs\rapin\node_modules\babel-traverse\lib\scope\index.js:398:27)
+    at Scope.registerBinding (D:\webserver\nodejs\rapin\node_modules\babel-traverse\lib\scope\index.js:592:16)
+    at Scope.registerDeclaration (D:\webserver\nodejs\rapin\node_modules\babel-traverse\lib\scope\index.js:499:12)
+    at Object.BlockScoped (D:\webserver\nodejs\rapin\node_modules\babel-traverse\lib\scope\index.js:244:28)
+    at Object.newFn (D:\webserver\nodejs\rapin\node_modules\babel-traverse\lib\visitors.js:318:17)
+    at NodePath._call (D:\webserver\nodejs\rapin\node_modules\babel-traverse\lib\path\context.js:76:18)
+    at NodePath.call (D:\webserver\nodejs\rapin\node_modules\babel-traverse\lib\path\context.js:44:14)
+    at NodePath.visit (D:\webserver\nodejs\rapin\node_modules\babel-traverse\lib\path\context.js:105:12)
+    at TraversalContext.visitQueue (D:\webserver\nodejs\rapin\node_modules\babel-traverse\lib\context.js:150:16)
+2018-05-13 18:41:22 - Invalid template! Template should be a "string" but "object" was given as the first argument for mustache#render(template, view, partials)TypeError: Invalid template! Template should be a "string" but "object" was given as the first argument for mustache#render(template, view, partials)
+    at Object.render (D:\webserver\nodejs\rapin\node_modules\mustache\mustache.js:598:13)
+    at Mustache.render (D:/webserver/nodejs/rapin/system/library/template/mustache.js:15:39)
+    at Template.render (D:/webserver/nodejs/rapin/system/library/template.js:18:29)
+    at Loader.view (D:/webserver/nodejs/rapin/system/engine/loader.js:34:33)
+    at Proxy.index (D:/webserver/nodejs/rapin/src/controller/common/home.js:3:43)
+    at Action.execute (D:/webserver/nodejs/rapin/system/engine/action.js:26:16)
+    at Router.postRequest (D:/webserver/nodejs/rapin/system/engine/router.js:68:20)
+    at D:/webserver/nodejs/rapin/system/engine/router.js:29:56
+    at Layer.handle [as handle_request] (D:\webserver\nodejs\rapin\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\webserver\nodejs\rapin\node_modules\express\lib\router\route.js:137:13)
+2018-05-13 18:41:38 - Invalid template! Template should be a "string" but "object" was given as the first argument for mustache#render(template, view, partials)TypeError: Invalid template! Template should be a "string" but "object" was given as the first argument for mustache#render(template, view, partials)
+    at Object.render (D:\webserver\nodejs\rapin\node_modules\mustache\mustache.js:598:13)
+    at Mustache.render (D:/webserver/nodejs/rapin/system/library/template/mustache.js:15:39)
+    at Template.render (D:/webserver/nodejs/rapin/system/library/template.js:18:29)
+    at Loader.view (D:/webserver/nodejs/rapin/system/engine/loader.js:34:33)
+    at Proxy.index (D:/webserver/nodejs/rapin/src/controller/common/home.js:3:43)
+    at Action.execute (D:/webserver/nodejs/rapin/system/engine/action.js:26:16)
+    at Router.postRequest (D:/webserver/nodejs/rapin/system/engine/router.js:68:20)
+    at D:/webserver/nodejs/rapin/system/engine/router.js:29:56
+    at Layer.handle [as handle_request] (D:\webserver\nodejs\rapin\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\webserver\nodejs\rapin\node_modules\express\lib\router\route.js:137:13)
+2018-05-13 18:42:04 - Invalid template! Template should be a "string" but "object" was given as the first argument for mustache#render(template, view, partials)TypeError: Invalid template! Template should be a "string" but "object" was given as the first argument for mustache#render(template, view, partials)
+    at Object.render (D:\webserver\nodejs\rapin\node_modules\mustache\mustache.js:598:13)
+    at Mustache.render (D:/webserver/nodejs/rapin/system/library/template/mustache.js:16:39)
+    at Template.render (D:/webserver/nodejs/rapin/system/library/template.js:18:29)
+    at Loader.view (D:/webserver/nodejs/rapin/system/engine/loader.js:34:33)
+    at Proxy.index (D:/webserver/nodejs/rapin/src/controller/common/home.js:3:43)
+    at Action.execute (D:/webserver/nodejs/rapin/system/engine/action.js:26:16)
+    at Router.postRequest (D:/webserver/nodejs/rapin/system/engine/router.js:68:20)
+    at D:/webserver/nodejs/rapin/system/engine/router.js:29:56
+    at Layer.handle [as handle_request] (D:\webserver\nodejs\rapin\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\webserver\nodejs\rapin\node_modules\express\lib\router\route.js:137:13)
+2018-05-13 18:42:28 - Invalid template! Template should be a "string" but "object" was given as the first argument for mustache#render(template, view, partials)TypeError: Invalid template! Template should be a "string" but "object" was given as the first argument for mustache#render(template, view, partials)
+    at Object.render (D:\webserver\nodejs\rapin\node_modules\mustache\mustache.js:598:13)
+    at Mustache.render (D:/webserver/nodejs/rapin/system/library/template/mustache.js:17:39)
+    at Template.render (D:/webserver/nodejs/rapin/system/library/template.js:18:29)
+    at Loader.view (D:/webserver/nodejs/rapin/system/engine/loader.js:34:33)
+    at Proxy.index (D:/webserver/nodejs/rapin/src/controller/common/home.js:3:43)
+    at Action.execute (D:/webserver/nodejs/rapin/system/engine/action.js:26:16)
+    at Router.postRequest (D:/webserver/nodejs/rapin/system/engine/router.js:68:20)
+    at D:/webserver/nodejs/rapin/system/engine/router.js:29:56
+    at Layer.handle [as handle_request] (D:\webserver\nodejs\rapin\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\webserver\nodejs\rapin\node_modules\express\lib\router\route.js:137:13)
+2018-05-13 18:42:44 - Invalid template! Template should be a "string" but "object" was given as the first argument for mustache#render(template, view, partials)TypeError: Invalid template! Template should be a "string" but "object" was given as the first argument for mustache#render(template, view, partials)
+    at Object.render (D:\webserver\nodejs\rapin\node_modules\mustache\mustache.js:598:13)
+    at Mustache.render (D:/webserver/nodejs/rapin/system/library/template/mustache.js:17:39)
+    at Template.render (D:/webserver/nodejs/rapin/system/library/template.js:18:29)
+    at Loader.view (D:/webserver/nodejs/rapin/system/engine/loader.js:34:33)
+    at Proxy.index (D:/webserver/nodejs/rapin/src/controller/common/home.js:3:43)
+    at Action.execute (D:/webserver/nodejs/rapin/system/engine/action.js:26:16)
+    at Router.postRequest (D:/webserver/nodejs/rapin/system/engine/router.js:68:20)
+    at D:/webserver/nodejs/rapin/system/engine/router.js:29:56
+    at Layer.handle [as handle_request] (D:\webserver\nodejs\rapin\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\webserver\nodejs\rapin\node_modules\express\lib\router\route.js:137:13)
+2018-05-13 18:43:21 - Invalid template! Template should be a "string" but "object" was given as the first argument for mustache#render(template, view, partials)TypeError: Invalid template! Template should be a "string" but "object" was given as the first argument for mustache#render(template, view, partials)
+    at Object.render (D:\webserver\nodejs\rapin\node_modules\mustache\mustache.js:598:13)
+    at Mustache.render (D:/webserver/nodejs/rapin/system/library/template/mustache.js:17:39)
+    at Template.render (D:/webserver/nodejs/rapin/system/library/template.js:18:29)
+    at Loader.view (D:/webserver/nodejs/rapin/system/engine/loader.js:34:33)
+    at Proxy.index (D:/webserver/nodejs/rapin/src/controller/common/home.js:3:43)
+    at Action.execute (D:/webserver/nodejs/rapin/system/engine/action.js:26:16)
+    at Router.postRequest (D:/webserver/nodejs/rapin/system/engine/router.js:68:20)
+    at D:/webserver/nodejs/rapin/system/engine/router.js:29:56
+    at Layer.handle [as handle_request] (D:\webserver\nodejs\rapin\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\webserver\nodejs\rapin\node_modules\express\lib\router\route.js:137:13)
+2018-05-13 18:43:58 - Invalid template! Template should be a "string" but "object" was given as the first argument for mustache#render(template, view, partials)TypeError: Invalid template! Template should be a "string" but "object" was given as the first argument for mustache#render(template, view, partials)
+    at Object.render (D:\webserver\nodejs\rapin\node_modules\mustache\mustache.js:598:13)
+    at Mustache.render (D:/webserver/nodejs/rapin/system/library/template/mustache.js:17:39)
+    at Template.render (D:/webserver/nodejs/rapin/system/library/template.js:18:29)
+    at Loader.view (D:/webserver/nodejs/rapin/system/engine/loader.js:34:33)
+    at Proxy.index (D:/webserver/nodejs/rapin/src/controller/common/home.js:3:43)
+    at Action.execute (D:/webserver/nodejs/rapin/system/engine/action.js:26:16)
+    at Router.postRequest (D:/webserver/nodejs/rapin/system/engine/router.js:68:20)
+    at D:/webserver/nodejs/rapin/system/engine/router.js:29:56
+    at Layer.handle [as handle_request] (D:\webserver\nodejs\rapin\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\webserver\nodejs\rapin\node_modules\express\lib\router\route.js:137:13)
+2018-05-13 18:44:28 - Invalid template! Template should be a "string" but "object" was given as the first argument for mustache#render(template, view, partials)TypeError: Invalid template! Template should be a "string" but "object" was given as the first argument for mustache#render(template, view, partials)
+    at Object.render (D:\webserver\nodejs\rapin\node_modules\mustache\mustache.js:598:13)
+    at Mustache.render (D:/webserver/nodejs/rapin/system/library/template/mustache.js:16:39)
+    at Template.render (D:/webserver/nodejs/rapin/system/library/template.js:18:29)
+    at Loader.view (D:/webserver/nodejs/rapin/system/engine/loader.js:34:33)
+    at Proxy.index (D:/webserver/nodejs/rapin/src/controller/common/home.js:3:43)
+    at Action.execute (D:/webserver/nodejs/rapin/system/engine/action.js:26:16)
+    at Router.postRequest (D:/webserver/nodejs/rapin/system/engine/router.js:68:20)
+    at D:/webserver/nodejs/rapin/system/engine/router.js:29:56
+    at Layer.handle [as handle_request] (D:\webserver\nodejs\rapin\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\webserver\nodejs\rapin\node_modules\express\lib\router\route.js:137:13)
+2018-05-13 18:46:29 - Invalid template! Template should be a "string" but "object" was given as the first argument for mustache#render(template, view, partials)TypeError: Invalid template! Template should be a "string" but "object" was given as the first argument for mustache#render(template, view, partials)
+    at Object.render (D:\webserver\nodejs\rapin\node_modules\mustache\mustache.js:598:13)
+    at Mustache.render (D:/webserver/nodejs/rapin/system/library/template/mustache.js:16:39)
+    at Template.render (D:/webserver/nodejs/rapin/system/library/template.js:18:29)
+    at Loader.view (D:/webserver/nodejs/rapin/system/engine/loader.js:34:33)
+    at Proxy.index (D:/webserver/nodejs/rapin/src/controller/common/home.js:3:43)
+    at Action.execute (D:/webserver/nodejs/rapin/system/engine/action.js:26:16)
+    at Router.postRequest (D:/webserver/nodejs/rapin/system/engine/router.js:68:20)
+    at D:/webserver/nodejs/rapin/system/engine/router.js:29:56
+    at Layer.handle [as handle_request] (D:\webserver\nodejs\rapin\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\webserver\nodejs\rapin\node_modules\express\lib\router\route.js:137:13)
+2018-05-13 18:51:13 - An exception has been thrown during the compilation of a template ("null is not a function!") in "default".TwingErrorSyntax: An exception has been thrown during the compilation of a template ("null is not a function!").
+    at TwingEnvironment.compileSource (D:\webserver\nodejs\rapin\node_modules\twing\lib\twing\environment.js:477:23)
+    at TwingEnvironment.loadTemplate (D:\webserver\nodejs\rapin\node_modules\twing\lib\twing\environment.js:291:32)
+    at TwingEnvironment.render (D:\webserver\nodejs\rapin\node_modules\twing\lib\twing\environment.js:221:21)
+    at Twig.render (D:/webserver/nodejs/rapin/system/library/template/twig.js:21:28)
+    at Template.render (D:/webserver/nodejs/rapin/system/library/template.js:18:29)
+    at Loader.view (D:/webserver/nodejs/rapin/system/engine/loader.js:34:33)
+    at Proxy.index (D:/webserver/nodejs/rapin/src/controller/common/home.js:3:43)
+    at Action.execute (D:/webserver/nodejs/rapin/system/engine/action.js:26:16)
+    at Router.postRequest (D:/webserver/nodejs/rapin/system/engine/router.js:68:20)
+    at D:/webserver/nodejs/rapin/system/engine/router.js:29:56
+2018-05-13 18:52:43 - An exception has been thrown during the compilation of a template ("null is not a function!") in "default".TwingErrorSyntax: An exception has been thrown during the compilation of a template ("null is not a function!").
+    at TwingEnvironment.compileSource (D:\webserver\nodejs\rapin\node_modules\twing\lib\twing\environment.js:477:23)
+    at TwingEnvironment.loadTemplate (D:\webserver\nodejs\rapin\node_modules\twing\lib\twing\environment.js:291:32)
+    at TwingEnvironment.render (D:\webserver\nodejs\rapin\node_modules\twing\lib\twing\environment.js:221:21)
+    at Twig.render (D:/webserver/nodejs/rapin/system/library/template/twig.js:21:28)
+    at Template.render (D:/webserver/nodejs/rapin/system/library/template.js:18:29)
+    at Loader.view (D:/webserver/nodejs/rapin/system/engine/loader.js:34:33)
+    at Proxy.index (D:/webserver/nodejs/rapin/src/controller/common/home.js:3:43)
+    at Action.execute (D:/webserver/nodejs/rapin/system/engine/action.js:26:16)
+    at Router.postRequest (D:/webserver/nodejs/rapin/system/engine/router.js:68:20)
+    at D:/webserver/nodejs/rapin/system/engine/router.js:29:56
+2018-05-13 18:56:42 - Template "default" is not defined.TwingErrorLoader: Template "default" is not defined.
+    at TwingLoaderArray.getCacheKey (D:\webserver\nodejs\rapin\node_modules\twing\lib\twing\loader\array.js:47:19)
+    at TwingEnvironment.getTemplateClass (D:\webserver\nodejs\rapin\node_modules\twing\lib\twing\environment.js:210:36)
+    at TwingEnvironment.loadTemplate (D:\webserver\nodejs\rapin\node_modules\twing\lib\twing\environment.js:274:24)
+    at TwingEnvironment.render (D:\webserver\nodejs\rapin\node_modules\twing\lib\twing\environment.js:221:21)
+    at Twig.render (D:/webserver/nodejs/rapin/system/library/template/twig.js:21:28)
+    at Template.render (D:/webserver/nodejs/rapin/system/library/template.js:18:29)
+    at Loader.view (D:/webserver/nodejs/rapin/system/engine/loader.js:34:33)
+    at Proxy.index (D:/webserver/nodejs/rapin/src/controller/common/home.js:3:43)
+    at Action.execute (D:/webserver/nodejs/rapin/system/engine/action.js:26:16)
+    at Router.postRequest (D:/webserver/nodejs/rapin/system/engine/router.js:68:20)
+2018-05-13 18:56:52 - An exception has been thrown during the compilation of a template ("null is not a function!") in "index.html".TwingErrorSyntax: An exception has been thrown during the compilation of a template ("null is not a function!").
+    at TwingEnvironment.compileSource (D:\webserver\nodejs\rapin\node_modules\twing\lib\twing\environment.js:477:23)
+    at TwingEnvironment.loadTemplate (D:\webserver\nodejs\rapin\node_modules\twing\lib\twing\environment.js:291:32)
+    at TwingEnvironment.render (D:\webserver\nodejs\rapin\node_modules\twing\lib\twing\environment.js:221:21)
+    at Twig.render (D:/webserver/nodejs/rapin/system/library/template/twig.js:21:28)
+    at Template.render (D:/webserver/nodejs/rapin/system/library/template.js:18:29)
+    at Loader.view (D:/webserver/nodejs/rapin/system/engine/loader.js:34:33)
+    at Proxy.index (D:/webserver/nodejs/rapin/src/controller/common/home.js:3:43)
+    at Action.execute (D:/webserver/nodejs/rapin/system/engine/action.js:26:16)
+    at Router.postRequest (D:/webserver/nodejs/rapin/system/engine/router.js:68:20)
+    at D:/webserver/nodejs/rapin/system/engine/router.js:29:56
+2018-05-13 18:59:02 - _twing2.default.load is not a functionTypeError: _twing2.default.load is not a function
+    at Twig.render (D:/webserver/nodejs/rapin/system/library/template/twig.js:21:28)
+    at Template.render (D:/webserver/nodejs/rapin/system/library/template.js:18:29)
+    at Loader.view (D:/webserver/nodejs/rapin/system/engine/loader.js:34:33)
+    at Proxy.index (D:/webserver/nodejs/rapin/src/controller/common/home.js:3:43)
+    at Action.execute (D:/webserver/nodejs/rapin/system/engine/action.js:26:16)
+    at Router.postRequest (D:/webserver/nodejs/rapin/system/engine/router.js:68:20)
+    at D:/webserver/nodejs/rapin/system/engine/router.js:29:56
+    at Layer.handle [as handle_request] (D:\webserver\nodejs\rapin\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\webserver\nodejs\rapin\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (D:\webserver\nodejs\rapin\node_modules\express\lib\router\route.js:112:3)
+2018-05-13 19:00:11 - An exception has been thrown during the compilation of a template ("null is not a function!") in "index.html".TwingErrorSyntax: An exception has been thrown during the compilation of a template ("null is not a function!").
+    at TwingEnvironment.compileSource (D:\webserver\nodejs\rapin\node_modules\twing\lib\twing\environment.js:477:23)
+    at TwingEnvironment.loadTemplate (D:\webserver\nodejs\rapin\node_modules\twing\lib\twing\environment.js:291:32)
+    at TwingEnvironment.load (D:\webserver\nodejs\rapin\node_modules\twing\lib\twing\environment.js:254:71)
+    at Twig.render (D:/webserver/nodejs/rapin/system/library/template/twig.js:21:28)
+    at Template.render (D:/webserver/nodejs/rapin/system/library/template.js:18:29)
+    at Loader.view (D:/webserver/nodejs/rapin/system/engine/loader.js:34:33)
+    at Proxy.index (D:/webserver/nodejs/rapin/src/controller/common/home.js:3:43)
+    at Action.execute (D:/webserver/nodejs/rapin/system/engine/action.js:26:16)
+    at Router.postRequest (D:/webserver/nodejs/rapin/system/engine/router.js:68:20)
+    at D:/webserver/nodejs/rapin/system/engine/router.js:29:56
+2018-05-13 19:00:18 - An exception has been thrown during the compilation of a template ("null is not a function!") in "index.html".TwingErrorSyntax: An exception has been thrown during the compilation of a template ("null is not a function!").
+    at TwingEnvironment.compileSource (D:\webserver\nodejs\rapin\node_modules\twing\lib\twing\environment.js:477:23)
+    at TwingEnvironment.loadTemplate (D:\webserver\nodejs\rapin\node_modules\twing\lib\twing\environment.js:291:32)
+    at TwingEnvironment.load (D:\webserver\nodejs\rapin\node_modules\twing\lib\twing\environment.js:254:71)
+    at Twig.render (D:/webserver/nodejs/rapin/system/library/template/twig.js:21:28)
+    at Template.render (D:/webserver/nodejs/rapin/system/library/template.js:18:29)
+    at Loader.view (D:/webserver/nodejs/rapin/system/engine/loader.js:34:33)
+    at Proxy.index (D:/webserver/nodejs/rapin/src/controller/common/home.js:3:43)
+    at Action.execute (D:/webserver/nodejs/rapin/system/engine/action.js:26:16)
+    at Router.postRequest (D:/webserver/nodejs/rapin/system/engine/router.js:68:20)
+    at D:/webserver/nodejs/rapin/system/engine/router.js:29:56
+2018-05-13 19:00:28 - An exception has been thrown during the compilation of a template ("null is not a function!") in "index.html".TwingErrorSyntax: An exception has been thrown during the compilation of a template ("null is not a function!").
+    at TwingEnvironment.compileSource (D:\webserver\nodejs\rapin\node_modules\twing\lib\twing\environment.js:477:23)
+    at TwingEnvironment.loadTemplate (D:\webserver\nodejs\rapin\node_modules\twing\lib\twing\environment.js:291:32)
+    at TwingEnvironment.load (D:\webserver\nodejs\rapin\node_modules\twing\lib\twing\environment.js:254:71)
+    at Twig.render (D:/webserver/nodejs/rapin/system/library/template/twig.js:21:28)
+    at Template.render (D:/webserver/nodejs/rapin/system/library/template.js:18:29)
+    at Loader.view (D:/webserver/nodejs/rapin/system/engine/loader.js:34:33)
+    at Proxy.index (D:/webserver/nodejs/rapin/src/controller/common/home.js:3:43)
+    at Action.execute (D:/webserver/nodejs/rapin/system/engine/action.js:26:16)
+    at Router.postRequest (D:/webserver/nodejs/rapin/system/engine/router.js:68:20)
+    at D:/webserver/nodejs/rapin/system/engine/router.js:29:56
+2018-05-13 19:00:45 - An exception has been thrown during the compilation of a template ("null is not a function!") in "index.html".TwingErrorSyntax: An exception has been thrown during the compilation of a template ("null is not a function!").
+    at TwingEnvironment.compileSource (D:\webserver\nodejs\rapin\node_modules\twing\lib\twing\environment.js:477:23)
+    at TwingEnvironment.loadTemplate (D:\webserver\nodejs\rapin\node_modules\twing\lib\twing\environment.js:291:32)
+    at TwingEnvironment.load (D:\webserver\nodejs\rapin\node_modules\twing\lib\twing\environment.js:254:71)
+    at Twig.render (D:/webserver/nodejs/rapin/system/library/template/twig.js:21:28)
+    at Template.render (D:/webserver/nodejs/rapin/system/library/template.js:18:29)
+    at Loader.view (D:/webserver/nodejs/rapin/system/engine/loader.js:34:33)
+    at Proxy.index (D:/webserver/nodejs/rapin/src/controller/common/home.js:3:43)
+    at Action.execute (D:/webserver/nodejs/rapin/system/engine/action.js:26:16)
+    at Router.postRequest (D:/webserver/nodejs/rapin/system/engine/router.js:68:20)
+    at D:/webserver/nodejs/rapin/system/engine/router.js:29:56
