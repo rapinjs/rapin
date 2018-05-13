@@ -945,3 +945,220 @@
     at Route.dispatch (D:\webserver\nodejs\rapin\node_modules\express\lib\router\route.js:112:3)
     at Layer.handle [as handle_request] (D:\webserver\nodejs\rapin\node_modules\express\lib\router\layer.js:95:5)
     at D:\webserver\nodejs\rapin\node_modules\express\lib\router\index.js:281:22
+2018-05-13 17:11:20 - Cannot read property 'render' of undefinedTypeError: Cannot read property 'render' of undefined
+    at Template.render (D:/webserver/nodejs/rapin/system/library/template.js:17:29)
+    at Loader.view (D:/webserver/nodejs/rapin/system/engine/loader.js:32:33)
+    at Proxy.index (D:/webserver/nodejs/rapin/src/controller/common/home.js:3:43)
+    at Action.execute (D:/webserver/nodejs/rapin/system/engine/action.js:26:16)
+    at Router.postRequest (D:/webserver/nodejs/rapin/system/engine/router.js:68:20)
+    at D:/webserver/nodejs/rapin/system/engine/router.js:29:56
+    at Layer.handle [as handle_request] (D:\webserver\nodejs\rapin\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\webserver\nodejs\rapin\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (D:\webserver\nodejs\rapin\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (D:\webserver\nodejs\rapin\node_modules\express\lib\router\layer.js:95:5)
+2018-05-13 17:12:11 - Cannot read property 'render' of undefinedTypeError: Cannot read property 'render' of undefined
+    at Template.render (D:/webserver/nodejs/rapin/system/library/template.js:17:29)
+    at Loader.view (D:/webserver/nodejs/rapin/system/engine/loader.js:32:33)
+    at Proxy.index (D:/webserver/nodejs/rapin/src/controller/common/home.js:3:43)
+    at Action.execute (D:/webserver/nodejs/rapin/system/engine/action.js:26:16)
+    at Router.postRequest (D:/webserver/nodejs/rapin/system/engine/router.js:68:20)
+    at D:/webserver/nodejs/rapin/system/engine/router.js:29:56
+    at Layer.handle [as handle_request] (D:\webserver\nodejs\rapin\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\webserver\nodejs\rapin\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (D:\webserver\nodejs\rapin\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (D:\webserver\nodejs\rapin\node_modules\express\lib\router\layer.js:95:5)
+2018-05-13 17:12:42 - Cannot read property 'render' of undefinedTypeError: Cannot read property 'render' of undefined
+    at Template.render (D:/webserver/nodejs/rapin/system/library/template.js:18:29)
+    at Loader.view (D:/webserver/nodejs/rapin/system/engine/loader.js:32:33)
+    at Proxy.index (D:/webserver/nodejs/rapin/src/controller/common/home.js:3:43)
+    at Action.execute (D:/webserver/nodejs/rapin/system/engine/action.js:26:16)
+    at Router.postRequest (D:/webserver/nodejs/rapin/system/engine/router.js:68:20)
+    at D:/webserver/nodejs/rapin/system/engine/router.js:29:56
+    at Layer.handle [as handle_request] (D:\webserver\nodejs\rapin\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\webserver\nodejs\rapin\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (D:\webserver\nodejs\rapin\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (D:\webserver\nodejs\rapin\node_modules\express\lib\router\layer.js:95:5)
+2018-05-13 17:12:57 - Cannot read property 'render' of undefinedTypeError: Cannot read property 'render' of undefined
+    at Template.render (D:/webserver/nodejs/rapin/system/library/template.js:19:29)
+    at Loader.view (D:/webserver/nodejs/rapin/system/engine/loader.js:32:33)
+    at Proxy.index (D:/webserver/nodejs/rapin/src/controller/common/home.js:3:43)
+    at Action.execute (D:/webserver/nodejs/rapin/system/engine/action.js:26:16)
+    at Router.postRequest (D:/webserver/nodejs/rapin/system/engine/router.js:68:20)
+    at D:/webserver/nodejs/rapin/system/engine/router.js:29:56
+    at Layer.handle [as handle_request] (D:\webserver\nodejs\rapin\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\webserver\nodejs\rapin\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (D:\webserver\nodejs\rapin\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (D:\webserver\nodejs\rapin\node_modules\express\lib\router\layer.js:95:5)
+2018-05-13 17:14:09 - Cannot find module '@template/common/home'Error: Cannot find module '@template/common/home'
+    at Function.Module._resolveFilename (module.js:538:15)
+    at Function.Module._resolveFilename (D:\webserver\nodejs\rapin\node_modules\module-alias\index.js:43:29)
+    at Function.Module._load (module.js:468:25)
+    at Module.require (module.js:587:17)
+    at require (internal/module.js:11:18)
+    at Jade.render (D:/webserver/nodejs/rapin/system/library/template/jade.js:13:25)
+    at Template.render (D:/webserver/nodejs/rapin/system/library/template.js:19:29)
+    at Loader.view (D:/webserver/nodejs/rapin/system/engine/loader.js:34:33)
+    at Proxy.index (D:/webserver/nodejs/rapin/src/controller/common/home.js:3:43)
+    at Action.execute (D:/webserver/nodejs/rapin/system/engine/action.js:26:16)
+2018-05-13 17:14:30 - Cannot find module '@template/common/home.jade'Error: Cannot find module '@template/common/home.jade'
+    at Function.Module._resolveFilename (module.js:538:15)
+    at Function.Module._resolveFilename (D:\webserver\nodejs\rapin\node_modules\module-alias\index.js:43:29)
+    at Function.Module._load (module.js:468:25)
+    at Module.require (module.js:587:17)
+    at require (internal/module.js:11:18)
+    at Jade.render (D:/webserver/nodejs/rapin/system/library/template/jade.js:13:25)
+    at Template.render (D:/webserver/nodejs/rapin/system/library/template.js:19:29)
+    at Loader.view (D:/webserver/nodejs/rapin/system/engine/loader.js:34:33)
+    at Proxy.index (D:/webserver/nodejs/rapin/src/controller/common/home.js:3:43)
+    at Action.execute (D:/webserver/nodejs/rapin/system/engine/action.js:26:16)
+2018-05-13 17:15:01 - D:/webserver/nodejs/rapin/src/view/template/common/home.jade: Unexpected token (5:8)SyntaxError: D:/webserver/nodejs/rapin/src/view/template/common/home.jade: Unexpected token (5:8)
+[0m [90m 3 | [39m    head
+ [90m 4 | [39m        title[33m=[39m pageTitle
+[31m[1m>[22m[39m[90m 5 | [39m        [33m:[39mjavascript
+ [90m   | [39m        [31m[1m^[22m[39m
+ [90m 6 | [39m            [33m|[39m [36mif[39m (foo) {
+ [90m 7 | [39m            [33m|[39m    bar()
+ [90m 8 | [39m                [33m|[39m }[0m
+    at Parser.pp$5.raise (D:\webserver\nodejs\rapin\node_modules\babylon\lib\index.js:4454:13)
+    at Parser.pp.unexpected (D:\webserver\nodejs\rapin\node_modules\babylon\lib\index.js:1761:8)
+    at Parser.pp$3.parseExprAtom (D:\webserver\nodejs\rapin\node_modules\babylon\lib\index.js:3750:12)
+    at Parser.pp$3.parseExprSubscripts (D:\webserver\nodejs\rapin\node_modules\babylon\lib\index.js:3494:19)
+    at Parser.pp$3.parseMaybeUnary (D:\webserver\nodejs\rapin\node_modules\babylon\lib\index.js:3474:19)
+    at Parser.pp$3.parseExprOps (D:\webserver\nodejs\rapin\node_modules\babylon\lib\index.js:3404:19)
+    at Parser.pp$3.parseMaybeConditional (D:\webserver\nodejs\rapin\node_modules\babylon\lib\index.js:3381:19)
+    at Parser.pp$3.parseMaybeAssign (D:\webserver\nodejs\rapin\node_modules\babylon\lib\index.js:3344:19)
+    at Parser.pp$3.parseExpression (D:\webserver\nodejs\rapin\node_modules\babylon\lib\index.js:3306:19)
+    at Parser.pp$1.parseStatement (D:\webserver\nodejs\rapin\node_modules\babylon\lib\index.js:1906:19)
+2018-05-13 17:15:43 - D:/webserver/nodejs/rapin/src/view/template/common/home.jade: Unexpected token, expected ; (6:11)SyntaxError: D:/webserver/nodejs/rapin/src/view/template/common/home.jade: Unexpected token, expected ; (6:11)
+[0m [90m 4 | [39m        title[33m=[39m pageTitle
+ [90m 5 | [39m    body
+[31m[1m>[22m[39m[90m 6 | [39m        h1 [33mJade[39m [33m-[39m node template engine
+ [90m   | [39m           [31m[1m^[22m[39m
+ [90m 7 | [39m        [37m[41m[1m#[22m[49m[39mcontainer
+ [90m 8 | [39m            [33mGet[39m on it[33m![39m
+ [90m 9 | [39m            [33mGet[39m on it[33m![39m[0m
+    at Parser.pp$5.raise (D:\webserver\nodejs\rapin\node_modules\babylon\lib\index.js:4454:13)
+    at Parser.pp.unexpected (D:\webserver\nodejs\rapin\node_modules\babylon\lib\index.js:1761:8)
+    at Parser.pp.semicolon (D:\webserver\nodejs\rapin\node_modules\babylon\lib\index.js:1742:38)
+    at Parser.pp$1.parseExpressionStatement (D:\webserver\nodejs\rapin\node_modules\babylon\lib\index.js:2236:8)
+    at Parser.pp$1.parseStatement (D:\webserver\nodejs\rapin\node_modules\babylon\lib\index.js:1911:17)
+    at Parser.pp$1.parseBlockBody (D:\webserver\nodejs\rapin\node_modules\babylon\lib\index.js:2268:21)
+    at Parser.pp$1.parseTopLevel (D:\webserver\nodejs\rapin\node_modules\babylon\lib\index.js:1778:8)
+    at Parser.parse (D:\webserver\nodejs\rapin\node_modules\babylon\lib\index.js:1673:17)
+    at parse (D:\webserver\nodejs\rapin\node_modules\babylon\lib\index.js:7305:37)
+    at File.parse (D:\webserver\nodejs\rapin\node_modules\babel-core\lib\transformation\file\index.js:517:15)
+2018-05-13 17:16:02 - D:/webserver/nodejs/rapin/src/view/template/common/home.jade: Unexpected token, expected ; (6:11)SyntaxError: D:/webserver/nodejs/rapin/src/view/template/common/home.jade: Unexpected token, expected ; (6:11)
+[0m [90m 4 | [39m        title[33m=[39m pageTitle
+ [90m 5 | [39m    body
+[31m[1m>[22m[39m[90m 6 | [39m        h1 [33mJade[39m [33m-[39m node template engine
+ [90m   | [39m           [31m[1m^[22m[39m
+ [90m 7 | [39m        [37m[41m[1m#[22m[49m[39mcontainer
+ [90m 8 | [39m            [33mGet[39m on it[33m![39m
+ [90m 9 | [39m            [33mGet[39m on it[33m![39m[0m
+    at Parser.pp$5.raise (D:\webserver\nodejs\rapin\node_modules\babylon\lib\index.js:4454:13)
+    at Parser.pp.unexpected (D:\webserver\nodejs\rapin\node_modules\babylon\lib\index.js:1761:8)
+    at Parser.pp.semicolon (D:\webserver\nodejs\rapin\node_modules\babylon\lib\index.js:1742:38)
+    at Parser.pp$1.parseExpressionStatement (D:\webserver\nodejs\rapin\node_modules\babylon\lib\index.js:2236:8)
+    at Parser.pp$1.parseStatement (D:\webserver\nodejs\rapin\node_modules\babylon\lib\index.js:1911:17)
+    at Parser.pp$1.parseBlockBody (D:\webserver\nodejs\rapin\node_modules\babylon\lib\index.js:2268:21)
+    at Parser.pp$1.parseTopLevel (D:\webserver\nodejs\rapin\node_modules\babylon\lib\index.js:1778:8)
+    at Parser.parse (D:\webserver\nodejs\rapin\node_modules\babylon\lib\index.js:1673:17)
+    at parse (D:\webserver\nodejs\rapin\node_modules\babylon\lib\index.js:7305:37)
+    at File.parse (D:\webserver\nodejs\rapin\node_modules\babel-core\lib\transformation\file\index.js:517:15)
+2018-05-13 17:28:56 - D:/webserver/nodejs/rapin/src/view/template/common/home.jade: Unexpected character '#' (6:8)SyntaxError: D:/webserver/nodejs/rapin/src/view/template/common/home.jade: Unexpected character '#' (6:8)
+[0m [90m 4 | [39m        title[33m=[39m pageTitle
+ [90m 5 | [39m    body
+[31m[1m>[22m[39m[90m 6 | [39m        [37m[41m[1m#[22m[49m[39mcontainer
+ [90m   | [39m        [31m[1m^[22m[39m
+ [90m 7 | [39m            [33mGet[39m on it[33m![39m
+ [90m 8 | [39m            [33mGet[39m on it[33m![39m
+ [90m 9 | [39m            [33mGet[39m on it[33m![39m[0m
+    at Parser.pp$5.raise (D:\webserver\nodejs\rapin\node_modules\babylon\lib\index.js:4454:13)
+    at Parser.getTokenFromCode (D:\webserver\nodejs\rapin\node_modules\babylon\lib\index.js:1147:10)
+    at Parser.readToken (D:\webserver\nodejs\rapin\node_modules\babylon\lib\index.js:776:19)
+    at Parser.nextToken (D:\webserver\nodejs\rapin\node_modules\babylon\lib\index.js:766:19)
+    at Parser.next (D:\webserver\nodejs\rapin\node_modules\babylon\lib\index.js:691:10)
+    at Parser.pp$3.parseIdentifier (D:\webserver\nodejs\rapin\node_modules\babylon\lib\index.js:4341:8)
+    at Parser.pp$3.parseExprAtom (D:\webserver\nodejs\rapin\node_modules\babylon\lib\index.js:3648:21)
+    at Parser.pp$3.parseExprSubscripts (D:\webserver\nodejs\rapin\node_modules\babylon\lib\index.js:3494:19)
+    at Parser.pp$3.parseMaybeUnary (D:\webserver\nodejs\rapin\node_modules\babylon\lib\index.js:3474:19)
+    at Parser.pp$3.parseExprOps (D:\webserver\nodejs\rapin\node_modules\babylon\lib\index.js:3404:19)
+2018-05-13 17:29:09 - D:/webserver/nodejs/rapin/src/view/template/common/home.jade: Unexpected character '#' (6:11)SyntaxError: D:/webserver/nodejs/rapin/src/view/template/common/home.jade: Unexpected character '#' (6:11)
+[0m [90m 4 | [39m        title[33m=[39m pageTitle
+ [90m 5 | [39m    body
+[31m[1m>[22m[39m[90m 6 | [39m        div[37m[41m[1m#[22m[49m[39mcontainer
+ [90m   | [39m           [31m[1m^[22m[39m
+ [90m 7 | [39m            [33mGet[39m on it[33m![39m
+ [90m 8 | [39m            [33mGet[39m on it[33m![39m
+ [90m 9 | [39m            [33mGet[39m on it[33m![39m[0m
+    at Parser.pp$5.raise (D:\webserver\nodejs\rapin\node_modules\babylon\lib\index.js:4454:13)
+    at Parser.getTokenFromCode (D:\webserver\nodejs\rapin\node_modules\babylon\lib\index.js:1147:10)
+    at Parser.readToken (D:\webserver\nodejs\rapin\node_modules\babylon\lib\index.js:776:19)
+    at Parser.nextToken (D:\webserver\nodejs\rapin\node_modules\babylon\lib\index.js:766:19)
+    at Parser.next (D:\webserver\nodejs\rapin\node_modules\babylon\lib\index.js:691:10)
+    at Parser.pp$3.parseIdentifier (D:\webserver\nodejs\rapin\node_modules\babylon\lib\index.js:4341:8)
+    at Parser.pp$3.parseExprAtom (D:\webserver\nodejs\rapin\node_modules\babylon\lib\index.js:3648:21)
+    at Parser.pp$3.parseExprSubscripts (D:\webserver\nodejs\rapin\node_modules\babylon\lib\index.js:3494:19)
+    at Parser.pp$3.parseMaybeUnary (D:\webserver\nodejs\rapin\node_modules\babylon\lib\index.js:3474:19)
+    at Parser.pp$3.parseExprOps (D:\webserver\nodejs\rapin\node_modules\babylon\lib\index.js:3404:19)
+2018-05-13 17:31:49 - ENOENT: no such file or directory, open 'D:\webserver\nodejs\rapin\@template\common\home.jade'Error: ENOENT: no such file or directory, open 'D:\webserver\nodejs\rapin\@template\common\home.jade'
+    at Object.fs.openSync (fs.js:646:18)
+    at Object.fs.readFileSync (fs.js:551:33)
+    at Jade.render (D:/webserver/nodejs/rapin/system/library/template/jade.js:15:28)
+    at Template.render (D:/webserver/nodejs/rapin/system/library/template.js:19:29)
+    at Loader.view (D:/webserver/nodejs/rapin/system/engine/loader.js:34:33)
+    at Proxy.index (D:/webserver/nodejs/rapin/src/controller/common/home.js:3:43)
+    at Action.execute (D:/webserver/nodejs/rapin/system/engine/action.js:26:16)
+    at Router.postRequest (D:/webserver/nodejs/rapin/system/engine/router.js:68:20)
+    at D:/webserver/nodejs/rapin/system/engine/router.js:29:56
+    at Layer.handle [as handle_request] (D:\webserver\nodejs\rapin\node_modules\express\lib\router\layer.js:95:5)
+2018-05-13 17:32:13 - Jade:1
+  > 1| !!! 5
+    2| html(lang="en")
+    3|     head
+    4|         title= pageTitle
+
+`!!!` is deprecated, you must now use `doctype`Error: Jade:1
+  > 1| !!! 5
+    2| html(lang="en")
+    3|     head
+    4|         title= pageTitle
+
+`!!!` is deprecated, you must now use `doctype`
+    at Lexer.doctype (D:\webserver\nodejs\rapin\node_modules\jade\lib\lexer.js:252:13)
+    at Lexer.next (D:\webserver\nodejs\rapin\node_modules\jade\lib\lexer.js:916:15)
+    at Lexer.lookahead (D:\webserver\nodejs\rapin\node_modules\jade\lib\lexer.js:113:46)
+    at Parser.lookahead (D:\webserver\nodejs\rapin\node_modules\jade\lib\parser.js:102:23)
+    at Parser.peek (D:\webserver\nodejs\rapin\node_modules\jade\lib\parser.js:79:17)
+    at Parser.parse (D:\webserver\nodejs\rapin\node_modules\jade\lib\parser.js:117:26)
+    at parse (D:\webserver\nodejs\rapin\node_modules\jade\lib\index.js:104:21)
+    at Object.exports.compile (D:\webserver\nodejs\rapin\node_modules\jade\lib\index.js:205:16)
+    at Jade.render (D:/webserver/nodejs/rapin/system/library/template/jade.js:16:33)
+    at Template.render (D:/webserver/nodejs/rapin/system/library/template.js:19:29)
+2018-05-13 17:32:54 - Jade:7
+    5|             | if (foo) {
+    6|             |    bar()
+  > 7|                 | }
+    8|     body
+    9|         h1 Jade - node template engine
+    10|         #container
+
+unknown filter ":javascript"Error: Jade:7
+    5|             | if (foo) {
+    6|             |    bar()
+  > 7|                 | }
+    8|     body
+    9|         h1 Jade - node template engine
+    10|         #container
+
+unknown filter ":javascript"
+    at filter (D:\webserver\nodejs\rapin\node_modules\jade\lib\filters.js:93:13)
+    at Compiler.visitFilter (D:\webserver\nodejs\rapin\node_modules\jade\lib\compiler.js:509:19)
+    at Compiler.visitNode (D:\webserver\nodejs\rapin\node_modules\jade\lib\compiler.js:225:37)
+    at Compiler.visit (D:\webserver\nodejs\rapin\node_modules\jade\lib\compiler.js:212:10)
+    at Compiler.visitBlock (D:\webserver\nodejs\rapin\node_modules\jade\lib\compiler.js:295:12)
+    at Compiler.visitNode (D:\webserver\nodejs\rapin\node_modules\jade\lib\compiler.js:225:37)
+    at Compiler.visit (D:\webserver\nodejs\rapin\node_modules\jade\lib\compiler.js:212:10)
+    at Compiler.visitTag (D:\webserver\nodejs\rapin\node_modules\jade\lib\compiler.js:480:12)
+    at Compiler.visitNode (D:\webserver\nodejs\rapin\node_modules\jade\lib\compiler.js:225:37)
+    at Compiler.visit (D:\webserver\nodejs\rapin\node_modules\jade\lib\compiler.js:212:10)

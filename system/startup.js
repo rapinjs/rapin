@@ -7,7 +7,7 @@ import path from 'path'
 global.Controller = Controller
 global.Model = Model
 global.DIR_IMAGE = path.resolve(__dirname, '../static/images/')
-console.log(global.DIR_IMAGE)
+
 let router = new Router()
 
 router.start()

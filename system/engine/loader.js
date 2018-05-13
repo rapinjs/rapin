@@ -1,6 +1,7 @@
-import {replace} from 'lodash'
+import {replace, each} from 'lodash'
 import Action from './action'
 import Registry from "./registry";
+import Template from "@system/library/template";
 export default class Loader {
     constructor(registry) {
         this.registry = registry
@@ -21,7 +22,17 @@ export default class Loader {
         }
     }
     view(route, data) {
+        route = replace(route, /[^a-zA-Z0-9_\/]/, '')
 
+        const {template_engine} = this.registry.get('config').get('defaultConfig')
+
+        let template = new Template(template_engine)
+        each(data, (key, value) => {
+            template.set(key, value)
+        })
+
+        const output = template.render(route)
+        return output
     }
     config(route, data) {
 

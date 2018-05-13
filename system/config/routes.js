@@ -28,5 +28,10 @@ export const routes = [
         type: 'POST',
         contentType: 'file',
         action: 'blog/post/image'
+    },
+    {
+        path: '/home',
+        type: 'GET',
+        action: 'common/home/index'
     }
 ]

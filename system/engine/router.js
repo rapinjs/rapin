@@ -47,12 +47,12 @@ export default class Router {
         this.registry.set('response', new Response(res))
         this.registry.set('language', new Language())
         this.registry.set('config', new Config())
-        this.registry.set('load', new Loader(this.registry))
         this.registry.get('config').load('default')
         const defaultConfig = this.registry.get('config').get('defaultConfig')
         const {db_engine, db_hostname, db_username, db_password, db_database, db_port, error_filename, cache_engine, cache_expire} = defaultConfig
         this.registry.set('log', new Log(error_filename))
         this.registry.set('cache', new Cache(cache_engine, cache_expire))
+        this.registry.set('load', new Loader(this.registry))
          try {
             this.registry.set('db', new DB(db_engine, db_hostname, db_username, db_password, db_database, db_port))
          } catch(e){

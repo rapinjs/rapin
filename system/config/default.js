@@ -6,6 +6,8 @@ export const defaultConfig =  {
     db_database: 'nodetest',
     db_port: '3306',
 
+    template_engine: 'jade',
+
     error_filename: 'error.log',
 
     cache_engine: 'file',
