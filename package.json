@@ -20,6 +20,7 @@
     "moment": "^2.22.0",
     "mongodb": "^3.1.0-beta4",
     "mysql": "^2.15.0",
+    "pug": "^2.0.3",
     "sync-mysql": "^3.0.1",
     "wait-for-stuff": "^1.4.0"
   },
