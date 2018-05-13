@@ -17,6 +17,7 @@ export default class ControllerBlogPost extends Controller {
     list(){
         this.load.model('blog/post')
         const posts = this.model_blog_post.getPosts()
+
         this.response.setOutput(posts)
     }
     post(){
@@ -26,6 +27,7 @@ export default class ControllerBlogPost extends Controller {
         this.load.model('blog/post')
 
         let data = {}
+
 
         data['title'] = this.language.get('text_title')
 
