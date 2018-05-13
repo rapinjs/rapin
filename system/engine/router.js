@@ -21,6 +21,7 @@ export default class Router {
         this.app.use(express.json());
         this.app.use(fileUpload());
         this.app.use(cookieParser());
+        this.app.use('/static', express.static(DIR_STATIC))
     }
     start() {
         this.app.use((req, res, next) => ::this.preRequest(req, res, next));

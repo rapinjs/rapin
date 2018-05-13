@@ -1867,3 +1867,80 @@ unknown filter ":javascript"
     at Action.execute (D:/webserver/nodejs/rapin/system/engine/action.js:26:16)
     at Router.postRequest (D:/webserver/nodejs/rapin/system/engine/router.js:68:20)
     at D:/webserver/nodejs/rapin/system/engine/router.js:29:56
+2018-05-13 21:53:03 - connect ECONNREFUSED 127.0.0.1:3306Error: connect ECONNREFUSED 127.0.0.1:3306
+    at extractValue (D:\webserver\nodejs\rapin\node_modules\sync-rpc\lib\index.js:144:19)
+    at Connection._client (D:\webserver\nodejs\rapin\node_modules\sync-rpc\lib\index.js:154:12)
+    at Connection.query (D:\webserver\nodejs\rapin\node_modules\sync-mysql\lib\index.js:68:19)
+    at new mysql (D:/webserver/nodejs/rapin/system/library/db/mysql.js:14:25)
+    at new DB (D:/webserver/nodejs/rapin/system/library/db.js:8:28)
+    at Router.preRequest (D:/webserver/nodejs/rapin/system/engine/router.js:58:37)
+    at D:/webserver/nodejs/rapin/system/engine/router.js:27:42
+    at Layer.handle [as handle_request] (D:\webserver\nodejs\rapin\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\webserver\nodejs\rapin\node_modules\express\lib\router\index.js:317:13)
+    at D:\webserver\nodejs\rapin\node_modules\express\lib\router\index.js:284:7
+2018-05-13 21:53:04 - connect ECONNREFUSED 127.0.0.1:3306Error: connect ECONNREFUSED 127.0.0.1:3306
+    at extractValue (D:\webserver\nodejs\rapin\node_modules\sync-rpc\lib\index.js:144:19)
+    at Connection._client (D:\webserver\nodejs\rapin\node_modules\sync-rpc\lib\index.js:154:12)
+    at Connection.query (D:\webserver\nodejs\rapin\node_modules\sync-mysql\lib\index.js:68:19)
+    at new mysql (D:/webserver/nodejs/rapin/system/library/db/mysql.js:14:25)
+    at new DB (D:/webserver/nodejs/rapin/system/library/db.js:8:28)
+    at Router.preRequest (D:/webserver/nodejs/rapin/system/engine/router.js:58:37)
+    at D:/webserver/nodejs/rapin/system/engine/router.js:27:42
+    at Layer.handle [as handle_request] (D:\webserver\nodejs\rapin\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\webserver\nodejs\rapin\node_modules\express\lib\router\index.js:317:13)
+    at D:\webserver\nodejs\rapin\node_modules\express\lib\router\index.js:284:7
+2018-05-13 22:07:28 - connect ECONNREFUSED 127.0.0.1:3306Error: connect ECONNREFUSED 127.0.0.1:3306
+    at extractValue (D:\webserver\nodejs\rapin\node_modules\sync-rpc\lib\index.js:144:19)
+    at Connection._client (D:\webserver\nodejs\rapin\node_modules\sync-rpc\lib\index.js:154:12)
+    at Connection.query (D:\webserver\nodejs\rapin\node_modules\sync-mysql\lib\index.js:68:19)
+    at new mysql (D:/webserver/nodejs/rapin/system/library/db/mysql.js:14:25)
+    at new DB (D:/webserver/nodejs/rapin/system/library/db.js:8:28)
+    at Router.preRequest (D:/webserver/nodejs/rapin/system/engine/router.js:58:37)
+    at D:/webserver/nodejs/rapin/system/engine/router.js:27:42
+    at Layer.handle [as handle_request] (D:\webserver\nodejs\rapin\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\webserver\nodejs\rapin\node_modules\express\lib\router\index.js:317:13)
+    at D:\webserver\nodejs\rapin\node_modules\express\lib\router\index.js:284:7
+2018-05-13 22:08:05 - connect ECONNREFUSED 127.0.0.1:3306Error: connect ECONNREFUSED 127.0.0.1:3306
+    at extractValue (D:\webserver\nodejs\rapin\node_modules\sync-rpc\lib\index.js:144:19)
+    at Connection._client (D:\webserver\nodejs\rapin\node_modules\sync-rpc\lib\index.js:154:12)
+    at Connection.query (D:\webserver\nodejs\rapin\node_modules\sync-mysql\lib\index.js:68:19)
+    at new mysql (D:/webserver/nodejs/rapin/system/library/db/mysql.js:14:25)
+    at new DB (D:/webserver/nodejs/rapin/system/library/db.js:8:28)
+    at Router.preRequest (D:/webserver/nodejs/rapin/system/engine/router.js:58:37)
+    at D:/webserver/nodejs/rapin/system/engine/router.js:27:42
+    at Layer.handle [as handle_request] (D:\webserver\nodejs\rapin\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\webserver\nodejs\rapin\node_modules\express\lib\router\index.js:317:13)
+    at D:\webserver\nodejs\rapin\node_modules\express\lib\router\index.js:284:7
+2018-05-13 22:08:33 - connect ECONNREFUSED 127.0.0.1:3306Error: connect ECONNREFUSED 127.0.0.1:3306
+    at extractValue (D:\webserver\nodejs\rapin\node_modules\sync-rpc\lib\index.js:144:19)
+    at Connection._client (D:\webserver\nodejs\rapin\node_modules\sync-rpc\lib\index.js:154:12)
+    at Connection.query (D:\webserver\nodejs\rapin\node_modules\sync-mysql\lib\index.js:68:19)
+    at new mysql (D:/webserver/nodejs/rapin/system/library/db/mysql.js:14:25)
+    at new DB (D:/webserver/nodejs/rapin/system/library/db.js:8:28)
+    at Router.preRequest (D:/webserver/nodejs/rapin/system/engine/router.js:58:37)
+    at D:/webserver/nodejs/rapin/system/engine/router.js:27:42
+    at Layer.handle [as handle_request] (D:\webserver\nodejs\rapin\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\webserver\nodejs\rapin\node_modules\express\lib\router\index.js:317:13)
+    at D:\webserver\nodejs\rapin\node_modules\express\lib\router\index.js:284:7
+2018-05-13 22:08:37 - connect ECONNREFUSED 127.0.0.1:3306Error: connect ECONNREFUSED 127.0.0.1:3306
+    at extractValue (D:\webserver\nodejs\rapin\node_modules\sync-rpc\lib\index.js:144:19)
+    at Connection._client (D:\webserver\nodejs\rapin\node_modules\sync-rpc\lib\index.js:154:12)
+    at Connection.query (D:\webserver\nodejs\rapin\node_modules\sync-mysql\lib\index.js:68:19)
+    at new mysql (D:/webserver/nodejs/rapin/system/library/db/mysql.js:14:25)
+    at new DB (D:/webserver/nodejs/rapin/system/library/db.js:8:28)
+    at Router.preRequest (D:/webserver/nodejs/rapin/system/engine/router.js:58:37)
+    at D:/webserver/nodejs/rapin/system/engine/router.js:27:42
+    at Layer.handle [as handle_request] (D:\webserver\nodejs\rapin\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\webserver\nodejs\rapin\node_modules\express\lib\router\index.js:317:13)
+    at D:\webserver\nodejs\rapin\node_modules\express\lib\router\index.js:284:7
+2018-05-13 22:08:37 - Cannot read property 'query' of undefinedTypeError: Cannot read property 'query' of undefined
+    at Proxy.getPosts (D:/webserver/nodejs/rapin/src/model/blog/post.js:20:35)
+    at Proxy.list (D:/webserver/nodejs/rapin/src/controller/blog/post.js:19:44)
+    at Action.execute (D:/webserver/nodejs/rapin/system/engine/action.js:26:16)
+    at Router.postRequest (D:/webserver/nodejs/rapin/system/engine/router.js:69:20)
+    at D:/webserver/nodejs/rapin/system/engine/router.js:30:56
+    at Layer.handle [as handle_request] (D:\webserver\nodejs\rapin\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\webserver\nodejs\rapin\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (D:\webserver\nodejs\rapin\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (D:\webserver\nodejs\rapin\node_modules\express\lib\router\layer.js:95:5)
+    at D:\webserver\nodejs\rapin\node_modules\express\lib\router\index.js:281:22

@@ -31,6 +31,7 @@
     "@storage": "system/storage",
     "@controller": "src/controller",
     "@language": "src/language",
+    "@images": "static/images",
     "@model": "src/model",
     "@template": "src/view/template"
   },
