@@ -1,3 +1,9 @@
 # Created by .ignore support plugin (hsz.mobi)
 /node_modules/
 /static/images/posts/
+.idea/
+.vscode/
+static/images/users/
+static/images/items/
+dist/
+*.txt

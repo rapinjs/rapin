@@ -2,46 +2,52 @@
   "name": "rapin",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "system/startup",
+  "watch": {
+    "tslint": "{src,system}/**/*.ts"
+  },
   "scripts": {
-    "start": "nodemon --exec babel-node --presets es2015 system/startup.js"
+    "start": "nodemon --exec ts-node -r ./tsconfigpath.ts system/startup.ts",
+    "start:idea": "ts-node %NODE_DEBUG_OPTION% --ignore false -r ./tsconfigpath.ts system/startup.ts",
+    "tslint": "tslint {src,system}/**/*.ts --fix",
+    "watch": "npm-watch"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@types/node": "^10.10.1",
     "cookie-parser": "^1.4.3",
+    "crypto": "^1.0.1",
     "express": "^4.16.3",
     "express-fileupload": "^0.4.0",
     "fs": "0.0.1-security",
     "glob": "^7.1.2",
     "jade": "^1.11.0",
     "lodash": "^4.17.5",
-    "module-alias": "^2.0.6",
-    "moment": "^2.22.0",
-    "mongodb": "^3.1.0-beta4",
+    "moment": "^2.22.2",
+    "mongodb": "^3.1.4",
     "mustache": "^2.3.0",
-    "mysql": "^2.15.0",
+    "mysql": "^2.16.0",
     "pug": "^2.0.3",
-    "sync-mysql": "^3.0.1",
+    "reflect-metadata": "^0.1.10",
+    "ts-node": "^7.0.1",
+    "tslint": "^5.11.0",
+    "typeorm": "^0.2.7",
+    "typescript": "^3.0.3",
     "wait-for-stuff": "^1.4.0"
   },
-  "_moduleAliases": {
-    "@system": "system",
-    "@config": "system/config",
-    "@storage": "system/storage",
-    "@controller": "src/controller",
-    "@language": "src/language",
-    "@images": "static/images",
-    "@model": "src/model",
-    "@template": "src/view/template"
-  },
   "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-plugin-transform-class-properties": "^6.24.1",
-    "babel-plugin-transform-decorators": "^6.24.1",
-    "babel-preset-env": "^1.6.1",
-    "babel-preset-es2015": "^6.24.1",
-    "babel-preset-stage-0": "^6.24.1",
-    "nodemon": "^1.17.4"
+    "@types/cookie-parser": "^1.4.1",
+    "@types/cors": "^2.8.4",
+    "@types/express": "^4.16.0",
+    "@types/express-fileupload": "^0.4.0",
+    "@types/glob": "^5.0.35",
+    "@types/jsonwebtoken": "^7.2.8",
+    "@types/lodash": "^4.14.116",
+    "cors": "^2.8.4",
+    "jsonwebtoken": "^8.3.0",
+    "nodemon": "^1.17.4",
+    "npm-watch": "^0.3.0",
+    "tsconfig-paths": "^3.5.0"
   }
 }

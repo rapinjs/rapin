@@ -1,7 +1,0 @@
-{
-  "plugins": [
-    "transform-decorators",
-    ["transform-class-properties", { "spec": true }]
-  ],
-  "presets": ["env", "stage-0"]
-}

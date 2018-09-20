@@ -1,0 +1,6 @@
+{
+  "watch": ["src", "system"],
+  "ext": "ts",
+  "ignore": [],
+  "exec": "ts-node ./system/startup"
+}
