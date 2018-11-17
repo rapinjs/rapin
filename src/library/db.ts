@@ -22,7 +22,7 @@ export default class DB {
       synchronize: false,
       logging: false,
       entities: [
-        'system/library/entities/**/*.ts',
+        'entities/**/*.ts',
       ],
     }))
 

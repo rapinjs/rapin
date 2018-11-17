@@ -16,13 +16,15 @@
     "paths": {
       "*": [
         "*",
+        "system/*",
         "src/*",
-        "src/helper/*"
+        "system/helper/*"
       ]
     }
   },
   "include": [
-    "src/**/*"
+    "src/**/*",
+    "system/**/*", "../rapin-starter-template/tsconfig.json"
   ],
   "exclude": [
     "node_modules"

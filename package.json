@@ -2,7 +2,7 @@
   "name": "rapin",
   "version": "1.0.0",
   "description": "",
-  "main": "src/startup",
+  "main": "src",
   "watch": {
     "tslint": "{src}/**/*.ts"
   },
@@ -12,6 +12,9 @@
     "tslint": "tslint {src}/**/*.ts --fix",
     "watch": "npm-watch",
     "build": "rimraf lib && tsc -p ."
+  },
+  "directions": {
+    "helper": "src/helper"
   },
   "bin": {
     "rapin": "./src/startup.ts"

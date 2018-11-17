@@ -61,6 +61,7 @@ export default class Router {
         router.put(route.path, (req, res) => this.postRequest(req, res, route)).bind(this)
       }
     })
+    // console.log(router)
     this.app.use(BASE_URL, router)
 
     this.app.listen(PORT, () => {
@@ -84,7 +85,6 @@ export default class Router {
       dbEngine, dbHostname, dbUsername, dbPassword, dbDatabase, dbPort, errorFilename,
     } = defaultConfig
 
-    console.log(defaultConfig)
     this.registry.set('log', new Log(errorFilename))
     this.registry.set('load', new Loader(this.registry))
     this.registry.set('log', new Log(errorFilename))
@@ -110,7 +110,7 @@ export default class Router {
 
   private postRequest(req: express.Request, res: express.Response, route: any) {
     const token = !isUndefined(req.headers.token) ? req.headers.token : false
-
+    console.log(route)
     if ((route.auth && token && this.registry.get('user').verify(token)) || !route.auth) {
       try {
         triggerEvent('controller/'+route.action, 'before', {data: {}})

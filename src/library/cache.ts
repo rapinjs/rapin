@@ -1,11 +1,12 @@
 import * as fs from 'fs'
+import * as path from 'path'
 
 export default class Cache {
   public cache: any
   constructor(driver: string, expire: number = 3600) {
-    const filePath = 'system/library/cache/' + driver + '.ts'
+    const filePath = path.resolve(__dirname, './cache/' + driver + '.ts')
     if (fs.existsSync(filePath) && fs.lstatSync(filePath).isFile()) {
-      const driverClass = require('system/library/cache/' + driver).default
+      const driverClass = require('./cache/' + driver).default
       this.cache = new driverClass(expire)
     }
   }

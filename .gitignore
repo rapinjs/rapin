@@ -8,3 +8,5 @@ static/images/items/
 dist/
 *.txt
 /system/helper
+bin/
+src/storage/

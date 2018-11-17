@@ -84,7 +84,6 @@ export const Auth = () => {
   export const routes = (registryOption: Registry) => {
     registry = registryOption
     const controllers = glob.sync('src/controller/**/*.ts')
-  
     for (const value of controllers) {
       controllerPath = replace(value, 'src/controller/', '')
       controllerPath = replace(controllerPath, '.ts', '')
@@ -97,7 +96,7 @@ export const Auth = () => {
 
       registry.set(controllerName, new controller(registry))
     }
-  
+
     return results
   }
   
