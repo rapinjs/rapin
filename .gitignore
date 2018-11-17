@@ -7,3 +7,4 @@ static/images/users/
 static/images/items/
 dist/
 *.txt
+/system/helper
