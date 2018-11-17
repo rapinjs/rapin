@@ -10,7 +10,7 @@
     "pretty": true,
     "sourceMap": true,
     "target": "es6",
-    "outDir": "./bin",
+    "outDir": "./lib",
     "declaration": true,
     "baseUrl": ".",
     "paths": {
@@ -24,7 +24,7 @@
   },
   "include": [
     "src/**/*",
-    "system/**/*", "../rapin-starter-template/tsconfig.json"
+    "system/**/*"
   ],
   "exclude": [
     "node_modules"

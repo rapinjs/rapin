@@ -4,6 +4,10 @@ import { forEach, isEmpty, last, replace, toNumber, toString } from 'lodash'
 import * as moment from 'moment'
 import {DIR_STORAGE} from '../../common'
 
+if (!fs.existsSync(DIR_STORAGE+'/cache')){
+  fs.mkdirSync(DIR_STORAGE+'/cache');
+}
+
 export default class File {
   public expire: number
   constructor(expire: number = 3600) {

@@ -7,17 +7,15 @@
     "tslint": "{src}/**/*.ts"
   },
   "scripts": {
-    "start": "cross-env NODE_ENV=production ts-node -r ./tsconfigpath.ts src/startup.ts",
-    "dev": "cross-env NODE_ENV=development nodemon --exec ts-node -r ./tsconfigpath.ts src/startup.ts",
     "tslint": "tslint {src}/**/*.ts --fix",
     "watch": "npm-watch",
     "build": "rimraf lib && tsc -p ."
   },
   "directions": {
-    "helper": "src/helper"
+    "helper": "lib/helper"
   },
   "bin": {
-    "rapin": "./src/startup.ts"
+    "rapin": "./lib/startup.js"
   },
   "author": "",
   "license": "ISC",

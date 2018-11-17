@@ -1,12 +1,13 @@
 import * as fs from 'fs'
+import * as path from 'path'
 
 export default class Style {
   public style: any
 
   constructor(driver: string) {
-    const filePath = 'system/library/style/' + driver + '.ts'
+    const filePath = path.resolve(__dirname, './style/' + driver + '.js')
     if (fs.existsSync(filePath) && fs.lstatSync(filePath).isFile()) {
-      const driverClass = require('system/library/style/' + driver).default
+      const driverClass = require('./style/' + driver).default
       this.style = new driverClass()
     }
   }

@@ -110,7 +110,7 @@ export default class Router {
 
   private postRequest(req: express.Request, res: express.Response, route: any) {
     const token = !isUndefined(req.headers.token) ? req.headers.token : false
-    console.log(route)
+
     if ((route.auth && token && this.registry.get('user').verify(token)) || !route.auth) {
       try {
         triggerEvent('controller/'+route.action, 'before', {data: {}})
