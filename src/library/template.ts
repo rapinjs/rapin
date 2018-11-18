@@ -1,11 +1,13 @@
 import * as fs from 'fs'
 import * as path from 'path'
+import {template} from 'rapin-config'
 export default class Template {
   public adaptor: any
-  constructor(adaptor: string) {
-    const filepath = path.resolve(__dirname, './template/' + adaptor + '.js')
+  constructor() {
+    const {engine} = template
+    const filepath = path.resolve(__dirname, './template/' + engine + '.js')
     if (fs.existsSync(filepath) && fs.lstatSync(filepath).isFile()) {
-      const adaptorClass = require('./template/' + adaptor).default
+      const adaptorClass = require('./template/' + engine).default
       this.adaptor = new adaptorClass()
     }
   }

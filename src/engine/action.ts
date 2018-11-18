@@ -21,7 +21,7 @@ export default class Action {
       }
     }
   }
-  public execute(registry: Registry, args: object = {}) {
+  public async execute(registry: Registry, args: object = {}) {
     
     const controllerName = 'Controller' + join(map(split(this.route, '/'), (value) => (capitalize(value))), '')
 
@@ -35,6 +35,6 @@ export default class Action {
       controller = new controller(registry)
     }
     
-    return controller[this.method](args)
+    return await controller[this.method](args)
   }
 }

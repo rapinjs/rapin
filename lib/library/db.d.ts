@@ -1,14 +1,14 @@
 import 'reflect-metadata';
-import { SelectQueryBuilder } from 'typeorm';
 export default class DB {
     private connection;
-    constructor(type: any, host: string, username: string, password: string, database: string, port?: number);
-    queryBuilder(table: string): SelectQueryBuilder<{}>;
-    queryMany(query: any): Object;
-    queryCount(query: any): Object;
+    constructor();
+    init(): Promise<void>;
+    queryBuilder(table: string): import("typeorm/query-builder/SelectQueryBuilder").SelectQueryBuilder<{}>;
+    queryMany(query: any): Promise<Object>;
+    queryCount(query: any): Promise<Object>;
     repository(table: string): import("typeorm/repository/Repository").Repository<{}>;
-    findOne(table: string, conditions?: any, options?: any): any;
-    find(table: string, options?: any): any;
+    findOne(table: string, conditions?: any, options?: any): Promise<{}>;
+    find(table: string, options?: any): Promise<{}[]>;
     create(table: string): {};
-    save(table: string, entity: any): any;
+    save(table: string, entity: any): Promise<any>;
 }

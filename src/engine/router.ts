@@ -44,11 +44,11 @@ export default class Router {
     new Decorator(this.registry)
   }
 
-  public start() {
-    this.initRegistry()
+  public async start() {
+    await this.initRegistry()
     const router: express.Router = express.Router()
 
-    router.use((req, res, next) => this.preRequest(req, res, next)).bind(this)
+    router.use(async (req, res, next) => this.preRequest(req, res, next)).bind(this)
 
     forEach(routes(this.registry), (route) => {
       if (route.type === 'GET') {
@@ -69,7 +69,7 @@ export default class Router {
     })
   }
 
-  private initRegistry() {
+  private async initRegistry() {
     this.registry = new Registry()
     initHelpers(this.registry)
     this.registry.set('language', new Language())
@@ -78,37 +78,28 @@ export default class Router {
     this.registry.set('image', new Image())
     this.registry.set('pagination', new Pagination())
 
-    this.registry.get('config').load('default')
-    const defaultConfig = this.registry.get('config').get('defaultConfig')
-
-    const {
-      dbEngine, dbHostname, dbUsername, dbPassword, dbDatabase, dbPort, errorFilename,
-    } = defaultConfig
-
-    this.registry.set('log', new Log(errorFilename))
+    this.registry.set('log', new Log())
     this.registry.set('load', new Loader(this.registry))
-    this.registry.set('log', new Log(errorFilename))
 
     try {
-      this.registry.set('db', new DB(dbEngine, dbHostname, dbUsername, dbPassword, dbDatabase, dbPort))
+      this.registry.set('db', new DB())
+      await this.registry.get('db').init()
     } catch (e) {
       this.handleError(e)
     }
   }
 
-  private preRequest(req: express.Request, res: express.Response, next: express.NextFunction) {
+  private async preRequest(req: express.Request, res: express.Response, next: express.NextFunction) {
     this.registry.set('error', new Error())
     this.registry.set('request', new Request(req))
     this.registry.set('response', new Response())
     this.registry.set('user', new User(this.registry))
-    const defaultConfig = this.registry.get('config').get('defaultConfig')
-    const { cacheEngine, cacheExpire } = defaultConfig
-    this.registry.set('cache', new Cache(cacheEngine, cacheExpire))
+    this.registry.set('cache', new Cache())
 
-    next()
+    await next()
   }
 
-  private postRequest(req: express.Request, res: express.Response, route: any) {
+  private async postRequest(req: express.Request, res: express.Response, route: any) {
     const token = !isUndefined(req.headers.token) ? req.headers.token : false
 
     if ((route.auth && token && this.registry.get('user').verify(token)) || !route.auth) {
@@ -116,7 +107,7 @@ export default class Router {
         triggerEvent('controller/'+route.action, 'before', {data: {}})
         const action = new Action(route.action)
 
-        const output = action.execute(this.registry)
+        const output = await action.execute(this.registry)
 
         triggerEvent('controller/'+route.action, 'after', {data: {}, output})
 

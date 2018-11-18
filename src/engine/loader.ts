@@ -11,10 +11,10 @@ export default class Loader {
     this.registry = registry
   }
 
-  public controller(route: string, data: object) {
+  public async controller(route: string, data: object) {
     triggerEvent('controller/'+route, 'before', {data})
     const action = new Action(route)
-    const output = action.execute(this.registry, data)
+    const output = await action.execute(this.registry, data)
 
     triggerEvent('controller/'+route, 'after', {data, output})
   }
@@ -36,9 +36,7 @@ export default class Loader {
   public view(route: string, data: object) {
     route = replace(route, /[^a-zA-Z0-9_\/]/, '')
 
-    const {templateEngine} = this.registry.get('config').get('defaultConfig')
-
-    const template = new Template(templateEngine)
+    const template = new Template()
 
     each(data, (value, key) => {
       template.set(key, value)

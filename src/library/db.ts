@@ -3,45 +3,42 @@ import 'reflect-metadata'
 import {
   Connection,
   createConnection,
-  SelectQueryBuilder,
 } from 'typeorm'
-import * as wait from 'wait-for-stuff'
+import {db} from 'rapin-config'
 
 export default class DB {
   private connection: Connection
 
-  constructor(type: any, host: string, username: string, password: string, database: string, port: number = null) {
-
-    this.connection = wait.for.promise(createConnection({
-      type,
-      host,
-      port,
-      username,
-      password,
-      database,
+  constructor() {}
+  public async init() {
+    this.connection = await createConnection({
+      type: db.engine,
+      host: db.host,
+      port: db.port,
+      username: db.username,
+      password: db.password,
+      database: db.database,
       synchronize: false,
       logging: false,
       entities: [
         'entities/**/*.ts',
       ],
-    }))
-
+    })
     if (this.connection instanceof Error) {
       throw new Error(this.connection.message)
     }
-
   }
 
   public queryBuilder(table: string) {
     return this.connection.getRepository(table).createQueryBuilder(table)
   }
 
-  public queryMany(query: any): Object {
-    const result = wait.for.promise(query.getMany())
+  public async queryMany(query: any): Promise<Object> {
+    const result = await query.getMany()
     return !isUndefined(result) ? result : {}
   }
-  public queryCount(query: any): Object {
-    const result = wait.for.promise(query.getCount())
+  public async queryCount(query: any): Promise<Object> {
+    const result = await query.getCount()
     return !isUndefined(result) ? result : 0
   }
 
@@ -50,16 +47,16 @@ export default class DB {
     return this.connection.getRepository(table)
   }
 
-  public findOne(table: string, conditions?, options?) {
+  public async findOne(table: string, conditions?, options?) {
     const repository = this.connection.getRepository(table)
 
-    const result = wait.for.promise(repository.findOne(conditions, options))
+    const result = await repository.findOne(conditions, options)
     return !isUndefined(result) ? result : {}
   }
 
-  public find(table: string, options?) {
+  public async find(table: string, options?) {
     const repository = this.connection.getRepository(table)
-    const result = wait.for.promise(repository.find(options))
+    const result = await repository.find(options)
     return !isUndefined(result) ? result : []
   }
 
@@ -69,9 +66,9 @@ export default class DB {
     return repository.create()
   }
 
-  public save(table: string, entity) {
+  public async save(table: string, entity) {
     const repository = this.connection.getRepository(table)
-    const result = wait.for.promise(repository.save(entity))
+    const result = await repository.save(entity)
     return result
   }
 }
