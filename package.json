@@ -9,6 +9,7 @@
   "scripts": {
     "tslint": "tslint {src}/**/*.ts --fix",
     "watch": "npm-watch",
+    "dev": "nodemon",
     "build": "rimraf lib && tsc -p ."
   },
   "directions": {

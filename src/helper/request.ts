@@ -79,8 +79,21 @@ export const Auth = () => {
       }
     }
   }
-  
 
+  export const validate = (action: string) => {
+    return (target: Object, propertyKey: string, descriptor: TypedPropertyDescriptor<any>) => {
+      const originalMethod = descriptor.value
+      descriptor.value = function(...args: any[]) {
+        const error = registry.get('load').controller(action)
+        if (!error) {
+          return originalMethod.apply(this, args)
+        } else {
+          registry.get('error').set(error)
+        }
+      }
+    }
+  }
+  
   export const routes = (registryOption: Registry) => {
     registry = registryOption
     const controllers = glob.sync('src/controller/**/*.ts')

@@ -33,6 +33,7 @@ import * as mount from 'koa-mount'
 import * as koaBody from 'koa-body'
 import * as session from 'koa-session'
 import axios from 'axios'
+import {pluginEvent} from '../helper/plugin'
 
 
 export default class Router {
@@ -57,9 +58,11 @@ export default class Router {
   }
 
   public async start() {
+    pluginEvent('beforeInitRegistry', {app: this.app})
     await this.initRegistry()
+    pluginEvent('afterInitRegistry', {app: this.app, registry: this.registry})
     const router: KoaRouter = new KoaRouter()
-
+    pluginEvent('onBeforeInitRouter', {app: this.app, registry: this.registry})
     this.app.use((ctx, next) => this.preRequest(ctx, next))
 
     forEach(routes(this.registry), (route) => {
@@ -77,6 +80,8 @@ export default class Router {
     this.app.use(router.routes())
     this.app.use(router.allowedMethods())
     this.app.use(mount(BASE_URL, router.middleware()))
+
+    pluginEvent('onAfterInitRouter', {app: this.app, registry: this.registry})
 
     this.app.listen(PORT, () => {
       // tslint:disable-next-line:no-console
@@ -121,6 +126,7 @@ export default class Router {
 
   private async postRequest(ctx, next, route: any) {
     this.registry.set('request', new Request({...ctx.request, query: ctx.query, cookie: ctx.cookie, session: ctx.session, params: ctx.params}))
+    pluginEvent('onRequest', {app: this.app, registry: this.registry, ctx, route})
 
     const token = !isUndefined(ctx.req.headers.token) ? ctx.req.headers.token : false
 
@@ -151,6 +157,7 @@ export default class Router {
   }
 
   private handleError(err) {
+    pluginEvent('onError', {app: this.app, err, registry: this.registry})
     // tslint:disable-next-line:no-console
     console.log(err)
     // this.registry.get('log').write(err.message + err.stack)

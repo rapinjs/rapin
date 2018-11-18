@@ -4,10 +4,11 @@ import {Controller as MainController} from './engine/controller'
 import {Model as MainModel} from './engine/model'
 import {config} from 'dotenv'
 import {includes} from 'lodash'
+import {storage} from 'rapin-config'
 
 export let DIR_APPLICATION: string = path.resolve(__dirname, '../')
 export let DIR_IMAGE: string = path.resolve(__dirname, '../static/images/')
-export let DIR_STORAGE: string = path.resolve(__dirname, './storage/')
+export let DIR_STORAGE: string = storage || path.resolve(__dirname, './storage/')
 export let DIR_STATIC: string = path.resolve(__dirname, '../static/')
 export let DIR_STYLESHEET: string = path.resolve(__dirname, '../src/view/stylesheet/')
 export let NODE_ENV: string = includes(process.argv, 'start') ? 'production' : 'development'

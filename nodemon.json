@@ -1,6 +1,6 @@
 {
-  "watch": ["src", "system"],
+  "watch": ["src"],
   "ext": "ts",
   "ignore": [],
-  "exec": "ts-node ./system/startup"
+  "exec": "rimraf lib && tsc -p ."
 }
