@@ -1,11 +1,11 @@
-import * as cookieParser from 'cookie-parser'
-import * as cors from 'cors'
-import * as express from 'express'
+import cookie from 'koa-cookie'
+import * as cors from '@koa/cors'
+import * as Koa from 'koa'
+import * as serve from 'koa-static'
+
 import {forEach, isUndefined} from 'lodash'
 import {initHelpers} from '../helper/common'
-
 import {routes} from '../helper/request'
-import * as fileUpload from 'express-fileupload'
 import {DIR_STATIC, PORT, CORS, BASE_URL} from '../common'
 import Cache from '../library/cache'
 import Config from '../library/config'
@@ -19,52 +19,67 @@ import Log from '../library/log'
 import Request from '../library/request'
 import Response from '../library/response'
 import Pagination from '../library/pagination'
+import Mail from '../library/mail'
 import User from '../library/user'
+import Inky from '../library/inky'
+import Style from '../library/style'
 import Action from './action'
 import Loader from './loader'
 import Registry from './registry'
-import { triggerEvent } from '../helper/event';
+import { triggerEvent } from '../helper/event'
+import File from '../library/file'
+import * as KoaRouter from 'koa-router'
+import * as mount from 'koa-mount'
+import * as koaBody from 'koa-body'
+import * as session from 'koa-session'
+import axios from 'axios'
+
 
 export default class Router {
-  private app: express.Application
+  private app: Koa
   private registry: Registry
 
   constructor() {
-    this.app = express()
+    this.app = new Koa()
 
     this.app.use(cors({
       allowedHeaders: 'content-type,token',
       origin: CORS ? '*' : false,
     }))
 
-    this.app.use(express.json())
-    this.app.use(fileUpload())
-    this.app.use(cookieParser())
-    this.app.use(BASE_URL + 'static', express.static(DIR_STATIC))
+    this.app.use(koaBody({multipart: true}))
+    this.app.use(cookie())
+    this.app.use(session(this.app))
+    this.app.use(serve(DIR_STATIC))
+    this.app.use(mount(BASE_URL + 'static', serve(DIR_STATIC)))
+
     new Decorator(this.registry)
   }
 
   public async start() {
     await this.initRegistry()
-    const router: express.Router = express.Router()
+    const router: KoaRouter = new KoaRouter()
 
-    router.use(async (req, res, next) => this.preRequest(req, res, next)).bind(this)
+    this.app.use((ctx, next) => this.preRequest(ctx, next))
 
     forEach(routes(this.registry), (route) => {
       if (route.type === 'GET') {
-        router.get(route.path, (req, res) => this.postRequest(req, res, route)).bind(this)
+        router.get(route.path, (ctx, next) => this.postRequest(ctx, next, route))
       }
       if (route.type === 'POST') {
-        router.post(route.path, (req, res) => this.postRequest(req, res, route)).bind(this)
+        router.post(route.path, (ctx, next) => this.postRequest(ctx, next, route))
       }
       if (route.type === 'PUT') {
-        router.put(route.path, (req, res) => this.postRequest(req, res, route)).bind(this)
+        router.put(route.path, (ctx, next) => this.postRequest(ctx, next, route))
       }
     })
-    // console.log(router)
-    this.app.use(BASE_URL, router)
+
+    this.app.use(router.routes())
+    this.app.use(router.allowedMethods())
+    this.app.use(mount(BASE_URL, router.middleware()))
 
     this.app.listen(PORT, () => {
+      // tslint:disable-next-line:no-console
       console.log('Example app listening on port ' + PORT + '!')
     })
   }
@@ -73,10 +88,15 @@ export default class Router {
     this.registry = new Registry()
     initHelpers(this.registry)
     this.registry.set('language', new Language())
+    this.registry.set('file', new File())
     this.registry.set('crypto', new Crypto())
     this.registry.set('config', new Config())
     this.registry.set('image', new Image())
     this.registry.set('pagination', new Pagination())
+    this.registry.set('inky', new Inky())
+    this.registry.set('axios', axios)
+    this.registry.set('mail', new Mail())
+    this.registry.set('style', new Style())
 
     this.registry.set('log', new Log())
     this.registry.set('load', new Loader(this.registry))
@@ -89,18 +109,20 @@ export default class Router {
     }
   }
 
-  private async preRequest(req: express.Request, res: express.Response, next: express.NextFunction) {
+  private async preRequest(ctx, next) {
     this.registry.set('error', new Error())
-    this.registry.set('request', new Request(req))
-    this.registry.set('response', new Response())
+    this.registry.set('request', new Request({...ctx.request, query: ctx.query, cookie: ctx.cookie, session: ctx.session, params: {}}))
+    this.registry.set('response', new Response(ctx))
     this.registry.set('user', new User(this.registry))
     this.registry.set('cache', new Cache())
 
     await next()
   }
 
-  private async postRequest(req: express.Request, res: express.Response, route: any) {
-    const token = !isUndefined(req.headers.token) ? req.headers.token : false
+  private async postRequest(ctx, next, route: any) {
+    this.registry.set('request', new Request({...ctx.request, query: ctx.query, cookie: ctx.cookie, session: ctx.session, params: ctx.params}))
+
+    const token = !isUndefined(ctx.req.headers.token) ? ctx.req.headers.token : false
 
     if ((route.auth && token && this.registry.get('user').verify(token)) || !route.auth) {
       try {
@@ -115,18 +137,21 @@ export default class Router {
         this.handleError(e)
       }
       const error = this.registry.get('error').get()
-
       if (error) {
-        res.status(400).send(error)
+        ctx.status = 400
+        ctx.body = error
       } else {
-        res.status(this.registry.get('response').getStatus()).send(this.registry.get('response').getOutput())
+        ctx.status = this.registry.get('response').getStatus()
+        ctx.body = this.registry.get('response').getOutput()
       }
     } else {
-      res.status(401).send('Unauthorized')
+      ctx.status = 401
+      ctx.body = 'Unauthorized'
     }
   }
 
   private handleError(err) {
+    // tslint:disable-next-line:no-console
     console.log(err)
     // this.registry.get('log').write(err.message + err.stack)
     // this.registry.get('response').setStatus(500)

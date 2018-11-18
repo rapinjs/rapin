@@ -6,4 +6,5 @@ export default class Request {
     readonly cookie: any;
     readonly files: any;
     readonly params: any;
+    readonly session: any;
 }

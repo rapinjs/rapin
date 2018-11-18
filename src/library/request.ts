@@ -1,4 +1,3 @@
-
 export default class Request {
   public req: any
   constructor(req) {
@@ -19,5 +18,8 @@ export default class Request {
   }
   get params() {
     return this.req.params
+  }
+  get session() {
+    return this.req.session
   }
 }

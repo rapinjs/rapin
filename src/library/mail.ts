@@ -1,5 +1,5 @@
 import {createTransport} from 'nodemailer'
-
+import {mail} from 'rapin-config'
 export default class Mail {
   protected to: string
   protected from: string
@@ -14,10 +14,10 @@ export default class Mail {
   protected mailUser: string
   protected mailPassword: string
 
-  constructor(mailService: string, mailUser: string, mailPassword: string) {
-    this.mailService = mailService
-    this.mailUser = mailUser
-    this.mailPassword = mailPassword
+  constructor() {
+    this.mailService = mail.service
+    this.mailUser = mail.user
+    this.mailPassword = mail.password
   }
 
   public setTo(to) {

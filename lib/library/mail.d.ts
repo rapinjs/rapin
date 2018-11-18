@@ -10,7 +10,7 @@ export default class Mail {
     protected mailService: string;
     protected mailUser: string;
     protected mailPassword: string;
-    constructor(mailService: string, mailUser: string, mailPassword: string);
+    constructor();
     setTo(to: any): void;
     setFrom(from: any): void;
     setBcc(bcc: any): void;
