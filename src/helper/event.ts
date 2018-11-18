@@ -1,6 +1,6 @@
 import { initRegistry, } from "./common";
 import Registry from "../engine/registry";
-import { isUndefined } from "lodash";
+import { isUndefined, each, filter } from "lodash";
 
 let registry: Registry = initRegistry()
 const listings = []
@@ -11,15 +11,18 @@ export const Listing = (action, type) => {
           listings[action] = []
         }
         listings[action].push({
-            action: descriptor.value
+            action: descriptor.value,
+            type
         })
     }
 }
 
 export const triggerEvent = (action, type, args) => {
-  console.log(action)
-  console.log(type)
-  console.log(args)
+  const result: any = filter(listings[action], {type})
+
+  each(result, (value) => {
+    value.action(args)
+  })
 }
 
 export const Trigger = (action, type) => {
