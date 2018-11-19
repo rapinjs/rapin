@@ -1,7 +1,7 @@
 import {DIR_STYLESHEET, HTTP_SERVER, NODE_ENV} from '../../common'
 import * as postcss from 'postcss'
 import * as fs from 'fs'
-import * as config from './postcss.config.js'
+const config = require('./postcss.config.js')
 
 export default class Postcss {
   public expire: number
@@ -10,7 +10,6 @@ export default class Postcss {
   }
 
   public convert(stylePath) {
-
     const filePath = DIR_STYLESHEET + '/' + stylePath
 
     if (!fs.existsSync(filePath + '.css') || NODE_ENV !== 'production') {
@@ -26,6 +25,7 @@ export default class Postcss {
 
   public link(link) {
     this.convert(link)
+    return HTTP_SERVER + '/stylesheet/' + link + '.css'
   }
 
   public path(filePath) {

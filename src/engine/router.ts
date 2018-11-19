@@ -6,7 +6,7 @@ import * as serve from 'koa-static'
 import {forEach, isUndefined} from 'lodash'
 import {initHelpers} from '../helper/common'
 import {routes} from '../helper/request'
-import {DIR_STATIC, PORT, CORS, BASE_URL} from '../common'
+import {DIR_STATIC, PORT, CORS, BASE_URL, DIR_STYLESHEET} from '../common'
 import Cache from '../library/cache'
 import Config from '../library/config'
 import Crypto from '../library/crypto'
@@ -53,6 +53,7 @@ export default class Router {
     this.app.use(session(this.app))
     this.app.use(serve(DIR_STATIC))
     this.app.use(mount(BASE_URL + 'static', serve(DIR_STATIC)))
+    this.app.use(mount(BASE_URL + 'stylesheet', serve(DIR_STYLESHEET)))
 
     new Decorator(this.registry)
   }
@@ -117,7 +118,6 @@ export default class Router {
   private async preRequest(ctx, next) {
     this.registry.set('error', new Error())
     this.registry.set('request', new Request({...ctx.request, query: ctx.query, cookie: ctx.cookie, session: ctx.session, params: {}}))
-    this.registry.set('response', new Response(ctx))
     this.registry.set('user', new User(this.registry))
     this.registry.set('cache', new Cache())
 
@@ -126,6 +126,7 @@ export default class Router {
 
   private async postRequest(ctx, next, route: any) {
     this.registry.set('request', new Request({...ctx.request, query: ctx.query, cookie: ctx.cookie, session: ctx.session, params: ctx.params}))
+    this.registry.set('response', new Response(ctx))
     pluginEvent('onRequest', {app: this.app, registry: this.registry, ctx, route})
 
     const token = !isUndefined(ctx.req.headers.token) ? ctx.req.headers.token : false
@@ -146,7 +147,7 @@ export default class Router {
       if (error) {
         ctx.status = 400
         ctx.body = error
-      } else {
+      } else if(ctx.response.status !== 302) {
         ctx.status = this.registry.get('response').getStatus()
         ctx.body = this.registry.get('response').getOutput()
       }
