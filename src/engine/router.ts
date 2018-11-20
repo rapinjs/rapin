@@ -129,7 +129,7 @@ export default class Router {
     this.registry.set('response', new Response(ctx))
     pluginEvent('onRequest', {app: this.app, registry: this.registry, ctx, route})
 
-    const token = !isUndefined(ctx.req.headers.token) ? ctx.req.headers.token : false
+    const token = !isUndefined(ctx.request.headers.token) ? ctx.request.headers.token : false
 
     if ((route.auth && token && this.registry.get('user').verify(token)) || !route.auth) {
       try {
