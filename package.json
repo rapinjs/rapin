@@ -1,7 +1,7 @@
 {
   "name": "rapin",
   "version": "0.0.4",
-  "description": "",
+  "description": "Framework for API",
   "repository": {
     "type" : "git",
     "url" : "https://github.com/krasaler/rapin.git"
