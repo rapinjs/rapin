@@ -2,6 +2,10 @@
   "name": "rapin",
   "version": "0.0.4",
   "description": "",
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/krasaler/rapin.git"
+  },
   "main": "src",
   "watch": {
     "tslint": "{src}/**/*.ts"
