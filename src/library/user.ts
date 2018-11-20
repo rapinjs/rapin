@@ -30,13 +30,19 @@ export default class User {
     this.roleType = ''
   }
 
-  public login(email: string, password: string, override: boolean = false) {
-    const user = this.db.findOne('User', {email})
-    const passwordHash = this.crypto.getHashPassword(password, user.salt)
+  public async login(email: string, password: string, override: boolean = false) {
+    const user = await this.db.findOne('User', {email})
+    let userInfo: any = {}
+    if(override) {
+        userInfo = user
+    } else {
+        const passwordHash = this.crypto.getHashPassword(password, user.salt)
 
-    const userInfo = this.db.findOne('User', {email, password: passwordHash.hash, salt: passwordHash.salt})
+        userInfo = await this.db.findOne('User', {email, password: passwordHash.hash, salt: passwordHash.salt})
+    }
+    
 
-    if (!isEmpty(userInfo) || override) {
+    if (!isEmpty(userInfo)) {
       this.token = jwt.sign(toPlainObject(userInfo), process.env.SECRET_KEY, {
         expiresIn: 21600,
       })
@@ -56,11 +62,11 @@ export default class User {
     }
   }
 
-  public verify(token) {
+  public async verify(token) {
     try {
       const user: any = jwt.verify(token, toString(process.env.SECRET_KEY))
 
-      const userInfo = this.db.findOne('User', {email: user.email})
+      const userInfo = await this.db.findOne('User', {email: user.email})
 
       if (userInfo) {
         this.token = token
