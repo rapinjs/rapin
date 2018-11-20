@@ -131,7 +131,13 @@ export default class Router {
 
     const token = !isUndefined(ctx.request.headers.token) ? ctx.request.headers.token : false
 
-    if ((route.auth && token && this.registry.get('user').verify(token)) || !route.auth) {
+    let verify = false
+
+    if(token) {
+        verify = await this.registry.get('user').verify(token)
+    }       
+
+    if ((route.auth && token && verify) || !route.auth) {
       try {
         triggerEvent('controller/'+route.action, 'before', {data: {}})
         const action = new Action(route.action)
