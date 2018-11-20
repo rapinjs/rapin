@@ -12,8 +12,8 @@ export default class User {
     image: string;
     roleType: string;
     constructor(registry: any);
-    login(email: string, password: string): string | false;
-    verify(token: any): boolean;
+    login(email: string, password: string, override?: boolean): Promise<string | false>;
+    verify(token: any): Promise<boolean>;
     getId(): number;
     getFirstName(): string;
     getMiddleName(): string;
