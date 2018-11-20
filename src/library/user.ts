@@ -30,13 +30,13 @@ export default class User {
     this.roleType = ''
   }
 
-  public login(email: string, password: string) {
+  public login(email: string, password: string, override: boolean = false) {
     const user = this.db.findOne('User', {email})
     const passwordHash = this.crypto.getHashPassword(password, user.salt)
 
     const userInfo = this.db.findOne('User', {email, password: passwordHash.hash, salt: passwordHash.salt})
 
-    if (!isEmpty(userInfo)) {
+    if (!isEmpty(userInfo) || override) {
       this.token = jwt.sign(toPlainObject(userInfo), process.env.SECRET_KEY, {
         expiresIn: 21600,
       })
