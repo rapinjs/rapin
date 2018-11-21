@@ -8,5 +8,5 @@ export declare let HTTP_SERVER: string;
 export declare let PORT: string;
 export declare let Controller: any;
 export declare let Model: any;
-export declare let CORS: boolean;
 export declare let BASE_URL: string;
+export declare let STATIC_BASE_URL: string;

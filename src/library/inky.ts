@@ -19,11 +19,11 @@ export default class Inky {
     this.html = html
   }
 
-  public convert(options = {}) {
+  public convert(options = {}, cheerioOpts = { decodeEntities: true }) {
     const i = new inkyLibrary(options)
     const html = cheerio.load(this.html)
 
-    let result = i.releaseTheKraken(html)
+    let result = i.releaseTheKraken(html, cheerioOpts)
 
     result = juice(result, {extraCss: this.css})
 

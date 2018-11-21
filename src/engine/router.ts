@@ -1,12 +1,11 @@
 import cookie from 'koa-cookie'
-import * as cors from '@koa/cors'
 import * as Koa from 'koa'
 import * as serve from 'koa-static'
 
 import {forEach, isUndefined} from 'lodash'
 import {initHelpers} from '../helper/common'
 import {routes} from '../helper/request'
-import {DIR_STATIC, PORT, CORS, BASE_URL, DIR_STYLESHEET} from '../common'
+import {DIR_STATIC, PORT, BASE_URL, STATIC_BASE_URL, DIR_STYLESHEET} from '../common'
 import Cache from '../library/cache'
 import Config from '../library/config'
 import Crypto from '../library/crypto'
@@ -43,17 +42,12 @@ export default class Router {
   constructor() {
     this.app = new Koa()
 
-    this.app.use(cors({
-      allowedHeaders: 'content-type,token',
-      origin: CORS ? '*' : false,
-    }))
-
     this.app.use(koaBody({multipart: true}))
     this.app.use(cookie())
     this.app.use(session(this.app))
     this.app.use(serve(DIR_STATIC))
-    this.app.use(mount(BASE_URL + 'static', serve(DIR_STATIC)))
-    this.app.use(mount(BASE_URL + 'stylesheet', serve(DIR_STYLESHEET)))
+    this.app.use(mount(STATIC_BASE_URL + '/static', serve(DIR_STATIC)))
+    this.app.use(mount(STATIC_BASE_URL + '/stylesheet', serve(DIR_STYLESHEET)))
 
     new Decorator(this.registry)
   }

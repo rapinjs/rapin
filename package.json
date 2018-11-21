@@ -1,10 +1,10 @@
 {
   "name": "rapin",
-  "version": "0.0.4",
+  "version": "0.0.13",
   "description": "Framework for API",
   "repository": {
-    "type" : "git",
-    "url" : "https://github.com/krasaler/rapin.git"
+    "type": "git",
+    "url": "https://github.com/krasaler/rapin.git"
   },
   "main": "src",
   "watch": {
@@ -19,13 +19,9 @@
   "directions": {
     "helper": "lib/helper"
   },
-  "bin": {
-    "rapin": "./lib/startup.js"
-  },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@koa/cors": "^2.2.2",
     "axios": "^0.18.0",
     "cheerio": "^1.0.0-rc.2",
     "crypto": "^1.0.1",

@@ -83,8 +83,8 @@ export const Auth = () => {
   export const validate = (action: string) => {
     return (target: Object, propertyKey: string, descriptor: TypedPropertyDescriptor<any>) => {
       const originalMethod = descriptor.value
-      descriptor.value = function(...args: any[]) {
-        const error = registry.get('load').controller(action)
+      descriptor.value = async function(...args: any[]) {
+        const error = await registry.get('load').controller(action)
         if (!error) {
           return originalMethod.apply(this, args)
         } else {

@@ -16,12 +16,12 @@ export let NODE_ENV: string = includes(process.argv, 'start') ? 'production' : '
 config({path: '.env.' + NODE_ENV})
 
 if (!fs.existsSync(DIR_STORAGE)){
-  fs.mkdirSync(DIR_STORAGE);
+  fs.mkdirSync(DIR_STORAGE)
 }
 
 export let HTTP_SERVER: string =  process.env.HTTP_SERVER || 'http://localhost/'
 export let PORT: string = process.env.PORT || '3000'
 export let Controller: any = MainController
 export let Model: any = MainModel
-export let CORS: boolean = process.env.CORS === 'true' || false
 export let BASE_URL: string = process.env.BASE_URL || '/'
+export let STATIC_BASE_URL: string = process.env.BASE_URL || ''

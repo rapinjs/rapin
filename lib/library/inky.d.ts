@@ -4,5 +4,7 @@ export default class Inky {
     constructor();
     addStyle(style: any): void;
     setHtml(html: any): void;
-    convert(options?: {}): any;
+    convert(options?: {}, cheerioOpts?: {
+        decodeEntities: boolean;
+    }): any;
 }
