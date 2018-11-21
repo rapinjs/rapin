@@ -42,6 +42,13 @@ export default class Router {
   constructor() {
     this.app = new Koa()
 
+    if (CORS) {
+        this.app.use(cors({
+          allowedHeaders: 'content-type,token',
+          origin: '*',
+        }))
+    }
+    
     this.app.use(koaBody({multipart: true}))
     this.app.use(cookie())
     this.app.use(session(this.app))
