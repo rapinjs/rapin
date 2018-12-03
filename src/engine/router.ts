@@ -70,6 +70,9 @@ export default class Router {
       if (route.type === 'PUT') {
         router.put(route.path, (ctx, next) => this.postRequest(ctx, next, route))
       }
+      if (route.type === 'DELETE') {
+        router.delete(route.path, (ctx, next) => this.postRequest(ctx, next, route))
+      }
     })
 
     this.app.use(router.routes())
