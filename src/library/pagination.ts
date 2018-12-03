@@ -4,14 +4,18 @@ export default class Pagination {
   private total: number
   private limit: number
   private items: any
+  private sortBy: string
+  private sortDirection: string
 
   constructor() {
   }
 
-  public init(items: Array<any>, total: number, limit?: number) {
+  public init(items: Array<any>, sortBy: string, sortDirection: string, total: number, limit?: number) {
     this.items = items
     this.limit = toNumber(limit)
     this.total = toNumber(total)
+    this.sortBy = sortBy
+    this.sortDirection = sortDirection
   }
 
   public format(page?: number) {
@@ -27,6 +31,10 @@ export default class Pagination {
         numberOfElements: size(this.items),
         size: this.limit,
         totalElements: this.total,
+        sort: {
+            direction: this.sortDirection,
+            property: this.sortBy,
+        },
         totalPages,
       }
     } else {
@@ -39,6 +47,10 @@ export default class Pagination {
         size: this.total,
         totalElements: this.total,
         totalPages: 1,
+        sort: {
+            direction: this.sortDirection,
+            property: this.sortBy,
+        },
       }
     }
   }
