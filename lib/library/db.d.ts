@@ -11,4 +11,5 @@ export default class DB {
     find(table: string, options?: any): Promise<{}[]>;
     create(table: string): {};
     save(table: string, entity: any): Promise<any>;
+    delete(table: string, options: any): Promise<import("typeorm").DeleteResult>;
 }

@@ -42,7 +42,6 @@ export default class DB {
     return !isUndefined(result) ? result : 0
   }
 
-
   public repository(table: string) {
     return this.connection.getRepository(table)
   }
@@ -69,6 +68,12 @@ export default class DB {
   public async save(table: string, entity) {
     const repository = this.connection.getRepository(table)
     const result = await repository.save(entity)
+    return result
+  }
+
+  public async delete(table: string, options) {
+    const repository = this.connection.getRepository(table)
+    const result = await repository.delete(options)
     return result
   }
 }
