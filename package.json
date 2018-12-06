@@ -51,7 +51,6 @@
     "postcss-import": "^12.0.1",
     "postcss-import-sync": "^7.1.4",
     "postcss-nested": "^4.1.0",
-    "postcss-pxtorem": "^4.0.1",
     "postcss-scss": "^2.0.0",
     "precss": "^3.1.2",
     "pug": "^2.0.3",
