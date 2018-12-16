@@ -1,4 +1,5 @@
 export declare let NODE_ENV: string;
+export declare let config: any;
 export declare let DIR_APPLICATION: string;
 export declare let DIR_IMAGE: string;
 export declare let DIR_STORAGE: string;

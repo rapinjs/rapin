@@ -1,5 +1,5 @@
-import {createTransport} from 'nodemailer'
-import {mail} from 'rapin-config'
+import { createTransport } from "nodemailer"
+import { config } from "../common"
 export default class Mail {
   protected to: string
   protected from: string
@@ -15,9 +15,9 @@ export default class Mail {
   protected mailPassword: string
 
   constructor() {
-    this.mailService = mail.service
-    this.mailUser = mail.user
-    this.mailPassword = mail.password
+    this.mailService = config.mail.service
+    this.mailUser = config.mail.user
+    this.mailPassword = config.mail.password
   }
 
   public setTo(to) {
@@ -57,8 +57,8 @@ export default class Mail {
       service: this.mailService,
       auth: {
         user: this.mailUser,
-        pass: this.mailPassword,
-      },
+        pass: this.mailPassword
+      }
     })
 
     const mailOptions = {
@@ -67,15 +67,15 @@ export default class Mail {
       bcc: this.bcc,
       subject: this.subject,
       text: this.text,
-      html: this.html,
+      html: this.html
     }
 
     transporter.sendMail(mailOptions, (error, info) => {
       if (error) {
         return console.log(error)
       }
-      console.log('Message sent: ' + info.response)
+      console.log("Message sent: " + info.response)
     })
-    this.bcc = ''
+    this.bcc = ""
   }
 }

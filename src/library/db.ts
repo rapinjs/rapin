@@ -1,29 +1,22 @@
-import {isUndefined} from 'lodash'
-import 'reflect-metadata'
-import {
-  Connection,
-  createConnection,
-} from 'typeorm'
-import {db} from 'rapin-config'
+import { isUndefined } from "lodash"
+import "reflect-metadata"
+import { Connection, createConnection } from "typeorm"
+import { config } from "../common"
 
 export default class DB {
-  private connection: Connection
+  private connection: any
+  private repositoryType: string
 
   constructor() {}
   public async init() {
+    const dbConfig = !isUndefined(config.db) ? config.db : {}
     this.connection = await createConnection({
-      type: db.engine,
-      host: db.host,
-      port: db.port,
-      username: db.username,
-      password: db.password,
-      database: db.database,
       synchronize: false,
       logging: false,
-      entities: [
-        'entities/**/*.ts',
-      ],
+      entities: ["entities/**/*.ts"],
+      ...dbConfig
     })
+
     if (this.connection instanceof Error) {
       throw new Error(this.connection.message)
     }
