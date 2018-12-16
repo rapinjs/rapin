@@ -12,11 +12,13 @@ export default class Loader {
   }
 
   public async controller(route: string, data: object) {
-    triggerEvent('controller/'+route, 'before', {data, route})
+    triggerEvent('controller/' + route, 'before', {data, route})
     const action = new Action(route)
     const output = await action.execute(this.registry, data)
 
-    triggerEvent('controller/'+route, 'after', {data, route, output})
+    triggerEvent('controller/' + route, 'after', {data, route, output})
+
+    return output
   }
 
   public model(route: string) {
