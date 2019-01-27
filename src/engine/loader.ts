@@ -12,11 +12,11 @@ export default class Loader {
   }
 
   public async controller(route: string, data: object) {
-    triggerEvent('controller/' + route, 'before', {data, route})
+    await triggerEvent('controller/' + route, 'before', {data, route})
     const action = new Action(route)
     const output = await action.execute(this.registry, data)
 
-    triggerEvent('controller/' + route, 'after', {data, route, output})
+    await triggerEvent('controller/' + route, 'after', {data, route, output})
 
     return output
   }
@@ -35,7 +35,7 @@ export default class Loader {
     }
   }
 
-  public view(route: string, data: object) {
+  public async view(route: string, data: object) {
     route = replace(route, /[^a-zA-Z0-9_\/]/, '')
 
     const template = new Template()
@@ -44,10 +44,10 @@ export default class Loader {
       template.set(key, value)
     })
 
-    triggerEvent('view/'+route, 'before', {route, data})
+    await triggerEvent('view/'+route, 'before', {route, data})
 
-    const output = template.render(route)
-    triggerEvent('view/'+route, 'after', {route, data, output})
+    const output = await template.render(route)
+    await triggerEvent('view/'+route, 'after', {route, data, output})
     return output
   }
 

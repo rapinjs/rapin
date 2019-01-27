@@ -14,10 +14,10 @@ export const initPlugins = () => {
   })
 }
 
-export const pluginEvent = (action, args) => {
-  each(listings, value => {
+export const pluginEvent = async (action, args) => {
+  for (const value of listings) {
     if (!isUndefined(value[action])) {
-      value[action](args)
+      await value[action](args)
     }
-  })
+  }
 }

@@ -16,7 +16,7 @@ export default class Template {
     this.adaptor.set(key, value)
   }
 
-  public render(template: string) {
-    return this.adaptor.render(template)
+  public async render(template: string) {
+    return await this.adaptor.render(template)
   }
 }

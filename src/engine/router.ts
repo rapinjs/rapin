@@ -53,11 +53,11 @@ export default class Router {
   }
 
   public async start() {
-    pluginEvent('beforeInitRegistry', {app: this.app})
+    await pluginEvent('beforeInitRegistry', {app: this.app})
     await this.initRegistry()
-    pluginEvent('afterInitRegistry', {app: this.app, registry: this.registry})
+    await pluginEvent('afterInitRegistry', {app: this.app, registry: this.registry})
     const router: KoaRouter = new KoaRouter()
-    pluginEvent('onBeforeInitRouter', {app: this.app, registry: this.registry})
+    await pluginEvent('onBeforeInitRouter', {app: this.app, registry: this.registry})
     this.app.use((ctx, next) => this.preRequest(ctx, next))
 
     forEach(routes(this.registry), (route) => {
@@ -79,7 +79,7 @@ export default class Router {
     this.app.use(router.allowedMethods())
     this.app.use(mount(BASE_URL, router.middleware()))
 
-    pluginEvent('onAfterInitRouter', {app: this.app, registry: this.registry})
+    await pluginEvent('onAfterInitRouter', {app: this.app, registry: this.registry})
 
     this.app.listen(PORT, () => {
       // tslint:disable-next-line:no-console
@@ -108,7 +108,7 @@ export default class Router {
       this.registry.set('db', new DB())
       await this.registry.get('db').init()
     } catch (e) {
-      this.handleError(e)
+      await this.handleError(e)
     }
   }
 
@@ -124,7 +124,7 @@ export default class Router {
   private async postRequest(ctx, next, route: any) {
     this.registry.set('request', new Request({...ctx.request, query: ctx.query, cookie: ctx.cookie, session: ctx.session, params: ctx.params}))
     this.registry.set('response', new Response(ctx))
-    pluginEvent('onRequest', {app: this.app, registry: this.registry, ctx, route})
+    await pluginEvent('onRequest', {app: this.app, registry: this.registry, ctx, route})
 
     const token = !isUndefined(ctx.request.headers.token) ? ctx.request.headers.token : false
 
@@ -144,7 +144,7 @@ export default class Router {
         triggerEvent('controller/'+route.action, 'after', {data: {}, output})
 
       } catch (e) {
-        this.handleError(e)
+        await this.handleError(e)
       }
       const error = this.registry.get('error').get()
       if (error) {
@@ -160,8 +160,8 @@ export default class Router {
     }
   }
 
-  private handleError(err) {
-    pluginEvent('onError', {app: this.app, err, registry: this.registry})
+  private async handleError(err) {
+    await pluginEvent('onError', {app: this.app, err, registry: this.registry})
     // tslint:disable-next-line:no-console
     console.log(err)
     // this.registry.get('log').write(err.message + err.stack)

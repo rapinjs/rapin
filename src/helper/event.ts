@@ -17,16 +17,15 @@ export const Listing = (action, type) => {
     }
 }
 
-export const triggerEvent = (action, type, args) => {
+export const  triggerEvent = async (action, type, args) => {
   const result: any = filter(listings[action], {type})
-
-  each(result, (value) => {
-    value.action(args)
-  })
+  for (const value of result) {
+   await  value.action(args)
+  }
 }
 
 export const Trigger = (action, type) => {
-    return (target, propertyKey: string, descriptor: PropertyDescriptor) => {
-      this.triggerEvent(action, type)
+    return async (target, propertyKey: string, descriptor: PropertyDescriptor) => {
+      await this.triggerEvent(action, type)
     }
 }

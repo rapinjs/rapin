@@ -4,7 +4,7 @@ export default class Loader {
     constructor(registry: Registry);
     controller(route: string, data: object): Promise<any>;
     model(route: string): void;
-    view(route: string, data: object): any;
+    view(route: string, data: object): Promise<any>;
     config(route: string): void;
     language(route: string): any;
 }
