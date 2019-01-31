@@ -164,7 +164,13 @@ export default class Router {
     await pluginEvent('onError', {app: this.app, err, registry: this.registry})
 
     this.registry.get('log').write(err.stack)
-    this.registry.get('response').setStatus(500)
-    this.registry.get('response').setOutput({ status: 500, message: err.message, stack: err.stack })
+    if(!isUndefined(this.registry.get('response'))){
+      this.registry.get('response').setStatus(500)
+      this.registry.get('response').setOutput({ status: 500, message: err.message, stack: err.stack })
+    } else {
+      // tslint:disable-next-line:no-console
+      console.log(err.message)
+    }
+
   }
 }
