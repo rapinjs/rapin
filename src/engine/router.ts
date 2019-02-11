@@ -57,7 +57,7 @@ export default class Router {
     await this.initRegistry()
     await pluginEvent('afterInitRegistry', {app: this.app, registry: this.registry})
     const router: KoaRouter = new KoaRouter()
-    await pluginEvent('onBeforeInitRouter', {app: this.app, registry: this.registry})
+    await pluginEvent('onBeforeInitRouter', {app: this.app, registry: this.registry, router})
     this.app.use((ctx, next) => this.preRequest(ctx, next))
 
     forEach(routes(this.registry), (route) => {
