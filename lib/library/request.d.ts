@@ -1,10 +1,13 @@
 export default class Request {
     req: any;
+    postData: any;
+    getData: any;
+    paramsData: any;
     constructor(req: any);
-    readonly post: any;
-    readonly get: any;
+    post: any;
+    get: any;
     readonly cookie: any;
     readonly files: any;
-    readonly params: any;
+    params: any;
     readonly session: any;
 }
