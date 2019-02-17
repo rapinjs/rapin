@@ -2,15 +2,15 @@ import cookie from 'koa-cookie'
 import * as Koa from 'koa'
 import * as serve from 'koa-static'
 
-import {forEach, isUndefined} from 'lodash'
-import {initHelpers} from '../helper/common'
-import {routes} from '../helper/request'
+import { forEach, isUndefined } from 'lodash'
+import { initHelpers } from '../helper/common'
+import { routes } from '../helper/request'
 import {
   DIR_STATIC,
   PORT,
   BASE_URL,
   STATIC_BASE_URL,
-  DIR_STYLESHEET,
+  DIR_STYLESHEET
 } from '../common'
 import Cache from '../library/cache'
 import Config from '../library/config'
@@ -31,14 +31,14 @@ import Style from '../library/style'
 import Action from './action'
 import Loader from './loader'
 import Registry from './registry'
-import {triggerEvent} from '../helper/event'
+import { triggerEvent } from '../helper/event'
 import File from '../library/file'
 import * as KoaRouter from 'koa-router'
 import * as mount from 'koa-mount'
 import * as koaBody from 'koa-body'
 import * as session from 'koa-session'
 import axios from 'axios'
-import {pluginEvent} from '../helper/plugin'
+import { pluginEvent } from '../helper/plugin'
 
 export default class Router {
   private app: Koa
@@ -47,7 +47,7 @@ export default class Router {
   constructor() {
     this.app = new Koa()
 
-    this.app.use(koaBody({multipart: true}))
+    this.app.use(koaBody({ multipart: true }))
     this.app.use(cookie())
     this.app.use(session(this.app))
     this.app.use(serve(DIR_STATIC))
@@ -58,39 +58,39 @@ export default class Router {
   }
 
   public async start() {
-    await pluginEvent('beforeInitRegistry', {app: this.app})
+    await pluginEvent('beforeInitRegistry', { app: this.app })
     await this.initRegistry()
     await pluginEvent('afterInitRegistry', {
       app: this.app,
-      registry: this.registry,
+      registry: this.registry
     })
     const router: KoaRouter = new KoaRouter()
     await pluginEvent('onBeforeInitRouter', {
       app: this.app,
       registry: this.registry,
-      router,
+      router
     })
     this.app.use((ctx, next) => this.preRequest(ctx, next))
 
     forEach(routes(this.registry), route => {
       if (route.type === 'GET') {
         router.get(route.path, (ctx, next) =>
-          this.postRequest(ctx, next, route),
+          this.postRequest(ctx, next, route)
         )
       }
       if (route.type === 'POST') {
         router.post(route.path, (ctx, next) =>
-          this.postRequest(ctx, next, route),
+          this.postRequest(ctx, next, route)
         )
       }
       if (route.type === 'PUT') {
         router.put(route.path, (ctx, next) =>
-          this.postRequest(ctx, next, route),
+          this.postRequest(ctx, next, route)
         )
       }
       if (route.type === 'DELETE') {
         router.delete(route.path, (ctx, next) =>
-          this.postRequest(ctx, next, route),
+          this.postRequest(ctx, next, route)
         )
       }
     })
@@ -98,7 +98,7 @@ export default class Router {
     await pluginEvent('onAfterInitRouter', {
       app: this.app,
       registry: this.registry,
-      router,
+      router
     })
     this.app.use(router.routes())
     this.app.use(router.allowedMethods())
@@ -144,8 +144,8 @@ export default class Router {
         query: ctx.query,
         cookie: ctx.cookie,
         session: ctx.session,
-        params: {},
-      }),
+        params: {}
+      })
     )
     this.registry.set('user', new User(this.registry))
     this.registry.set('cache', new Cache())
@@ -157,8 +157,8 @@ export default class Router {
         query: ctx.query,
         cookie: ctx.cookie,
         session: ctx.session,
-        params: ctx.params,
-      }),
+        params: ctx.params
+      })
     )
 
     const token = !isUndefined(ctx.request.headers.token)
@@ -167,34 +167,47 @@ export default class Router {
 
     if (token) {
       await this.registry.get('user').verify(token)
+    } else {
+      const authToken = !isUndefined(ctx.request.headers.Authorization)
+        ? ctx.request.headers.Authorization
+        : false
+
+      if (authToken) {
+        await this.registry.get('user').verify(authToken)
+      }
     }
 
     this.registry.set('response', new Response(ctx))
+
+    await pluginEvent('onBeforeRequest', {
+      app: this.app,
+      registry: this.registry,
+      ctx
+    })
 
     await next()
   }
 
   private async postRequest(ctx, next, route: any) {
-
     this.registry.set('response', new Response(ctx))
 
     await pluginEvent('onRequest', {
       app: this.app,
       registry: this.registry,
       ctx,
-      route,
+      route
     })
 
     if ((route.auth && this.registry.get('user').isLogged()) || !route.auth) {
       try {
-        triggerEvent('controller/' + route.action, 'before', {data: {}})
+        triggerEvent('controller/' + route.action, 'before', { data: {} })
         const action = new Action(route.action)
 
         const output = await action.execute(this.registry)
 
         triggerEvent('controller/' + route.action, 'after', {
           data: {},
-          output,
+          output
         })
       } catch (e) {
         await this.handleError(e)
@@ -217,7 +230,7 @@ export default class Router {
     await pluginEvent('onError', {
       app: this.app,
       err,
-      registry: this.registry,
+      registry: this.registry
     })
 
     this.registry.get('log').write(err.stack)
@@ -225,7 +238,7 @@ export default class Router {
       this.registry.get('response').setStatus(500)
       this.registry
         .get('response')
-        .setOutput({status: 500, message: err.message, stack: err.stack})
+        .setOutput({ status: 500, message: err.message, stack: err.stack })
     } else {
       // tslint:disable-next-line:no-console
       console.log(err.message)

@@ -1,6 +1,6 @@
 {
   "name": "rapin",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "Framework for API",
   "repository": {
     "type": "git",
@@ -40,7 +40,7 @@
     "koa-router": "^7.4.0",
     "koa-session": "^5.10.1",
     "koa-static": "^5.0.0",
-    "liquidjs": "^6.3.0",
+    "liquidjs": "^6.4.3",
     "lodash": "^4.17.11",
     "moment": "^2.24.0",
     "mustache": "^2.3.2",
@@ -59,7 +59,7 @@
     "ts-node": "^7.0.1",
     "tsconfig-paths": "^3.7.0",
     "twig": "^1.13.2",
-    "typeorm": "^0.2.12",
+    "typeorm": "^0.2.13",
     "typescript": "^3.2.4"
   },
   "devDependencies": {
@@ -69,9 +69,9 @@
     "@types/inline-css": "0.0.31",
     "@types/jsonwebtoken": "^7.2.8",
     "@types/koa-session": "^5.7.4",
-    "@types/lodash": "^4.14.120",
-    "@types/node": "^10.12.18",
-    "@types/nodemailer": "^4.6.5",
+    "@types/lodash": "^4.14.121",
+    "@types/node": "^10.12.26",
+    "@types/nodemailer": "^4.6.6",
     "npm-watch": "^0.3.0",
     "rimraf": "^2.6.3",
     "tslint": "^5.12.1"
