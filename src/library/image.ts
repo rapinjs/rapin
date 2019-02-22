@@ -19,6 +19,9 @@ export default class Image {
       if (width && height) {
         convertImage = path.resolve(DIR_IMAGE, 'cache/' + width + 'x' + height + '/' + image)
       }
+      if(!fs.existsSync(originalImage)){
+        return ''
+      }
       if (!fs.existsSync(convertImage)) {
         const content = await Jimp.read(originalImage)
         if (width && height) {

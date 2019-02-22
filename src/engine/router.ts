@@ -168,8 +168,8 @@ export default class Router {
     if (token) {
       await this.registry.get('user').verify(token)
     } else {
-      const authToken = !isUndefined(ctx.request.headers.Authorization)
-        ? ctx.request.headers.Authorization
+      const authToken = !isUndefined(ctx.request.headers.authorization)
+        ? ctx.request.headers.authorization
         : false
 
       if (authToken) {
@@ -189,7 +189,18 @@ export default class Router {
   }
 
   private async postRequest(ctx, next, route: any) {
-    this.registry.set('response', new Response(ctx))
+		this.registry.set('response', new Response(ctx))
+		
+		this.registry.set(
+      'request',
+      new Request({
+        ...ctx.request,
+        query: ctx.query,
+        cookie: ctx.cookie,
+        session: ctx.session,
+        params: ctx.params
+      })
+    )
 
     await pluginEvent('onRequest', {
       app: this.app,
