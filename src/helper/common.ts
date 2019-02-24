@@ -1,5 +1,4 @@
 import Registry from "../engine/registry";
-import "reflect-metadata";
 
 let registry: Registry;
 

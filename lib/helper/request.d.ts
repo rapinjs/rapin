@@ -1,5 +1,4 @@
 import Registry from "../engine/registry";
-export declare const Auth: () => (target: any, propertyKey: string, descriptor: PropertyDescriptor) => void;
 export declare const GET: (path: any, type?: string) => (target: any, propertyKey: string, descriptor: PropertyDescriptor) => void;
 export declare const POST: (path: any, type?: string) => (target: any, propertyKey: string, descriptor: PropertyDescriptor) => void;
 export declare const DELETE: (path: any, type?: string) => (target: any, propertyKey: string, descriptor: PropertyDescriptor) => void;

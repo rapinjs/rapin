@@ -7,16 +7,7 @@ let registry: Registry = initRegistry()
 const results = []
 let controllerPath: string = ''
 
-export const Auth = () => {
-    return (target, propertyKey: string, descriptor: PropertyDescriptor) => {
-      for (const key in results) {
-        if (results[key].action === controllerPath + '/' + propertyKey) {
-          results[key].auth = true
-        }
-      }
-    }
-  }
-  
+ 
   export const GET = (path, type = 'json') => {
     return (target, propertyKey: string, descriptor: PropertyDescriptor) => {
       results.push({

@@ -10,12 +10,12 @@ import {
   PORT,
   BASE_URL,
   STATIC_BASE_URL,
-  DIR_STYLESHEET
+  DIR_STYLESHEET,
+  config as rapinConfig
 } from '../common'
 import Cache from '../library/cache'
 import Config from '../library/config'
 import Crypto from '../library/crypto'
-import DB from '../library/db'
 import Decorator from '../library/decorator'
 import Error from '../library/error'
 import Image from '../library/image'
@@ -25,8 +25,6 @@ import Request from '../library/request'
 import Response from '../library/response'
 import Pagination from '../library/pagination'
 import Mail from '../library/mail'
-import User from '../library/user'
-import Inky from '../library/inky'
 import Style from '../library/style'
 import Action from './action'
 import Loader from './loader'
@@ -58,17 +56,22 @@ export default class Router {
   }
 
   public async start() {
-    await pluginEvent('beforeInitRegistry', { app: this.app })
+    await pluginEvent('beforeInitRegistry', {
+      app: this.app,
+      config: rapinConfig
+    })
     await this.initRegistry()
     await pluginEvent('afterInitRegistry', {
       app: this.app,
-      registry: this.registry
+      registry: this.registry,
+      config: rapinConfig
     })
     const router: KoaRouter = new KoaRouter()
     await pluginEvent('onBeforeInitRouter', {
       app: this.app,
       registry: this.registry,
-      router
+      router,
+      config: rapinConfig
     })
     this.app.use((ctx, next) => this.preRequest(ctx, next))
 
@@ -98,7 +101,8 @@ export default class Router {
     await pluginEvent('onAfterInitRouter', {
       app: this.app,
       registry: this.registry,
-      router
+      router,
+      config: rapinConfig
     })
     this.app.use(router.routes())
     this.app.use(router.allowedMethods())
@@ -119,20 +123,12 @@ export default class Router {
     this.registry.set('config', new Config())
     this.registry.set('image', new Image())
     this.registry.set('pagination', new Pagination())
-    this.registry.set('inky', new Inky())
     this.registry.set('axios', axios)
     this.registry.set('mail', new Mail())
     this.registry.set('style', new Style())
 
     this.registry.set('log', new Log())
     this.registry.set('load', new Loader(this.registry))
-
-    try {
-      this.registry.set('db', new DB())
-      await this.registry.get('db').init()
-    } catch (e) {
-      await this.handleError(e)
-    }
   }
 
   private async preRequest(ctx, next) {
@@ -147,7 +143,6 @@ export default class Router {
         params: {}
       })
     )
-    this.registry.set('user', new User(this.registry))
     this.registry.set('cache', new Cache())
 
     this.registry.set(
@@ -161,37 +156,22 @@ export default class Router {
       })
     )
 
-    const token = !isUndefined(ctx.request.headers.token)
-      ? ctx.request.headers.token
-      : false
-
-    if (token) {
-      await this.registry.get('user').verify(token)
-    } else {
-      const authToken = !isUndefined(ctx.request.headers.authorization)
-        ? ctx.request.headers.authorization
-        : false
-
-      if (authToken) {
-        await this.registry.get('user').verify(authToken)
-      }
-    }
-
     this.registry.set('response', new Response(ctx))
 
     await pluginEvent('onBeforeRequest', {
       app: this.app,
       registry: this.registry,
-      ctx
+      ctx,
+      config: rapinConfig
     })
 
     await next()
   }
 
   private async postRequest(ctx, next, route: any) {
-		this.registry.set('response', new Response(ctx))
-		
-		this.registry.set(
+    this.registry.set('response', new Response(ctx))
+
+    this.registry.set(
       'request',
       new Request({
         ...ctx.request,
@@ -206,34 +186,30 @@ export default class Router {
       app: this.app,
       registry: this.registry,
       ctx,
-      route
+      route,
+      config: rapinConfig
     })
 
-    if ((route.auth && this.registry.get('user').isLogged()) || !route.auth) {
-      try {
-        triggerEvent('controller/' + route.action, 'before', { data: {} })
-        const action = new Action(route.action)
+    try {
+      triggerEvent('controller/' + route.action, 'before', { data: {} })
+      const action = new Action(route.action)
 
-        const output = await action.execute(this.registry)
+      const output = await action.execute(this.registry)
 
-        triggerEvent('controller/' + route.action, 'after', {
-          data: {},
-          output
-        })
-      } catch (e) {
-        await this.handleError(e)
-      }
-      const error = this.registry.get('error').get()
-      if (error) {
-        ctx.status = 400
-        ctx.body = error
-      } else if (ctx.response.status !== 302) {
-        ctx.status = this.registry.get('response').getStatus()
-        ctx.body = this.registry.get('response').getOutput()
-      }
-    } else {
-      ctx.status = 401
-      ctx.body = 'Unauthorized'
+      triggerEvent('controller/' + route.action, 'after', {
+        data: {},
+        output
+      })
+    } catch (e) {
+      await this.handleError(e)
+    }
+    const error = this.registry.get('error').get()
+    if (error) {
+      ctx.status = 400
+      ctx.body = error
+    } else if (ctx.response.status !== 302) {
+      ctx.status = this.registry.get('response').getStatus()
+      ctx.body = this.registry.get('response').getOutput()
     }
   }
 
@@ -241,7 +217,8 @@ export default class Router {
     await pluginEvent('onError', {
       app: this.app,
       err,
-      registry: this.registry
+      registry: this.registry,
+      config: rapinConfig
     })
 
     this.registry.get('log').write(err.stack)
