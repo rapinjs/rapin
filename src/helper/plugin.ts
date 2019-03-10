@@ -1,23 +1,23 @@
-import { initRegistry } from "./common"
-import { config } from "../common"
-import Registry from "../engine/registry"
-import { each } from "lodash"
-import { isUndefined } from "util"
+import {config} from '../common'
+import {each, isUndefined, isEmpty} from 'lodash'
 
-let registry: Registry = initRegistry()
 const listings = []
 
 export const initPlugins = () => {
   each(config.plugins, value => {
     const plugin = require(value)
-    listings.push(new plugin["default"]())
+    listings.push(new plugin.default())
   })
 }
 
-export const pluginEvent = async (action, args) => {
+export const pluginEvent = async (action: string, args: any): Promise<any> => {
   for (const value of listings) {
     if (!isUndefined(value[action])) {
-      await value[action](args)
+      const output = await value[action](args)
+      if (!isEmpty(output)) {
+        return output
+      }
     }
   }
+  return false
 }

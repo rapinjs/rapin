@@ -1,5 +1,5 @@
-/// <reference path="../types/Proxy.d.ts" />
 import Registry from './registry'
+/// <reference path="../types/Proxy.d.ts" />
 export class Controller {
   protected registry: Registry
 

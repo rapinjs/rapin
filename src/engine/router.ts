@@ -2,9 +2,9 @@ import cookie from 'koa-cookie'
 import * as Koa from 'koa'
 import * as serve from 'koa-static'
 
-import { forEach, isUndefined } from 'lodash'
-import { initHelpers } from '../helper/common'
-import { routes } from '../helper/request'
+import {forEach, isUndefined} from 'lodash'
+import {initHelpers} from '../helper/common'
+import {routes} from '../helper/request'
 import {
   DIR_STATIC,
   PORT,
@@ -29,14 +29,14 @@ import Style from '../library/style'
 import Action from './action'
 import Loader from './loader'
 import Registry from './registry'
-import { triggerEvent } from '../helper/event'
+import {triggerEvent} from '../helper/event'
 import File from '../library/file'
 import * as KoaRouter from 'koa-router'
 import * as mount from 'koa-mount'
 import * as koaBody from 'koa-body'
 import * as session from 'koa-session'
 import axios from 'axios'
-import { pluginEvent } from '../helper/plugin'
+import {pluginEvent} from '../helper/plugin'
 
 export default class Router {
   private app: Koa
@@ -45,7 +45,7 @@ export default class Router {
   constructor() {
     this.app = new Koa()
 
-    this.app.use(koaBody({ multipart: true }))
+    this.app.use(koaBody({multipart: true}))
     this.app.use(cookie())
     this.app.use(session(this.app))
     this.app.use(serve(DIR_STATIC))
@@ -58,20 +58,20 @@ export default class Router {
   public async start() {
     await pluginEvent('beforeInitRegistry', {
       app: this.app,
-      config: rapinConfig
+      config: rapinConfig,
     })
     await this.initRegistry()
     await pluginEvent('afterInitRegistry', {
       app: this.app,
       registry: this.registry,
-      config: rapinConfig
+      config: rapinConfig,
     })
     const router: KoaRouter = new KoaRouter()
     await pluginEvent('onBeforeInitRouter', {
       app: this.app,
       registry: this.registry,
       router,
-      config: rapinConfig
+      config: rapinConfig,
     })
     this.app.use((ctx, next) => this.preRequest(ctx, next))
 
@@ -191,7 +191,7 @@ export default class Router {
     })
 
     try {
-      triggerEvent('controller/' + route.action, 'before', { data: {} })
+      triggerEvent('controller/' + route.action, 'before', {data: {}})
       const action = new Action(route.action)
 
       const output = await action.execute(this.registry)
@@ -226,7 +226,7 @@ export default class Router {
       this.registry.get('response').setStatus(500)
       this.registry
         .get('response')
-        .setOutput({ status: 500, message: err.message, stack: err.stack })
+        .setOutput({status: 500, message: err.message, stack: err.stack})
     } else {
       // tslint:disable-next-line:no-console
       console.log(err.message)

@@ -1,6 +1,6 @@
 {
   "name": "rapin",
-  "version": "0.1.11",
+  "version": "0.1.12",
   "description": "Framework for API",
   "repository": {
     "type": "git",
@@ -29,13 +29,13 @@
     "inline-css": "^2.4.1",
     "jimp": "^0.6.0",
     "koa": "^2.7.0",
-    "koa-body": "^4.0.8",
+    "koa-body": "^4.1.0",
     "koa-cookie": "^1.0.0",
     "koa-mount": "^4.0.0",
     "koa-router": "^7.4.0",
     "koa-session": "^5.10.1",
     "koa-static": "^5.0.0",
-    "liquidjs": "^7.2.1",
+    "liquidjs": "^7.5.1",
     "lodash": "^4.17.11",
     "moment": "^2.24.0",
     "mustache": "^3.0.1",
@@ -46,11 +46,11 @@
     "postcss-font-magician": "^2.2.1",
     "postcss-import": "^12.0.1",
     "postcss-import-sync": "^7.1.4",
-    "postcss-nested": "^4.1.1",
+    "postcss-nested": "^4.1.2",
     "postcss-scss": "^2.0.0",
     "precss": "^4.0.0",
     "pug": "^2.0.3",
-    "ts-node": "^8.0.2",
+    "ts-node": "^8.0.3",
     "tsconfig-paths": "^3.8.0",
     "twig": "^1.13.2",
     "typescript": "^3.3.3333"
@@ -60,11 +60,11 @@
     "@types/glob": "^7.1.1",
     "@types/inline-css": "0.0.31",
     "@types/koa-session": "^5.10.0",
-    "@types/lodash": "^4.14.121",
-    "@types/node": "^11.9.5",
+    "@types/lodash": "^4.14.122",
+    "@types/node": "^11.11.0",
     "@types/nodemailer": "^4.6.6",
     "npm-watch": "^0.6.0",
     "rimraf": "^2.6.3",
-    "tslint": "^5.12.1"
+    "tslint": "^5.13.1"
   }
 }

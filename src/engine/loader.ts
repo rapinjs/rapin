@@ -44,10 +44,10 @@ export default class Loader {
       template.set(key, value)
     })
 
-    await triggerEvent('view/'+route, 'before', {route, data})
+    await triggerEvent('view/' + route, 'before', {route, data})
 
     const output = await template.render(route)
-    await triggerEvent('view/'+route, 'after', {route, data, output})
+    await triggerEvent('view/' + route, 'after', {route, data, output})
     return output
   }
 
