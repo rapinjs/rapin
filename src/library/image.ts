@@ -29,23 +29,19 @@ export default class Image {
         } else {
           content.quality(90).write(convertImage)
         }
+        await pluginEvent('onImageResize', {width, height, image, convertImage})
       }
-      let ext = path.extname(originalImage)
       let imageUrl = HTTP_SERVER
+
+      let ext = path.extname(originalImage)
+
+      const output = await pluginEvent('onImageResizeAfter', {width, height, imageUrl, ext, image})
+      if (output) {
+        ({width, height, imageUrl, ext, image} = output)
+      }
       if (width !== 0 && height !== 0) {
-        const output = await pluginEvent('onImageResizeAfter', {width, height, imageUrl, ext, image})
-
-        if (output) {
-          ({width, height, imageUrl, ext, image} = output)
-        }
-
         return imageUrl + 'static/images/cache/' + width + 'x' + height + '/' + path.dirname(image) + '/' + path.basename(image, ext) + ext
       } else {
-        const output = await pluginEvent('onImageResizeAfter', {width, height, imageUrl, ext, image})
-
-        if (output) {
-          ({width, height, imageUrl, ext, image} = output)
-        }
         return imageUrl + 'static/images/cache/' + path.dirname(image) + '/' + path.basename(image, ext) + ext
       }
     }
