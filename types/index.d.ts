@@ -18,11 +18,14 @@ export * from './helpers/plugin'
 
 export declare class Registry {
   get(name: string): Promise<any>
-  set(name: string, value: any): void 
+  set(name: string, value: any): void
   has(name: string): boolean
 }
 
 export declare interface Context {
+  /**
+   * For load controllers, models, views. configs and languages
+   */
   load: Loader
   cache: Cache
   config: Config
@@ -41,14 +44,14 @@ export declare interface Context {
 }
 
 export declare class Controller {
-    constructor(registry: Registry)
-    $context: Context
-    [x: string]: any
+  constructor(registry: Registry)
+  $context: Context
+  [x: string]: any
 }
 export declare class Model {
-    constructor(registry: Registry)
-    $context: Context
-    [x: string]: any
+  constructor(registry: Registry)
+  $context: Context
+  [x: string]: any
 }
 
 export declare const DIR_IMAGE: string
