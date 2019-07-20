@@ -1,5 +1,6 @@
-import Registry from './registry'
 /// <reference path="../types/Proxy.d.ts" />
+import Registry from './registry'
+
 export class Controller {
   protected registry: Registry
 
@@ -8,6 +9,7 @@ export class Controller {
 
     return new Proxy(this, this)
   }
+  
 
   public get(target, name) {
     if (name in target) {

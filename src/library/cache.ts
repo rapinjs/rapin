@@ -16,9 +16,9 @@ export default class Cache {
     return this.cache.get(key)
   }
   public set(key: string, value: object | string | object[]) {
-    return this.cache.set(key, value)
+    this.cache.set(key, value)
   }
   public delete(key: string) {
-    return this.cache.delete(key)
+    this.cache.delete(key)
   }
 }

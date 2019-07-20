@@ -16,7 +16,6 @@ import {
 import Cache from '../library/cache'
 import Config from '../library/config'
 import Crypto from '../library/crypto'
-import Decorator from '../library/decorator'
 import Error from '../library/error'
 import Image from '../library/image'
 import Language from '../library/language'
@@ -51,8 +50,6 @@ export default class Router {
     this.app.use(serve(DIR_STATIC))
     this.app.use(mount(STATIC_BASE_URL + '/static', serve(DIR_STATIC)))
     this.app.use(mount(STATIC_BASE_URL + '/stylesheet', serve(DIR_STYLESHEET)))
-
-    new Decorator(this.registry)
   }
 
   public async start() {
