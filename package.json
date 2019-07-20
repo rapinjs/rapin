@@ -6,7 +6,7 @@
     "type": "git",
     "url": "https://github.com/krasaler/rapin.git"
   },
-  "main": "lib/common.js",
+  "main": "lib/index.js",
   "typings": "types/index.d.ts",
   "watch": {
     "tslint": "{src}/**/*.ts"
@@ -37,7 +37,7 @@
     "koa-session": "^5.12.2",
     "koa-static": "^5.0.0",
     "liquidjs": "^8.4.0",
-    "lodash": "^4.17.15",
+    "lodash1": "^4.17.15",
     "moment": "^2.24.0",
     "mustache": "^3.0.1",
     "mysql": "^2.17.1",

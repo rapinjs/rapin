@@ -22,8 +22,7 @@ export declare class Registry {
   has(name: string): boolean
 }
 
-export declare class Base {
-  constructor(registry: Registry)
+export declare interface Context {
   load: Loader
   cache: Cache
   config: Config
@@ -41,8 +40,16 @@ export declare class Base {
   [x: string]: any
 }
 
-export declare class Controller extends Base {}
-export declare class Model extends Base {}
+export declare class Controller {
+    constructor(registry: Registry)
+    $context: Context
+    [x: string]: any
+}
+export declare class Model {
+    constructor(registry: Registry)
+    $context: Context
+    [x: string]: any
+}
 
 export declare const DIR_IMAGE: string
 export declare const DIR_APPLICATION: string

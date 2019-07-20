@@ -10,6 +10,4 @@ dist/
 /system/helper
 bin/
 src/storage/
--starter-template/node_modules
--starter-template/node_modules/.bin/acorn
--starter-template/.env.development
+.history

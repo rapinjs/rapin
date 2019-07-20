@@ -9,7 +9,10 @@ export class Controller {
 
     return new Proxy(this, this)
   }
-  
+
+  protected get $context() {
+    return this.registry.getAll()
+  }
 
   public get(target, name) {
     if (name in target) {

@@ -9,6 +9,10 @@ export default class Registry {
     return this.data[name]
   }
 
+  public getAll() {
+      return this.data
+  }
+
   public set(name, value) {
     this.data[name] = value
   }
