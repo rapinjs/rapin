@@ -27,29 +27,74 @@ export declare interface Context {
    * For load controllers, models, views. configs and languages
    */
   load: Loader
+  /**
+   * Class to work with cache
+   */
   cache: Cache
+  /**
+   * Class for getting and setting configs
+   */
   config: Config
+  /**
+   * Class for provides cryptographic functionality
+   */
   crypto: Crypto
+  /**
+   * Class for working with errors
+   */
   error: Error
+  /**
+   * Class for processing received files
+   */
   file: File
+  /**
+   * Class for working with images
+   */
   image: Image
+  /**
+   * Class for receiving translations
+   */
   language: Language
+  /**
+   * Class to work with logs
+   */
   log: Log
+  /**
+   * Class for sending mail through the package "nodemailer"
+   */
   mail: Mail
+  /**
+   * Class for creating pagination from the list of item
+   */
   pagination: Pagination<any>
+  /**
+   * Class for retrieving request data
+   */
   request: Request
+  /**
+   * Class for setting data for response
+   */
   response: Response
+  /**
+   * Class to work with styles
+   */
   style: Style
   [x: string]: any
 }
 
 export declare class Controller {
   constructor(registry: Registry)
+  /**
+   * Global object with system data
+   */
   $context: Context
   [x: string]: any
 }
 export declare class Model {
   constructor(registry: Registry)
+  /**
+   * Global object with system data
+   */
   $context: Context
   [x: string]: any
 }

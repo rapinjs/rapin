@@ -1,6 +1,6 @@
 {
   "name": "rapin",
-  "version": "0.1.14",
+  "version": "0.1.16",
   "description": "Framework for API",
   "repository": {
     "type": "git",
@@ -15,6 +15,7 @@
     "lib",
     "types",
     "src",
+    "tsconfig.json",
     "rapin.config.js"
   ],
   "scripts": {
