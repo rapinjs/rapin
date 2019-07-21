@@ -1,6 +1,6 @@
 {
   "name": "rapin",
-  "version": "0.1.13",
+  "version": "0.1.14",
   "description": "Framework for API",
   "repository": {
     "type": "git",
@@ -11,6 +11,12 @@
   "watch": {
     "tslint": "{src}/**/*.ts"
   },
+  "files": [
+    "lib",
+    "types",
+    "src",
+    "rapin.config.js"
+  ],
   "scripts": {
     "tslint": "tslint {src}/**/*.ts --fix",
     "watch": "npm-watch",
