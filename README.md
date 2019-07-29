@@ -13,7 +13,7 @@ NodeJS framework for creating Rest API.</p>
   <a href="https://github.com/rapinjs/rapin"><img src="https://img.shields.io/badge/price-FREE-0098f7.svg" alt="Version"></a>
   <a href="https://www.npmjs.com/package/rapin"><img src="https://img.shields.io/npm/v/rapin.svg" alt="Version"></a>
   <a href="https://www.npmjs.com/package/rapin"><img src="https://img.shields.io/npm/l/rapin.svg" alt="License"></a>
-  <a href="https://discord.gg/QeB6Tv"><img src="https://img.shields.io/badge/chat-on%20discord-7289da.svg" alt="Chat"></a>
+  <a href="https://discord.gg/YqyzguB"><img src="https://img.shields.io/badge/chat-on%20discord-7289da.svg" alt="Chat"></a>
 </p>
 
 ## Installation
