@@ -99,7 +99,7 @@ export default class Router {
       app: this.app,
       registry: this.registry,
       router,
-      config: rapinConfig
+      config: rapinConfig,
     })
     this.app.use(router.routes())
     this.app.use(router.allowedMethods())

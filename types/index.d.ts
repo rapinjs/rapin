@@ -15,6 +15,7 @@ import { Style } from './library/style'
 export * from './helpers/request'
 export * from './helpers/event'
 export * from './helpers/plugin'
+import {AxiosInstance} from 'axios'
 
 export declare class Registry {
   get(name: string): Promise<any>
@@ -23,6 +24,7 @@ export declare class Registry {
 }
 
 export declare interface Context {
+  axios: AxiosInstance
   /**
    * For load controllers, models, views. configs and languages
    */
