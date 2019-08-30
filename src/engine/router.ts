@@ -44,7 +44,6 @@ export default class Router {
   constructor() {
     this.app = new Koa()
 
-    this.app.use(koaBody({multipart: true}))
     this.app.use(cookie())
     this.app.use(session(this.app))
     this.app.use(serve(DIR_STATIC))
@@ -63,6 +62,7 @@ export default class Router {
       registry: this.registry,
       config: rapinConfig,
     })
+    this.app.use(koaBody({ multipart: true }))
     const router: KoaRouter = new KoaRouter()
     await pluginEvent('onBeforeInitRouter', {
       app: this.app,

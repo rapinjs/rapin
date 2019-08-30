@@ -21,7 +21,7 @@
   "scripts": {
     "tslint": "tslint {src}/**/*.ts --fix",
     "watch": "npm-watch",
-    "dev": "nodemon",
+    "dev": "rimraf lib && tsc -w -p .",
     "build": "rimraf lib && tsc -p ."
   },
   "directions": {
