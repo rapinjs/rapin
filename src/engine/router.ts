@@ -62,7 +62,6 @@ export default class Router {
       registry: this.registry,
       config: rapinConfig,
     })
-    this.app.use(koaBody({ multipart: true }))
     const router: KoaRouter = new KoaRouter()
     await pluginEvent('onBeforeInitRouter', {
       app: this.app,
@@ -74,22 +73,22 @@ export default class Router {
 
     forEach(routes(this.registry), route => {
       if (route.type === 'GET') {
-        router.get(route.path, (ctx, next) =>
+        router.get(route.path, koaBody({ multipart: true }), (ctx, next) =>
           this.postRequest(ctx, next, route)
         )
       }
       if (route.type === 'POST') {
-        router.post(route.path, (ctx, next) =>
+        router.post(route.path, koaBody({ multipart: true }), (ctx, next) =>
           this.postRequest(ctx, next, route)
         )
       }
       if (route.type === 'PUT') {
-        router.put(route.path, (ctx, next) =>
+        router.put(route.path, koaBody({ multipart: true }), (ctx, next) =>
           this.postRequest(ctx, next, route)
         )
       }
       if (route.type === 'DELETE') {
-        router.delete(route.path, (ctx, next) =>
+        router.delete(route.path, koaBody({ multipart: true }), (ctx, next) =>
           this.postRequest(ctx, next, route)
         )
       }
