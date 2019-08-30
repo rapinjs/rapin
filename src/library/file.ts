@@ -5,8 +5,18 @@ export default class File {
   }
 
   public upload(file, path) {
-    const reader = fs.createReadStream(file.path)
-    const stream = fs.createWriteStream(path)
-    reader.pipe(stream)
+    if (typeof file.then === 'function') {
+      file.then(({ createReadStream }) => {
+        const reader = createReadStream()
+        const stream = fs.createWriteStream(path)
+        reader.pipe(stream)
+      })
+    } else {
+      const reader = fs.createReadStream(file.path)
+      const stream = fs.createWriteStream(path)
+      reader.pipe(stream)
+    }
+
   }
+
 }
