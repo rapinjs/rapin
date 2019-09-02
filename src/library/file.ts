@@ -13,16 +13,25 @@ export default class File {
         .substring(2, 15) +
       '.jpg'
 
+    let reader;
+
     if (typeof file.then === 'function') {
       const {createReadStream} = await file
-      const reader = createReadStream()
-      const stream = fs.createWriteStream(DIR_IMAGE + '/' + image)
-      reader.pipe(stream)
+      reader = createReadStream()
     } else {
-      const reader = fs.createReadStream(file.path)
-      const stream = fs.createWriteStream(DIR_IMAGE + '/' + image)
-      reader.pipe(stream)
+      reader = fs.createReadStream(file.path)
     }
+
+    const stream = fs.createWriteStream(DIR_IMAGE + '/' + image)
+
+    reader.pipe(stream)
+
+    const end = new Promise(function(resolve, reject) {
+      stream.on('end', resolve);
+      reader.on('error', reject);
+    });
+
+    await end
 
     return image
   }
