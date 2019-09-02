@@ -27,7 +27,7 @@ export default class File {
     reader.pipe(stream)
 
     const end = new Promise(function(resolve, reject) {
-      stream.on('end', resolve);
+      stream.on('finish', resolve);
       reader.on('error', reject);
     });
 
