@@ -25,7 +25,7 @@ export default class Image {
       if (!fs.existsSync(convertImage)) {
         const content = await Jimp.read(originalImage)
         if (width !== 0 && height !== 0) {
-          content.resize(width, height).quality(90).write(convertImage)
+          content.background(0xFFFFFFFF).contain(width, height).quality(90).write(convertImage);
         } else {
           content.quality(90).write(convertImage)
         }
