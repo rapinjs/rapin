@@ -12,6 +12,11 @@ declare interface Session {
   toJSON(): object;
 
   /**
+   * alias to `toJSON`
+   */
+  inspect(): object;
+
+  /**
    * Return how many values there are in the session object.
    * Used to see if it"s "populated".
    */
