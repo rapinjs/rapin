@@ -23,7 +23,7 @@ export default class Request {
     this.getData = value
   }
   get cookie() {
-    return this.req.cookies
+    return this.req.cookie
   }
   get files() {
     return this.req.files

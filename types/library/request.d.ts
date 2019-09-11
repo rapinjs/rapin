@@ -1,12 +1,13 @@
+import {Session} from './koa-session'
+import {Context} from 'koa'
 declare interface RequestData {
   [x: string]: any
 }
-
 export declare class Request {
   post: any
   get: RequestData
-  readonly cookie: RequestData
+  readonly cookie: Context['cookies']
   readonly files: RequestData
   params: RequestData
-  readonly session: RequestData
+  readonly session: Session 
 }

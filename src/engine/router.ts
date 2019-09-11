@@ -69,7 +69,7 @@ export default class Router {
       router,
       config: rapinConfig,
     })
-    this.app.use((ctx, next) => this.preRequest(ctx, next))
+    this.app.use((ctx: Koa.Context, next) => this.preRequest(ctx, next))
 
     forEach(routes(this.registry), route => {
       if (route.type === 'GET') {
@@ -127,7 +127,7 @@ export default class Router {
     this.registry.set('load', new Loader(this.registry))
   }
 
-  private async preRequest(ctx, next) {
+  private async preRequest(ctx: Koa.Context, next) {
     this.registry.set('error', new Error())
     this.registry.set(
       'request',
@@ -146,11 +146,13 @@ export default class Router {
       new Request({
         ...ctx.request,
         query: ctx.query,
-        cookie: ctx.cookie,
+        cookie: ctx.cookies,
         session: ctx.session,
         params: ctx.params
       })
     )
+
+    ctx.session
 
     this.registry.set('response', new Response(ctx))
 
