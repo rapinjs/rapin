@@ -1,4 +1,5 @@
 import * as fs from 'fs'
+import * as nPath from 'path'
 import { DIR_IMAGE } from '../common'
 
 export default class File {
@@ -6,20 +7,25 @@ export default class File {
   }
 
   public async upload(file, path) {
-
-    const image = path + '/' +
+    let image = path + '/' +
       Math.random()
         .toString(36)
-        .substring(2, 15) +
-      '.jpg'
+        .substring(2, 15)
 
     let reader;
 
     if (typeof file.then === 'function') {
-      const {createReadStream} = await file
+      const { createReadStream, filename} = await file
+
+      const ext = nPath.extname(filename)
+      image += ext
+
       reader = createReadStream()
     } else {
       reader = fs.createReadStream(file.path)
+
+      const ext = nPath.extname(file.name)
+      image += ext
     }
 
     const stream = fs.createWriteStream(DIR_IMAGE + '/' + image)
