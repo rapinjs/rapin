@@ -30,7 +30,11 @@ export default class Image {
       if (!fs.existsSync(convertImage) && ext !== '.svg') {
         const content = await Jimp.read(originalImage)
         if (width !== 0 && height !== 0) {
-          content.background(0xFFFFFFFF).contain(width, height).quality(90).write(convertImage);
+          if(ext === '.png') {
+            content.contain(width, height).quality(90).write(convertImage);
+          } else {
+            content.background(0xFFFFFFFF).contain(width, height).quality(90).write(convertImage);
+          }
         } else {
           content.quality(90).write(convertImage)
         }
