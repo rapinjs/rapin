@@ -10,6 +10,10 @@ export default class Request {
     this.paramsData = req.params
   }
 
+  get headers() {
+    return this.req.headers
+  }
+
   get post() {
     return this.postData
   }

@@ -9,5 +9,6 @@ export declare class Request {
   readonly cookie: Context['cookies']
   readonly files: RequestData
   params: RequestData
-  readonly session: Session 
+  readonly session: Session
+  readonly headers: any
 }
