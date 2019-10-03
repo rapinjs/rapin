@@ -11,7 +11,7 @@ export default class Request {
   }
 
   get headers() {
-    return this.req.headers
+    return this.req.req.headers
   }
 
   get post() {
