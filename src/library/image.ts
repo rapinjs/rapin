@@ -1,7 +1,7 @@
 import {isEmpty} from 'lodash'
 import {HTTP_SERVER, DIR_IMAGE} from '../common'
 import * as path from 'path'
-import Jimp from 'jimp'
+import jimp from 'jimp'
 import {pluginEvent} from '../helper/plugin'
 import * as fs from 'fs'
 
@@ -28,7 +28,7 @@ export default class Image {
 
 
       if (!fs.existsSync(convertImage) && ext !== '.svg') {
-        const content = await Jimp.read(originalImage)
+        const content = await jimp.read(originalImage)
         if (width !== 0 && height !== 0) {
           if(ext === '.png') {
             content.contain(width, height).quality(90).write(convertImage);
