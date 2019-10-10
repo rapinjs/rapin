@@ -15,7 +15,7 @@ export default class Postcss {
       const fileContent = fs.readFileSync(filePath + '.scss').toString()
       const result = sass.renderSync({
         data: fileContent
-      })
+      }).css
 
       fs.writeFileSync(filePath + '.css', result)
     }
