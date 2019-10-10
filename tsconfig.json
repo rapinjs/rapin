@@ -7,6 +7,7 @@
     "moduleResolution": "node",
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
+    "allowSyntheticDefaultImports": true,
     "resolveJsonModule": true,
     "pretty": true,
     "sourceMap": true,
