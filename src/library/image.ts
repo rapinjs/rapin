@@ -1,7 +1,7 @@
 import {isEmpty} from 'lodash'
 import {HTTP_SERVER, DIR_IMAGE} from '../common'
 import * as path from 'path'
-import * as Jimp from 'jimp'
+import Jimp from 'jimp'
 import {pluginEvent} from '../helper/plugin'
 import * as fs from 'fs'
 
