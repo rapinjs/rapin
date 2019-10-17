@@ -1,5 +1,6 @@
 import * as fs from "fs";
 import * as twig from "twig";
+import {isDev} from '../../common'
 
 export default class Twig {
   public data: any;
@@ -12,6 +13,11 @@ export default class Twig {
   }
 
   public async render(template: string) {
+
+    if(isDev) {
+      twig.cache(false)
+    }
+
     const p = new Promise((resolve, reject) => {
       twig.renderFile(
         "src/view/template/" + template + ".twig",

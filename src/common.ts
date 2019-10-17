@@ -15,7 +15,7 @@ import * as rapinConfig from 'rapin.config'
 import * as rapinConfigDefault from '../rapin.config'
 
 const {storage} = rapinConfig
-
+export let isDev = NODE_ENV === 'development'
 export let config = {...rapinConfigDefault, ...rapinConfig}
 export let DIR_APPLICATION: string = path.resolve(__dirname, '')
 export let DIR_IMAGE: string = path.resolve('', './static/images/')
