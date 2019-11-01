@@ -61,13 +61,17 @@ export default class Mail {
       }
     })
 
-    const mailOptions = {
+    const mailOptions: any = {
       from: this.from,
       to: this.to,
       bcc: this.bcc,
       subject: this.subject,
       text: this.text,
       html: this.html
+    }
+
+    if(this.reply_to) {
+      mailOptions.replyTo = this.reply_to
     }
 
     transporter.sendMail(mailOptions, (error, info) => {
