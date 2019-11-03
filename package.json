@@ -65,7 +65,7 @@
     "typescript": "^3.6.4"
   },
   "devDependencies": {
-    "@types/dotenv": "^6.1.1",
+    "@types/dotenv": "^8.2.0",
     "@types/glob": "^7.1.1",
     "@types/inline-css": "0.0.32",
     "@types/koa": "^2.0.50",
