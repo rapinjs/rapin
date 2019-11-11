@@ -799,11 +799,6 @@ block-stream@*:
   dependencies:
     inherits "~2.0.0"
 
-bluebird@^3.7.1:
-  version "3.7.1"
-  resolved "https://registry.yarnpkg.com/bluebird/-/bluebird-3.7.1.tgz#df70e302b471d7473489acf26a93d63b53f874de"
-  integrity sha512-DdmyoGCleJnkbp3nkbxTLJ18rjDsE4yCggEwKNXkeV123sPNfOCYeDoeuOY+F2FrSjO1YXcTU+dsy96KMy+gcg==
-
 bmp-js@^0.1.0:
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/bmp-js/-/bmp-js-0.1.0.tgz#e05a63f796a6c1ff25f4771ec7adadc148c07233"
@@ -2320,12 +2315,11 @@ ini@^1.3.4, ini@~1.3.0:
   integrity sha512-RZY5huIKCMRWDUqZlEi72f/lmXKMvuszcMBduliQ3nnWbx9X/ZBQO7DijMEYS9EhHBb2qacRUMtC7svLwe0lcw==
 
 inline-css@^2.5.0:
-  version "2.5.0"
-  resolved "https://registry.yarnpkg.com/inline-css/-/inline-css-2.5.0.tgz#a69f2a2a207fe341bedf748a9dc95afdeeee0e0f"
-  integrity sha512-jgtHkj/63YTZfZOf0xZ5KUJoLhToQG8oiRhgutQG2UbJwPghyOfSrI8FrGL8L0WRNmOn8Ir95Y0qz99OrSmzYQ==
+  version "2.5.1"
+  resolved "https://registry.yarnpkg.com/inline-css/-/inline-css-2.5.1.tgz#1d956db9304b34aa8d5c2933a8ef93147d9dcd31"
+  integrity sha512-L/hSvfHgR17I4iW2ZLuhHH++je6lB7sODZDw+TvwckYA372Pu27iSNg343YjdtSs3d7WvoDrfX5yBXXeV6IBsg==
   dependencies:
     array-flatten "^2.1.2"
-    bluebird "^3.7.1"
     cheerio "^0.22.0"
     css-rules "^1.0.5"
     extend "^3.0.2"
