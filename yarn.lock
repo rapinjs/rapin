@@ -2055,12 +2055,12 @@ globule@^1.0.0:
     lodash "~4.17.10"
     minimatch "~3.0.2"
 
-google-fonts-complete@^1.2.3:
-  version "1.2.3"
-  resolved "https://registry.yarnpkg.com/google-fonts-complete/-/google-fonts-complete-1.2.3.tgz#1dcaa79a386baf69ee9ee97630fd5a63e899dd2f"
-  integrity sha512-eyupLYOnziSQ44QApNTDDFXcY8T1C/rbdhC1tRot4zN7mbyZ/4bCdcckyDx6kBtam62FJ+ZnbIRSQ/HG81WchQ==
+google-fonts-complete@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/google-fonts-complete/-/google-fonts-complete-2.0.0.tgz#d5c764fa9999e95edade159447ca13abf69c1d0e"
+  integrity sha512-OEvi5aC9ypmg8Nahtl3kh5EeCgzVsW3RLJxuP27/irkmE3KozqN/uNzIA8JAAg/yTr5194i/8q6iN/ibbcNhDA==
   dependencies:
-    postcss "^4.1.16"
+    postcss "^7.0.18"
 
 got@^6.7.1:
   version "6.7.1"
@@ -3941,14 +3941,14 @@ postcss-focus-within@^3.0.0:
     postcss "^7.0.2"
 
 postcss-font-magician@^2.2.2:
-  version "2.2.2"
-  resolved "https://registry.yarnpkg.com/postcss-font-magician/-/postcss-font-magician-2.2.2.tgz#c0f7d47cecb1894b03bf1843a9b8e178805ec892"
-  integrity sha512-NfyNPDRhZMU0WKxrClAOghTuyivq9pSOJbJMgSCGbxjvjKF/HXl1oCvJpDXwFZ5rRrla06ljXd4KcpOAA7Trew==
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/postcss-font-magician/-/postcss-font-magician-2.3.0.tgz#567c41289ddacb2f7e59d25d63264dfd6874d16d"
+  integrity sha512-W8baCvCUXTCFmeOgiSfjixWjBQGE0wxtb1F78TD640chcP4YBxqXcy3qwwWqLXA1Vo5aMBajf8xWhCDbu2fSng==
   dependencies:
     bootstrap-fonts-complete "^1.0.0"
     directory-fonts-complete "^1.2.0"
-    google-fonts-complete "^1.2.3"
-    postcss "^7.0.17"
+    google-fonts-complete "^2.0.0"
+    postcss "^7.0.21"
 
 postcss-font-variant@^4.0.0:
   version "4.0.0"
@@ -4228,7 +4228,7 @@ postcss@^6.0.21, postcss@^6.0.22, postcss@^6.0.6:
     source-map "^0.6.1"
     supports-color "^5.4.0"
 
-postcss@^7.0.0, postcss@^7.0.1, postcss@^7.0.14, postcss@^7.0.17, postcss@^7.0.2, postcss@^7.0.21, postcss@^7.0.5, postcss@^7.0.6:
+postcss@^7.0.0, postcss@^7.0.1, postcss@^7.0.14, postcss@^7.0.17, postcss@^7.0.18, postcss@^7.0.2, postcss@^7.0.21, postcss@^7.0.5, postcss@^7.0.6:
   version "7.0.21"
   resolved "https://registry.yarnpkg.com/postcss/-/postcss-7.0.21.tgz#06bb07824c19c2021c5d056d5b10c35b989f7e17"
   integrity sha512-uIFtJElxJo29QC753JzhidoAhvp/e/Exezkdhfmt8AymWT6/5B7W1WmponYWkHk2eg6sONyTch0A3nkMPun3SQ==
