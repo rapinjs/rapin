@@ -18,6 +18,13 @@
     esutils "^2.0.2"
     js-tokens "^4.0.0"
 
+"@babel/runtime@^7.6.3":
+  version "7.7.2"
+  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.7.2.tgz#111a78002a5c25fc8e3361bedc9529c696b85a6a"
+  integrity sha512-JONRbXbTXc9WQE2mAZd1p0Z3DZ/6vaQIkgYMSTP3KjRCyd7rCZCcfhCyX+YjwcKxcZ82UrxbRD358bpExNgrjw==
+  dependencies:
+    regenerator-runtime "^0.13.2"
+
 "@csstools/convert-colors@^1.4.0":
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/@csstools/convert-colors/-/convert-colors-1.4.0.tgz#ad495dc41b12e75d588c6db8b9834f08fa131eb7"
@@ -4534,7 +4541,7 @@ regenerator-runtime@^0.11.0:
   resolved "https://registry.yarnpkg.com/regenerator-runtime/-/regenerator-runtime-0.11.1.tgz#be05ad7f9bf7d22e056f9726cee5017fbf19e2e9"
   integrity sha512-MguG95oij0fC3QV3URf4V2SDYGJhJnJGqvIIgdECeODCT98wSWDAJ94SSuVpYQUoTcGUIL6L4yNB7j1DFFHSBg==
 
-regenerator-runtime@^0.13.3:
+regenerator-runtime@^0.13.2, regenerator-runtime@^0.13.3:
   version "0.13.3"
   resolved "https://registry.yarnpkg.com/regenerator-runtime/-/regenerator-runtime-0.13.3.tgz#7cf6a77d8f5c6f60eb73c5fc1955b2ceb01e6bf5"
   integrity sha512-naKIZz2GQ8JWh///G7L3X6LaQUAMp2lvb1rvwwsURe/VXwD6VMfr+/1NuNw3ag8v2kY1aQ/go5SNn79O9JU7yw==
@@ -5342,10 +5349,11 @@ tweetnacl@^0.14.3, tweetnacl@~0.14.0:
   integrity sha1-WuaBd/GS1EViadEIr6k/+HQ/T2Q=
 
 twig@^1.13.3:
-  version "1.13.3"
-  resolved "https://registry.yarnpkg.com/twig/-/twig-1.13.3.tgz#895fe341beb6a3f53051318b90a40e0ab0e28fe9"
-  integrity sha512-Kjart2102Kf0IdsEmLonSJKcByU7o9uiJhBde3GhrNHrX4XenT5WSKu4Hpkx+rF6Kyppeyd48BKsCREIOPXd/g==
+  version "1.14.0"
+  resolved "https://registry.yarnpkg.com/twig/-/twig-1.14.0.tgz#64b64d4dae3e34c157f356a270d7dfff9ee3aa0c"
+  integrity sha512-ut1LslUKAeF56TYQglabJaATUqbNuGO3EcXDhUspAdNbxez5VwTk2n8H00V0VfNy9Scet+VGQP8oPxt4v6mykQ==
   dependencies:
+    "@babel/runtime" "^7.6.3"
     locutus "^2.0.5"
     minimatch "3.0.x"
     walk "2.3.x"
