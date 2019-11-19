@@ -110,4 +110,5 @@ export declare const HTTP_SERVER: string
 export declare const PORT: string
 export declare const BASE_URL: string
 export declare const STATIC_BASE_URL: string
+export declare const isDev: boolean
 export declare const start: () => void
