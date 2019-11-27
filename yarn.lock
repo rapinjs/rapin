@@ -2993,9 +2993,9 @@ levn@~0.3.0:
     type-check "~0.3.2"
 
 liquidjs@^9.2.0:
-  version "9.2.0"
-  resolved "https://registry.yarnpkg.com/liquidjs/-/liquidjs-9.2.0.tgz#ebaa3ae2a6212db6c604016b9f6444a31bb6a368"
-  integrity sha512-SYnS5SjZ9K+XrFmhpZhQdKurzzx+NG0kIznC764RzuNRbi/fxaizG46E7EGRdVUpinD8MpVX0nZ9YZyT5j5+3g==
+  version "9.4.2"
+  resolved "https://registry.yarnpkg.com/liquidjs/-/liquidjs-9.4.2.tgz#9e7e6ee59f52b6b8ac28b2ad086978c71fc51481"
+  integrity sha512-tYCZ6+4lmFI6jf4dLvMapfuSHHX8KgkENBZVsf+h94FKN/8I+NovjXa/QGyjWdsmwjy+2fwCJYtbG+iCpTjTBg==
 
 list-stylesheets@^1.2.3:
   version "1.2.3"
