@@ -1,5 +1,5 @@
-import { createTransport } from "nodemailer"
-import { config } from "../common"
+import { createTransport } from 'nodemailer'
+import { config } from '../common'
 export default class Mail {
   protected to: string
   protected from: string
@@ -52,13 +52,14 @@ export default class Mail {
     this.html = html
   }
 
-  public send() {
+  public send(auth = {}) {
     const transporter = createTransport({
       service: this.mailService,
       auth: {
         user: this.mailUser,
-        pass: this.mailPassword
-      }
+        pass: this.mailPassword,
+        ...auth,
+      },
     })
 
     const mailOptions: any = {
@@ -67,10 +68,10 @@ export default class Mail {
       bcc: this.bcc,
       subject: this.subject,
       text: this.text,
-      html: this.html
+      html: this.html,
     }
 
-    if(this.reply_to) {
+    if (this.reply_to) {
       mailOptions.replyTo = this.reply_to
     }
 
@@ -78,8 +79,8 @@ export default class Mail {
       if (error) {
         return console.log(error)
       }
-      console.log("Message sent: " + info.response)
+      console.log('Message sent: ' + info.response)
     })
-    this.bcc = ""
+    this.bcc = ''
   }
 }

@@ -7,5 +7,5 @@ export declare class Mail {
   setSubject(subject: string): void
   setText(text: string): void
   setHtml(html: string): void
-  send(): void
+  send(auth?: {user?: String; pass?: String; }): void
 }
