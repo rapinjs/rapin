@@ -149,7 +149,8 @@ export default class Router {
         query: ctx.query,
         cookie: ctx.cookies,
         session: ctx.session,
-        params: ctx.params
+        params: ctx.params,
+        ip: ctx.request.ip
       })
     )
 
@@ -177,7 +178,8 @@ export default class Router {
         query: ctx.query,
         cookie: ctx.cookie,
         session: ctx.session,
-        params: ctx.params
+        params: ctx.params,
+        ip: ctx.request.ip
       })
     )
 
