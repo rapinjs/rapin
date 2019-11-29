@@ -4,6 +4,7 @@ declare interface RequestData {
   [x: string]: any
 }
 export declare class Request {
+  ip: string
   post: any
   get: RequestData
   readonly cookie: Context['cookies']

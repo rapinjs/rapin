@@ -10,6 +10,10 @@ export default class Request {
     this.paramsData = req.params
   }
 
+  get ip() {
+    return this.req.ip.replace('::ffff:', '')
+  }
+
   get headers() {
     return this.req.req.headers
   }
