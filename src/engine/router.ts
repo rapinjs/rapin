@@ -43,6 +43,7 @@ export default class Router {
 
   constructor() {
     this.app = new Koa()
+    this.app.proxy = true
     this.app.keys = [process.env.SECRET_KEY]
 
     this.app.use(cookie())
