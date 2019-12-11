@@ -7,6 +7,7 @@ export default class Mail {
   protected reply_to: string
   protected subject: string
   protected bcc: string
+  protected cc: string
   protected text: string
   protected html: string
 
@@ -30,6 +31,10 @@ export default class Mail {
 
   public setBcc(bcc) {
     this.bcc = bcc
+  }
+
+  public setCC(cc) {
+    this.cc = cc
   }
 
   public setSender(sender) {
@@ -66,6 +71,7 @@ export default class Mail {
       from: this.from,
       to: this.to,
       bcc: this.bcc,
+      cc: this.cc,
       subject: this.subject,
       text: this.text,
       html: this.html,

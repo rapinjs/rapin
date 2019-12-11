@@ -2,6 +2,7 @@ export declare class Mail {
   setTo(to: string): void
   setFrom(from: string): void
   setBcc(bcc: string): void
+  setCC(cc: string): void
   setSender(sender: string): void
   setReplyTo(reply_to: string): void
   setSubject(subject: string): void
