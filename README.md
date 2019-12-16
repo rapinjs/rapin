@@ -23,13 +23,13 @@ NodeJS framework for creating Rest API.</p>
 With help npx:
 
 ```bash
-yarn create rapin-app <project-name>
+npx create-rapin-app <project-name>
 ```
 
 or with yarn
 
 ```bash
-npx create-rapin-app <project-name>
+yarn create rapin-app <project-name>
 ```
 
 To run in developer mode use the command:
