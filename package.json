@@ -71,7 +71,7 @@
     "@types/koa": "^2.11.0",
     "@types/koa-session": "^5.10.1",
     "@types/lodash": "^4.14.149",
-    "@types/node": "^12.12.17",
+    "@types/node": "^13.1.0",
     "@types/node-sass": "^4.11.0",
     "@types/nodemailer": "^6.2.2",
     "npm-watch": "^0.6.0",
