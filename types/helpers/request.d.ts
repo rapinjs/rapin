@@ -17,3 +17,6 @@ export declare const DELETE: (
 export declare const required: (
   list: string[]
 ) => (target: any, propertyKey: string, descriptor: PropertyDescriptor) => void
+export declare const validate: (
+  action: string
+) => (target: any, propertyKey: string, descriptor: PropertyDescriptor) => void
