@@ -46,7 +46,7 @@
     "liquidjs": "^9.6.0",
     "lodash": "^4.17.15",
     "moment": "^2.24.0",
-    "mustache": "^3.2.0",
+    "mustache": "^4.0.0",
     "mysql": "^2.17.1",
     "node-sass": "^4.13.0",
     "nodemailer": "^6.4.2",
