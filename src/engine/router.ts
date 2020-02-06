@@ -169,7 +169,7 @@ export default class Router {
     await next()
   }
 
-  private async postRequest(ctx, next, route: any) {
+  private async postRequest(ctx: Koa.Context, next, route: any) {
     this.registry.set('response', new Response(ctx))
 
     this.registry.set(
