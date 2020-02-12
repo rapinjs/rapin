@@ -38,8 +38,8 @@ import axios from 'axios'
 import {pluginEvent} from '../helper/plugin'
 
 export default class Router {
-  private app: Koa
   private registry: Registry
+  private app: Koa
 
   constructor() {
     this.app = new Koa()

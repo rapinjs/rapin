@@ -3,6 +3,7 @@ declare interface ResponseData {
 }
 
 export declare class Response {
+  set(field: string,  val: string | string[]): void
   getOutput(): string | ResponseData
   setOutput(output: string | ResponseData): void
   getStatus(): number

@@ -3,8 +3,8 @@ declare interface ConfigData {
 }
 
 export declare class Config {
-  get(key: string): ConfigData
-  set(key: string, value: ConfigData): void
+  get<T>(key: string): T
+  set(key: string, value: ConfigData | string | number): void
   has(name: string): boolean
   load(filename: string): ConfigData
 }

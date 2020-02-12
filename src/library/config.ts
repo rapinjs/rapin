@@ -22,10 +22,14 @@ export default class Config {
   public load(filename: string) {
     const filepath: string = 'config/' + filename + '.ts'
 
-    let data = {}
+    let data: any = {}
 
     if (fs.existsSync(filepath) && fs.lstatSync(filepath).isFile()) {
       data = require('config/' + filename)
+    }
+
+    if(data.default) {
+      data = data.default
     }
 
     this.data = { ...this.data, ...data }

@@ -1,6 +1,6 @@
 {
   "name": "rapin",
-  "version": "0.1.37",
+  "version": "0.1.41",
   "description": "Framework for API",
   "repository": {
     "type": "git",
@@ -43,7 +43,7 @@
     "koa-router": "^8.0.7",
     "koa-session": "^5.13.1",
     "koa-static": "^5.0.0",
-    "liquidjs": "^9.6.2",
+    "liquidjs": "^9.7.0",
     "lodash": "^4.17.15",
     "moment": "^2.24.0",
     "mustache": "^4.0.0",
@@ -68,14 +68,14 @@
     "@types/dotenv": "^8.2.0",
     "@types/glob": "^7.1.1",
     "@types/inline-css": "0.0.32",
-    "@types/koa": "^2.11.0",
+    "@types/koa": "^2.11.1",
     "@types/koa-session": "^5.10.1",
     "@types/lodash": "^4.14.149",
-    "@types/node": "^13.7.0",
+    "@types/node": "^13.7.1",
     "@types/node-sass": "^4.11.0",
     "@types/nodemailer": "^6.4.0",
     "npm-watch": "^0.6.0",
-    "rimraf": "^3.0.1",
+    "rimraf": "^3.0.2",
     "tslint": "^6.0.0"
   }
 }
