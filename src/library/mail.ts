@@ -57,7 +57,7 @@ export default class Mail {
     this.html = html
   }
 
-  public send(auth = {}) {
+  public async send(auth = {}): Promise<string> {
     const transporter = createTransport({
       service: this.mailService,
       auth: {
@@ -81,12 +81,31 @@ export default class Mail {
       mailOptions.replyTo = this.reply_to
     }
 
-    transporter.sendMail(mailOptions, (error, info) => {
-      if (error) {
-        return console.log(error)
-      }
-      console.log('Message sent: ' + info.response)
+    const promise = new Promise<string>((resolve, reject) => {
+      transporter.sendMail(mailOptions, (error, info) => {
+        if (error) {
+          reject(error)
+          return
+        }
+        resolve(info.response)
+        console.log('Message sent: ' + info.response)
+      })
     })
+
+    let result = ''
+
+    result = await promise
+    
     this.bcc = ''
+    this.cc = ''
+    this.reply_to = ''
+    this.from = ''
+    this.to = ''
+    this.text = ''
+    this.sender = ''
+    this.subject = ''
+    this.html = ''
+
+    return result
   }
 }

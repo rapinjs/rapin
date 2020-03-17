@@ -8,5 +8,5 @@ export declare class Mail {
   setSubject(subject: string): void
   setText(text: string): void
   setHtml(html: string): void
-  send(auth?: {user: string; pass: string; }): void
+  send(auth?: {user: string; pass: string; }): Promise<string>
 }
