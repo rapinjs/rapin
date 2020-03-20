@@ -36,6 +36,7 @@ import * as koaBody from 'koa-body'
 import * as session from 'koa-session'
 import axios from 'axios'
 import {pluginEvent} from '../helper/plugin'
+import {Logger} from '../logger'
 
 export default class Router {
   private registry: Registry
@@ -58,7 +59,9 @@ export default class Router {
       app: this.app,
       config: rapinConfig,
     })
+    let logger = new Logger('Initial registry')
     await this.initRegistry()
+    logger.end()
     await pluginEvent('afterInitRegistry', {
       app: this.app,
       registry: this.registry,
@@ -72,8 +75,15 @@ export default class Router {
       config: rapinConfig,
     })
     this.app.use((ctx: Koa.Context, next) => this.preRequest(ctx, next))
+    
+    logger = new Logger('Load routes')
 
-    forEach(routes(this.registry), route => {
+    const mapRoutes = routes(this.registry)
+
+    logger.end()
+
+    forEach(mapRoutes, route => {
+      logger = new Logger(`Mapped {${route.path} ${route.type}} route`)
       if (route.type === 'GET') {
         router.get(route.path, koaBody({ multipart: true }), (ctx, next) =>
           this.postRequest(ctx, next, route)
@@ -94,7 +104,10 @@ export default class Router {
           this.postRequest(ctx, next, route)
         )
       }
+      logger.end()
     })
+
+    logger = new Logger('Rapin JS application successfully started ')
 
     await pluginEvent('onAfterInitRouter', {
       app: this.app,
@@ -108,7 +121,7 @@ export default class Router {
 
     this.app.listen(PORT, () => {
       // tslint:disable-next-line:no-console
-      console.log('Example app listening on port ' + PORT + '!')
+      logger.end()
     })
   }
 
