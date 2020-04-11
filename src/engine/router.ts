@@ -53,6 +53,7 @@ export default class Router {
     this.app.use(serve(DIR_STATIC))
     this.app.use(mount(STATIC_BASE_URL + '/static', serve(DIR_STATIC)))
     this.app.use(mount(STATIC_BASE_URL + '/stylesheet', serve(DIR_STYLESHEET)))
+    this.app.use((ctx: Koa.Context, next) => this.preRequest(ctx, next))
   }
 
   public async start() {
@@ -63,6 +64,7 @@ export default class Router {
     let logger = new Logger('Initial registry')
     await this.initRegistry()
     logger.end()
+
     await pluginEvent('afterInitRegistry', {
       app: this.app,
       registry: this.registry,
@@ -75,7 +77,6 @@ export default class Router {
       router,
       config: rapinConfig,
     })
-    this.app.use((ctx: Koa.Context, next) => this.preRequest(ctx, next))
     
     logger = new Logger('Load routes')
 
