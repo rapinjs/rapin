@@ -98,7 +98,9 @@ let controllerPath: string = ''
 
       controller = controller[controllerName]
 
-      registry.set(controllerName, new controller(registry))
+      new controller(registry)
+
+      // registry.set(controllerName, new controller(registry))
     }
 
     return results

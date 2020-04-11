@@ -27,6 +27,7 @@ import Mail from '../library/mail'
 import Style from '../library/style'
 import Action from './action'
 import Loader from './loader'
+import Document from '../library/document'
 import Registry from './registry'
 import {triggerEvent} from '../helper/event'
 import File from '../library/file'
@@ -143,20 +144,16 @@ export default class Router {
   }
 
   private async preRequest(ctx: Koa.Context, next) {
-    this.registry.set('error', new Error())
-    this.registry.set(
-      'request',
-      new Request({
-        ...ctx.request,
-        query: ctx.query,
-        cookie: ctx.cookie,
-        session: ctx.session,
-        params: {}
-      })
-    )
-    this.registry.set('cache', new Cache())
 
-    this.registry.set(
+    ctx.registry = new Registry(this.registry.getAll())
+
+    ctx.registry.set('error', new Error())
+
+    ctx.registry.set('cache', new Cache())
+
+    ctx.registry.set('document',  new Document())
+
+    ctx.registry.set(
       'request',
       new Request({
         ...ctx.request,
@@ -168,13 +165,9 @@ export default class Router {
       })
     )
 
-    ctx.session
-
-    this.registry.set('response', new Response(ctx))
-
     await pluginEvent('onBeforeRequest', {
       app: this.app,
-      registry: this.registry,
+      registry: ctx.registry,
       ctx,
       config: rapinConfig
     })
@@ -183,9 +176,9 @@ export default class Router {
   }
 
   private async postRequest(ctx: Koa.Context, next, route: any) {
-    this.registry.set('response', new Response(ctx))
+    ctx.registry.set('response', new Response(ctx))
 
-    this.registry.set(
+    ctx.registry.set(
       'request',
       new Request({
         ...ctx.request,
@@ -199,7 +192,7 @@ export default class Router {
 
     await pluginEvent('onRequest', {
       app: this.app,
-      registry: this.registry,
+      registry: ctx.registry,
       ctx,
       route,
       config: rapinConfig
@@ -209,37 +202,37 @@ export default class Router {
       triggerEvent('controller/' + route.action, 'before', {data: {}})
       const action = new Action(route.action)
 
-      const output = await action.execute(this.registry)
+      const output = await action.execute(ctx.registry)
 
       triggerEvent('controller/' + route.action, 'after', {
         data: {},
         output
       })
     } catch (e) {
-      await this.handleError(e)
+      await this.handleError(e, ctx.registry)
     }
-    const error = this.registry.get('error').get()
+    const error = ctx.registry.get('error').get()
     if (error) {
       ctx.status = 400
       ctx.body = error
     } else if (ctx.response.status !== 302) {
-      ctx.status = this.registry.get('response').getStatus()
-      ctx.body = this.registry.get('response').getOutput()
+      ctx.status = ctx.registry.get('response').getStatus()
+      ctx.body = await ctx.registry.get('response').getOutput()
     }
   }
 
-  private async handleError(err) {
+  private async handleError(err, registry) {
     await pluginEvent('onError', {
       app: this.app,
       err,
-      registry: this.registry,
+      registry: registry,
       config: rapinConfig
     })
 
-    this.registry.get('log').write(err.stack)
-    if (!isUndefined(this.registry.get('response'))) {
-      this.registry.get('response').setStatus(500)
-      this.registry
+    registry.get('log').write(err.stack)
+    if (!isUndefined(registry.get('response'))) {
+      registry.get('response').setStatus(500)
+      registry
         .get('response')
         .setOutput({status: 500, message: err.message, stack: err.stack})
     } else {

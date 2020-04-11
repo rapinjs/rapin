@@ -1,8 +1,8 @@
 import { isUndefined } from 'lodash'
 export default class Registry {
   private data: object
-  constructor() {
-    this.data = {}
+  constructor(data = {}) {
+    this.data = data
   }
 
   public get(name) {

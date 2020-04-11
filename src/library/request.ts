@@ -5,9 +5,9 @@ export default class Request {
   public paramsData: any
   constructor(req) {
     this.req = req
-    this.postData = req.body
-    this.getData = req.query
-    this.paramsData = req.params
+    this.postData = req.body ? req.body : {}
+    this.getData = req.query ? req.query : {}
+    this.paramsData = req.params ? req.params : {}
   }
 
   get ip() {

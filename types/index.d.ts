@@ -12,19 +12,26 @@ import { Pagination } from './library/pagination'
 import { Request } from './library/request'
 import { Response } from './library/response'
 import { Style } from './library/style'
+import { Document } from './library/document'
 export * from './helpers/request'
 export * from './helpers/event'
 export * from './helpers/plugin'
 import {AxiosInstance} from 'axios'
 
 export declare class Registry {
-  get(name: string): Promise<any>
+  constructor(data?: any)
+  get(name: string): any
+  getAll(): any
   set(name: string, value: any): void
   has(name: string): boolean
 }
 
 export declare interface Context {
   axios: AxiosInstance
+  /**
+   * For work with styles, links and scripts
+   */
+  document: Document
   /**
    * For load controllers, models, views. configs and languages
    */
@@ -86,6 +93,7 @@ export declare interface Context {
 
 export declare class Controller {
   constructor(registry: Registry)
+  data: any
   /**
    * Global object with system data
    */
@@ -94,6 +102,7 @@ export declare class Controller {
 }
 export declare class Model {
   constructor(registry: Registry)
+  data: any
   /**
    * Global object with system data
    */

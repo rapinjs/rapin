@@ -11,7 +11,7 @@ export default class Loader {
     this.registry = registry
   }
 
-  public async controller(route: string, data: object) {
+  public async controller(route: string, data: object = {}) {
     await triggerEvent('controller/' + route, 'before', {data, route})
     const action = new Action(route)
     const output = await action.execute(this.registry, data)
@@ -35,7 +35,7 @@ export default class Loader {
     }
   }
 
-  public async view(route: string, data: object) {
+  public async view(route: string, data: object = {}) {
     route = replace(route, /[^a-zA-Z0-9_\/]/, '')
 
     const template = new Template()

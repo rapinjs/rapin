@@ -3,6 +3,7 @@ import Registry from './registry'
 
 export class Controller {
   protected registry: Registry
+  protected data: any = {}
 
   constructor(registry: Registry) {
     this.registry = registry
