@@ -41,7 +41,7 @@ import {Logger} from '../logger'
 
 export default class Router {
   private registry: Registry
-  private app: Koa
+  private app: any
 
   constructor() {
     this.app = new Koa()
@@ -49,7 +49,17 @@ export default class Router {
     this.app.keys = [process.env.SECRET_KEY]
 
     this.app.use(cookie())
-    this.app.use(session(this.app))
+    this.app.use(session({
+      key: 'koa.sess',
+      maxAge: 86400000,
+      overwrite: true, 
+      httpOnly: true,
+      signed: true, 
+      rolling: false, 
+      renew: false,
+      secure: true, 
+      sameSite: null,
+    }, this.app))
     this.app.use(serve(DIR_STATIC))
     this.app.use(mount(STATIC_BASE_URL + '/static', serve(DIR_STATIC)))
     this.app.use(mount(STATIC_BASE_URL + '/stylesheet', serve(DIR_STYLESHEET)))
@@ -210,7 +220,7 @@ export default class Router {
         output
       })
     } catch (e) {
-      await this.handleError(e, ctx.registry)
+      await this.handleError(e, ctx)
     }
     const error = ctx.registry.get('error').get()
     if (error) {
@@ -222,11 +232,13 @@ export default class Router {
     }
   }
 
-  private async handleError(err, registry) {
+  private async handleError(err, ctx) {
+    const {registry} = ctx
     await pluginEvent('onError', {
       app: this.app,
       err,
-      registry: registry,
+      ctx,
+      registry,
       config: rapinConfig
     })
 
