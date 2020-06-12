@@ -121,3 +121,4 @@ export declare const BASE_URL: string
 export declare const STATIC_BASE_URL: string
 export declare const isDev: boolean
 export declare const start: () => void
+export declare const config: {[x: string]: any;}
