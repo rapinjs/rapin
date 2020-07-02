@@ -17,6 +17,7 @@ export * from './helpers/request'
 export * from './helpers/event'
 export * from './helpers/plugin'
 import {AxiosInstance} from 'axios'
+import * as moment from 'moment'
 
 export declare class Registry {
   constructor(data?: any)
@@ -28,6 +29,7 @@ export declare class Registry {
 
 export declare interface Context {
   axios: AxiosInstance
+  moment: moment.Moment
   /**
    * For work with styles, links and scripts
    */

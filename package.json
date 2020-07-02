@@ -1,6 +1,6 @@
 {
   "name": "rapin",
-  "version": "0.1.49",
+  "version": "0.1.50",
   "description": "Framework for API",
   "repository": {
     "type": "git",
@@ -20,7 +20,6 @@
   ],
   "scripts": {
     "tslint": "tslint {src}/**/*.ts --fix",
-    "watch": "npm-watch",
     "dev": "rimraf lib && tsc -w -p .",
     "build": "rimraf lib && tsc -p ."
   },
@@ -33,25 +32,23 @@
     "axios": "^0.19.2",
     "colors": "^1.4.0",
     "dotenv": "^8.2.0",
-    "fs": "0.0.2",
     "glob": "^7.1.6",
     "inline-css": "^2.6.3",
-    "jimp": "^0.13.0",
-    "koa": "^2.12.0",
+    "jimp": "^0.14.0",
+    "koa": "^2.13.0",
     "koa-body": "^4.2.0",
     "koa-cookie": "^1.0.0",
     "koa-mount": "^4.0.0",
-    "koa-router": "^9.0.1",
+    "koa-router": "^9.1.0",
     "koa-session": "^6.0.0",
     "koa-static": "^5.0.0",
-    "liquidjs": "^9.12.0",
+    "liquidjs": "^9.14.0",
     "lodash": "^4.17.15",
-    "moment": "^2.26.0",
+    "moment": "^2.27.0",
     "mustache": "^4.0.1",
     "mysql": "^2.18.1",
     "node-sass": "^4.14.1",
-    "nodemailer": "^6.4.8",
-    "nodemon": "^2.0.4",
+    "nodemailer": "^6.4.10",
     "postcss": "^7.0.32",
     "postcss-font-magician": "^2.3.1",
     "postcss-import": "^12.0.1",
@@ -63,7 +60,7 @@
     "ts-node": "^8.10.2",
     "tsconfig-paths": "^3.9.0",
     "twig": "^1.15.1",
-    "typescript": "^3.9.5"
+    "typescript": "^3.9.6"
   },
   "devDependencies": {
     "@types/dotenv": "^8.2.0",
@@ -71,11 +68,10 @@
     "@types/inline-css": "0.0.33",
     "@types/koa": "^2.11.3",
     "@types/koa-session": "^5.10.2",
-    "@types/lodash": "^4.14.155",
-    "@types/node": "^14.0.13",
+    "@types/lodash": "^4.14.157",
+    "@types/node": "^14.0.14",
     "@types/node-sass": "^4.11.1",
     "@types/nodemailer": "^6.4.0",
-    "npm-watch": "^0.6.0",
     "rimraf": "^3.0.2",
     "tslint": "^6.1.2"
   }

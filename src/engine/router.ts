@@ -36,6 +36,7 @@ import * as mount from 'koa-mount'
 import * as koaBody from 'koa-body'
 import * as session from 'koa-session'
 import axios from 'axios'
+import * as moment from 'moment'
 import {pluginEvent} from '../helper/plugin'
 import {Logger} from '../logger'
 
@@ -147,6 +148,7 @@ export default class Router {
     this.registry.set('image', new Image())
     this.registry.set('pagination', new Pagination())
     this.registry.set('axios', axios)
+    this.registry.set('moment', moment)
     this.registry.set('mail', new Mail())
     this.registry.set('style', new Style())
 
