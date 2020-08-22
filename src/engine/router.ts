@@ -153,11 +153,9 @@ export default class Router {
     this.registry.set('style', new Style())
 
     this.registry.set('log', new Log())
-    this.registry.set('load', new Loader(this.registry))
   }
 
   private async preRequest(ctx: Koa.Context, next) {
-
     ctx.registry = new Registry(this.registry.getAll())
 
     ctx.registry.set('error', new Error())
@@ -165,6 +163,8 @@ export default class Router {
     ctx.registry.set('cache', new Cache())
 
     ctx.registry.set('document',  new Document())
+
+    ctx.registry.set('load', new Loader(ctx.registry))
 
     ctx.registry.set(
       'request',
@@ -177,6 +177,7 @@ export default class Router {
         ip: ctx.request.ip
       })
     )
+;
 
     await pluginEvent('onBeforeRequest', {
       app: this.app,

@@ -2,7 +2,7 @@ import { isUndefined } from 'lodash'
 export default class Registry {
   private data: object
   constructor(data = {}) {
-    this.data = data
+    this.data = {...data}
   }
 
   public get(name) {
@@ -10,7 +10,7 @@ export default class Registry {
   }
 
   public getAll() {
-      return this.data
+      return {...this.data}
   }
 
   public set(name, value) {
