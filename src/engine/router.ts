@@ -176,8 +176,8 @@ export default class Router {
         params: ctx.params,
         ip: ctx.request.ip
       })
-    )
-;
+    );
+    initHelpers(ctx.registry)
 
     await pluginEvent('onBeforeRequest', {
       app: this.app,

@@ -3,7 +3,6 @@ import Registry from "../engine/registry";
 import { isUndefined, replace, join, split, map, capitalize } from "lodash";
 import * as glob from 'glob'
 
-let registry: Registry = initRegistry()
 const results = []
 let controllerPath: string = ''
 
@@ -59,6 +58,7 @@ let controllerPath: string = ''
     return (target: Object, propertyKey: string, descriptor: TypedPropertyDescriptor<any>) => {
       const originalMethod = descriptor.value
       descriptor.value = function(...args: any[]) {
+        let registry: Registry = initRegistry()
         for (const key in list) {
           if (isUndefined(registry.get('request').post[list[key]])) {
             registry.get('error').set('missing_' + list[key])
@@ -75,6 +75,7 @@ let controllerPath: string = ''
     return (target: Object, propertyKey: string, descriptor: TypedPropertyDescriptor<any>) => {
       const originalMethod = descriptor.value
       descriptor.value = async function(...args: any[]) {
+        let registry: Registry = initRegistry()
         const error = await registry.get('load').controller(action)
         if (!error) {
           return originalMethod.apply(this, args)
@@ -86,7 +87,7 @@ let controllerPath: string = ''
   }
   
   export const routes = (registryOption: Registry) => {
-    registry = registryOption
+    const registry = registryOption
     const controllers = glob.sync('src/controller/**/*.ts')
     for (const value of controllers) {
       controllerPath = replace(value, 'src/controller/', '')
