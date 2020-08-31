@@ -1,5 +1,6 @@
 import * as fs from 'fs'
 import { isUndefined } from 'lodash'
+import {DIR_LANGUAGE} from 'rapin'
 
 export default class Language {
   public directory: string
@@ -22,12 +23,12 @@ export default class Language {
   }
 
   public load(filename) {
-    const filepath = 'src/language/' + this.directory + '/' + filename + '.json'
+    const filepath = DIR_LANGUAGE + '/' + this.directory + '/' + filename + '.json'
 
     let data = {}
 
     if (fs.existsSync(filepath) && fs.lstatSync(filepath).isFile()) {
-      data = require('language/' + this.directory + '/' + filename)
+      data = require(DIR_LANGUAGE+'/' + this.directory + '/' + filename)
     }
 
     this.data = { ...this.data, ...data }

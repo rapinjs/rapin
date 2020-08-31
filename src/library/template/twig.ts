@@ -1,6 +1,6 @@
 import * as fs from "fs";
 import * as twig from "twig";
-import {isDev} from '../../common'
+import {isDev, DIR_TEMPLATE} from '../../common'
 
 export default class Twig {
   public data: any;
@@ -20,7 +20,7 @@ export default class Twig {
 
     const p = new Promise((resolve, reject) => {
       twig.renderFile(
-        "src/view/template/" + template + ".twig",
+        "view/template/" + template + ".twig",
         this.data,
         (err, txt) => {
           resolve(txt);

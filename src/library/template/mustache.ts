@@ -12,7 +12,7 @@ export default class Mustache {
   }
 
   public render(template: string) {
-    const content = fs.readFileSync('src/view/template/' + template + '.mustache')
+    const content = fs.readFileSync('view/template/' + template + '.mustache')
 
     const output = render(content.toString(), this.data)
     return output
