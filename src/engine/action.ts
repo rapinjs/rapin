@@ -10,7 +10,7 @@ export default class Action {
     const parts = split(replace(route, /[^a-zA-Z0-9_\/]/, ''), '/')
 
     while (parts) {
-      const filename = 'src/controller/' + join(parts, '/') + '.ts'
+      const filename = 'src/controller/' + join(parts, '/') + '.js'
       if (isEmpty(parts)) {
         break
       }
