@@ -88,10 +88,10 @@ let controllerPath: string = ''
   
   export const routes = (registryOption: Registry) => {
     const registry = registryOption
-    const controllers = glob.sync('src/controller/**/*.ts')
+    const controllers = glob.sync('lib/controller/**/*.js')
     for (const value of controllers) {
-      controllerPath = replace(value, 'src/controller/', '')
-      controllerPath = replace(controllerPath, '.ts', '')
+      controllerPath = replace(value, 'lib/controller/', '')
+      controllerPath = replace(controllerPath, '.js', '')
 
       let controller = require('controller/' + controllerPath)
 

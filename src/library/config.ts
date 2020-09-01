@@ -1,5 +1,6 @@
 import * as fs from 'fs'
 import { isUndefined } from 'lodash'
+import {isDev } from '../common'
 
 export default class Config {
   public data: object
@@ -20,10 +21,9 @@ export default class Config {
   }
 
   public load(filename: string) {
-    const filepath: string = 'config/' + filename + '.ts'
+    const filepath: string = 'config/' + filename + '.js'
 
     let data: any = {}
-
     if (fs.existsSync(filepath) && fs.lstatSync(filepath).isFile()) {
       data = require('config/' + filename)
     }
