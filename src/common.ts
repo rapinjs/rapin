@@ -4,10 +4,13 @@ import {Controller as MainController} from './engine/controller'
 import {Model as MainModel} from './engine/model'
 import * as dotenv from 'dotenv'
 import {includes} from 'lodash'
+
 export let isDev = process.env.NODE_ENV === 'development'
+
 export let NODE_ENV = process.env.NODE_ENV
 
 dotenv.config({path: '.env.' + process.env.NODE_ENV})
+//@ts-ignore
 import * as rapinConfig from 'config.js'
 import * as rapinConfigDefault from '../rapin.config'
 const {storage} = rapinConfig

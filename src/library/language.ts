@@ -1,6 +1,6 @@
 import * as fs from 'fs'
 import { isUndefined } from 'lodash'
-import {DIR_LANGUAGE} from 'rapin'
+import {DIR_LANGUAGE} from '../common'
 
 export default class Language {
   public directory: string

@@ -1,6 +1,5 @@
-import * as fs from "fs";
 import * as twig from "twig";
-import {isDev, DIR_TEMPLATE} from '../../common'
+import {isDev} from '../../common'
 
 export default class Twig {
   public data: any;
