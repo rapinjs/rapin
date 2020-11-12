@@ -21,7 +21,7 @@ export default class Config {
   }
 
   public load(filename: string) {
-    const filepath: string = 'config/' + filename + '.js'
+    const filepath: string = 'lib/config/' + filename + '.js'
 
     let data: any = {}
     if (fs.existsSync(filepath) && fs.lstatSync(filepath).isFile()) {

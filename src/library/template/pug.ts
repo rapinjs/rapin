@@ -12,7 +12,7 @@ export default class Pug {
   }
 
   public render(template: string) {
-    const content = fs.readFileSync('src/view/template/' + template + '.pug')
+    const content = fs.readFileSync('view/template/' + template + '.pug')
 
     return render(content, this.data)
   }

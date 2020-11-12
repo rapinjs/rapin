@@ -117,6 +117,7 @@ export declare const DIR_APPLICATION: string
 export declare const DIR_STORAGE: string
 export declare const DIR_STATIC: string
 export declare const DIR_STYLESHEET: string
+export declare const DIR_LANGUAGE: string
 export declare const HTTP_SERVER: string
 export declare const PORT: string
 export declare const BASE_URL: string

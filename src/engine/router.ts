@@ -58,7 +58,7 @@ export default class Router {
       signed: true, 
       rolling: false, 
       renew: false,
-      secure: true, 
+      secure: false, 
       sameSite: null,
     }, this.app))
     this.app.use(serve(DIR_STATIC))
@@ -197,7 +197,7 @@ export default class Router {
       new Request({
         ...ctx.request,
         query: ctx.query,
-        cookie: ctx.cookie,
+        cookie: ctx.cookies,
         session: ctx.session,
         params: ctx.params,
         ip: ctx.request.ip

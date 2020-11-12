@@ -5,23 +5,23 @@ import {Model as MainModel} from './engine/model'
 import * as dotenv from 'dotenv'
 import {includes} from 'lodash'
 
-export let NODE_ENV: string = includes(process.argv, 'start')
-    ? 'production'
-    : 'development'
+export let isDev = process.env.NODE_ENV === 'development'
 
-dotenv.config({path: '.env.' + NODE_ENV})
+export let NODE_ENV = process.env.NODE_ENV
 
-import * as rapinConfig from 'rapin.config'
+dotenv.config({path: '.env.' + process.env.NODE_ENV})
+//@ts-ignore
+import * as rapinConfig from 'config.js'
 import * as rapinConfigDefault from '../rapin.config'
-
 const {storage} = rapinConfig
-export let isDev = NODE_ENV === 'development'
+
 export let config = {...rapinConfigDefault, ...rapinConfig}
 export let DIR_APPLICATION: string = path.resolve(__dirname, '')
 export let DIR_IMAGE: string = path.resolve('', './static/images/')
+export let DIR_LANGUAGE: string = path.resolve('', './language/')
 export let DIR_STORAGE: string = storage || path.resolve('', './storage/')
 export let DIR_STATIC: string = path.resolve('', './static/')
-export let DIR_STYLESHEET: string = path.resolve('', './src/view/stylesheet/')
+export let DIR_STYLESHEET: string = path.resolve('', './view/stylesheet/')
 
 if (!fs.existsSync(DIR_STORAGE)) {
     fs.mkdirSync(DIR_STORAGE)
