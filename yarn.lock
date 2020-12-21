@@ -2692,9 +2692,9 @@ line-column@^1.0.2:
     isobject "^2.0.0"
 
 liquidjs@^9.16.1:
-  version "9.16.1"
-  resolved "https://registry.yarnpkg.com/liquidjs/-/liquidjs-9.16.1.tgz#0b2d88a2cd2144e7f9e8d169c986dd2042b05ee3"
-  integrity sha512-bo/EpbQ5u3ZIMtk4NT56wWlWi/ZQz0E/x5GB81BmrbU5Txa7Z2Ha08XYZGXTGXlW0wTWwIgDVk//oxMm35Vugw==
+  version "9.19.0"
+  resolved "https://registry.yarnpkg.com/liquidjs/-/liquidjs-9.19.0.tgz#79d571651e3bd8c1e976f807cd49b2bab9dd43e3"
+  integrity sha512-uqyrWIw9oqVi18gBvBZUK9llCdAHh6YMUrwo6IuzDOVimRSE/LqydJYhZv1VeTvMuUZNNK8hqj/lXaKon4e+GA==
 
 list-stylesheets@^1.2.9:
   version "1.2.9"
