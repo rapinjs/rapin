@@ -2,7 +2,7 @@ import { initRegistry, } from "../helper/common";
 import Registry from "../engine/registry";
 import { isUndefined, replace, join, split, map, capitalize } from "lodash";
 import * as glob from 'glob'
-
+import {DIR_CATALOG} from '../common'
 const results = []
 let controllerPath: string = ''
 
@@ -88,10 +88,11 @@ let controllerPath: string = ''
   
   export const routes = (registryOption: Registry) => {
     const registry = registryOption
-    const controllers = glob.sync('lib/controller/**/*.js')
+    const controllers = glob.sync(DIR_CATALOG + 'controller/**/*.+(js|ts)')
     for (const value of controllers) {
-      controllerPath = replace(value, 'lib/controller/', '')
+      controllerPath = replace(value, DIR_CATALOG + 'controller/', '')
       controllerPath = replace(controllerPath, '.js', '')
+      controllerPath = replace(controllerPath, '.ts', '')
 
       let controller = require('controller/' + controllerPath)
 

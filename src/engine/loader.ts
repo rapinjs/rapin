@@ -3,6 +3,7 @@ import Template from '../library/template'
 import Action from './action'
 import Registry from './registry'
 import {triggerEvent} from '../helper/event'
+import { DIR_CATALOG } from '../common'
 
 export default class Loader {
   public registry: Registry
@@ -25,7 +26,7 @@ export default class Loader {
     route = replace(route, /[^a-zA-Z0-9_\/]/, '')
 
     if (!this.registry.has('model_' + replace(route, '/', '_'))) {
-      let model = require('model/' + route)
+      let model = require(DIR_CATALOG + '/model/' + route)
 
       const modelName = 'Model' + join(map(split(route, '/'), (value) => (capitalize(value))), '')
 
@@ -47,7 +48,9 @@ export default class Loader {
     await triggerEvent('view/' + route, 'before', {route, data})
 
     const output = await template.render(route)
+
     await triggerEvent('view/' + route, 'after', {route, data, output})
+
     return output
   }
 

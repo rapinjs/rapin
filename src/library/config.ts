@@ -1,6 +1,6 @@
 import * as fs from 'fs'
 import { isUndefined } from 'lodash'
-import {isDev } from '../common'
+import {isDev, DIR_CATALOG } from '../common'
 
 export default class Config {
   public data: object
@@ -21,7 +21,7 @@ export default class Config {
   }
 
   public load(filename: string) {
-    const filepath: string = 'lib/config/' + filename + '.js'
+    const filepath: string = DIR_CATALOG + 'config/' + filename + '.js'
 
     let data: any = {}
     if (fs.existsSync(filepath) && fs.lstatSync(filepath).isFile()) {

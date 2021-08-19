@@ -1,5 +1,5 @@
 import {DIR_STYLESHEET, HTTP_SERVER, NODE_ENV} from '../../common'
-import * as postcss from 'postcss'
+import postcss from 'postcss'
 import * as fs from 'fs'
 const config = require('./postcss.config.js')
 

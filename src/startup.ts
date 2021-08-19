@@ -1,4 +1,3 @@
-import './tsconfigpath'
 import './common'
 import Router from './engine/router'
 import {initPlugins} from './helper/plugin'

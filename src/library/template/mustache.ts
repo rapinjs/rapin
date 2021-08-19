@@ -1,5 +1,6 @@
 import * as fs from 'fs'
 import {render} from 'mustache'
+import {DIR_TEMPLATE} from '../../common'
 
 export default class Mustache {
   public data: any
@@ -12,7 +13,7 @@ export default class Mustache {
   }
 
   public render(template: string) {
-    const content = fs.readFileSync('view/template/' + template + '.mustache')
+    const content = fs.readFileSync(DIR_TEMPLATE + '/template/' + template + '.mustache')
 
     const output = render(content.toString(), this.data)
     return output

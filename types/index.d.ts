@@ -119,6 +119,8 @@ export declare const DIR_STATIC: string
 export declare const DIR_STYLESHEET: string
 export declare const DIR_LANGUAGE: string
 export declare const HTTP_SERVER: string
+export declare const DIR_CATALOG: string
+export declare const DIR_TEMPLATE: string
 export declare const PORT: string
 export declare const BASE_URL: string
 export declare const STATIC_BASE_URL: string

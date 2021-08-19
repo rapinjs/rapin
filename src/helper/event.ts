@@ -26,6 +26,6 @@ export const  triggerEvent = async (action, type, args) => {
 
 export const Trigger = (action, type) => {
     return async (target, propertyKey: string, descriptor: PropertyDescriptor) => {
-      await this.triggerEvent(action, type)
+      await triggerEvent(action, type, {})
     }
 }

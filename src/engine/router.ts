@@ -39,7 +39,6 @@ import axios from 'axios'
 import * as moment from 'moment'
 import {pluginEvent} from '../helper/plugin'
 import {Logger} from '../logger'
-
 export default class Router {
   private registry: Registry
   private app: any
@@ -81,7 +80,8 @@ export default class Router {
       registry: this.registry,
       config: rapinConfig,
     })
-    const router: KoaRouter = new KoaRouter()
+    const router = new KoaRouter()
+
     await pluginEvent('onBeforeInitRouter', {
       app: this.app,
       registry: this.registry,
@@ -98,7 +98,7 @@ export default class Router {
     forEach(mapRoutes, route => {
       logger = new Logger(`Mapped {${route.path} ${route.type}} route`)
       if (route.type === 'GET') {
-        router.get(route.path, koaBody({ multipart: true }), (ctx, next) =>
+        router.get(route.path, koaBody({multipart: true}), (ctx, next) => 
           this.postRequest(ctx, next, route)
         )
       }
@@ -130,6 +130,7 @@ export default class Router {
     })
     this.app.use(router.routes())
     this.app.use(router.allowedMethods())
+
     this.app.use(mount(BASE_URL, router.middleware()))
 
     this.app.listen(PORT, () => {
@@ -189,7 +190,7 @@ export default class Router {
     await next()
   }
 
-  private async postRequest(ctx: Koa.Context, next, route: any) {
+  private async postRequest(ctx: Koa.Context, next: Koa.Next, route: any) {
     ctx.registry.set('response', new Response(ctx))
 
     ctx.registry.set(
@@ -235,7 +236,7 @@ export default class Router {
     }
   }
 
-  private async handleError(err, ctx) {
+  private async handleError(err, ctx: Koa.Context) {
     const {registry} = ctx
     await pluginEvent('onError', {
       app: this.app,
