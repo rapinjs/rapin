@@ -1,35 +1,33 @@
 Arguments: 
-  /usr/local/bin/node /usr/local/bin/yarn add @types/mount
+  C:\Program Files\nodejs\node.exe C:\Program Files\nodejs\node_modules\yarn\bin\yarn.js
 
 PATH: 
-  /usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Apple/usr/bin:/opt/homebrew/opt/mysql@5.7/bin:/opt/homebrew/opt/php@7.4/bin:/opt/homebrew/bin:/opt/homebrew/sbin
+  C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\alexk\bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0;C:\Windows\System32\OpenSSH;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Users\alexk\AppData\Roaming\nvm;C:\Program Files\nodejs;C:\Program Files\PuTTY;C:\Program Files\dotnet;C:\ProgramData\chocolatey\bin;D:\webserver\Android_SDK\platform-tools;C:\Program Files (x86)\WinSCP;C:\Program Files\Common Files\Autodesk Shared;C:\Program Files\Git\cmd;C:\Users\alexk\.windows-build-tools\python27;C:\Users\alexk\.windows-build-tools\python27;C:\Users\alexk\AppData\Local\Microsoft\WindowsApps;C:\Users\alexk\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\alexk\AppData\Roaming\nvm;C:\Program Files\nodejs;D:\webserver\Android_SDK\platform-tools;C:\Users\alexk\AppData\Local\.meteor;C:\Users\alexk\AppData\Local\GitHubDesktop\bin
 
 Yarn version: 
   1.22.10
 
 Node version: 
-  14.17.5
+  14.15.0
 
 Platform: 
-  darwin x64
+  win32 x64
 
 Trace: 
-  Error: https://registry.yarnpkg.com/@types%2fmount: Not found
-      at Request.params.callback [as _callback] (/usr/local/lib/node_modules/yarn/lib/cli.js:66988:18)
-      at Request.self.callback (/usr/local/lib/node_modules/yarn/lib/cli.js:140662:22)
-      at Request.emit (events.js:400:28)
-      at Request.<anonymous> (/usr/local/lib/node_modules/yarn/lib/cli.js:141634:10)
-      at Request.emit (events.js:400:28)
-      at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/yarn/lib/cli.js:141556:12)
-      at Object.onceWrapper (events.js:519:28)
-      at IncomingMessage.emit (events.js:412:35)
-      at endReadableNT (internal/streams/readable.js:1317:12)
-      at processTicksAndRejections (internal/process/task_queues.js:82:21)
+  SyntaxError: Unknown token: { line: 478, col: 2, type: 'INVALID', value: undefined } 478:2 in D:\Workspace\javascript\rapin\rapin\yarn.lock
+      at Parser.unexpected (C:\Users\alexk\AppData\Roaming\nvm\v14.15.0\node_modules\yarn\lib\cli.js:64333:11)
+      at Parser.parse (C:\Users\alexk\AppData\Roaming\nvm\v14.15.0\node_modules\yarn\lib\cli.js:64464:14)
+      at parse (C:\Users\alexk\AppData\Roaming\nvm\v14.15.0\node_modules\yarn\lib\cli.js:64538:21)
+      at module.exports.exports.default (C:\Users\alexk\AppData\Roaming\nvm\v14.15.0\node_modules\yarn\lib\cli.js:64100:96)
+      at Function.<anonymous> (C:\Users\alexk\AppData\Roaming\nvm\v14.15.0\node_modules\yarn\lib\cli.js:3064:63)
+      at Generator.next (<anonymous>)
+      at step (C:\Users\alexk\AppData\Roaming\nvm\v14.15.0\node_modules\yarn\lib\cli.js:310:30)
+      at C:\Users\alexk\AppData\Roaming\nvm\v14.15.0\node_modules\yarn\lib\cli.js:321:13
 
 npm manifest: 
   {
     "name": "rapin",
-    "version": "0.1.57",
+    "version": "0.1.58",
     "description": "Framework for API",
     "repository": {
       "type": "git",
@@ -62,18 +60,21 @@ npm manifest:
     "author": "",
     "license": "ISC",
     "dependencies": {
+      "@types/koa-cookie": "^1.0.0",
+      "@types/koa-mount": "^4.0.1",
       "@types/koa-router": "^7.4.4",
-      "axios": "^0.21.1",
+      "@types/koa-static": "^4.0.2",
+      "axios": "^0.21.4",
       "colors": "^1.4.0",
       "dotenv": "^10.0.0",
-      "glob": "^7.1.7",
+      "glob": "^7.2.0",
       "inline-css": "^3.0.0",
       "jimp": "^0.16.1",
-      "koa": "^2.13.1",
+      "koa": "^2.13.3",
       "koa-body": "^4.2.0",
       "koa-cookie": "^1.0.0",
       "koa-mount": "^4.0.0",
-      "koa-router": "^10.0.0",
+      "koa-router": "^10.1.1",
       "koa-session": "^6.2.0",
       "koa-static": "^5.0.0",
       "liquidjs": "^9.25.1",
@@ -82,8 +83,8 @@ npm manifest:
       "mustache": "^4.2.0",
       "mysql": "^2.18.1",
       "node-sass": "^6.0.1",
-      "nodemailer": "^6.6.3",
-      "postcss": "^8.3.6",
+      "nodemailer": "^6.6.5",
+      "postcss": "^8.3.8",
       "postcss-font-magician": "^3.0.0",
       "postcss-import": "^14.0.2",
       "postcss-import-sync": "^7.1.4",
@@ -91,22 +92,21 @@ npm manifest:
       "postcss-scss": "^4.0.0",
       "precss": "^4.0.0",
       "pug": "^3.0.2",
-      "ts-node": "^10.2.0",
-      "tsconfig-paths": "^3.10.1",
+      "ts-node": "^10.2.1",
+      "tsconfig-paths": "^3.11.0",
       "twig": "^1.15.4",
-      "typescript": "^4.3.5"
+      "typescript": "^4.4.3"
     },
     "devDependencies": {
       "@types/dotenv": "^8.2.0",
       "@types/glob": "^7.1.4",
       "@types/inline-css": "3.0.1",
       "@types/koa": "^2.13.4",
-      "@types/koa-session": "^5.10.4",
-      "@types/lodash": "^4.14.172",
-      "@types/node": "^16.6.1",
+      "@types/lodash": "^4.14.174",
+      "@types/node": "^16.10.1",
       "@types/node-sass": "^4.11.2",
       "@types/nodemailer": "^6.4.4",
-      "nodemon": "^2.0.12",
+      "nodemon": "^2.0.13",
       "rimraf": "^3.0.2",
       "tslint": "^6.1.3",
       "yalc": "^1.0.0-pre.53"
@@ -637,6 +637,20 @@ Lockfile:
     dependencies:
       "@types/koa" "*"
   
+  "@types/koa-cookie@^1.0.0":
+    version "1.0.0"
+    resolved "https://registry.yarnpkg.com/@types/koa-cookie/-/koa-cookie-1.0.0.tgz#facd85b3f1b4cd1f72c73a70314757d459672ea0"
+    integrity sha512-0YTUgGqXlyVV2zYkDaDr5KNOXLki3ZqHP3adtlcz8+Fh94vzLfv8mnlxzDpfHuj//bIkwsh2zHVzdNrurUIKvA==
+    dependencies:
+      "@types/koa" "*"
+  
+  "@types/koa-mount@^4.0.0":
+    version "4.0.0"
+    resolved "https://registry.yarnpkg.com/@types/koa-mount/-/koa-mount-4.0.0.tgz#aa0505763c0d20bf4a16cdec0d9ccd2f4f2d2a86"
+    integrity sha512-56iBULArwY3uKLl28eRFchZ2v0diEoJzJbDaHH/ehgruF/s2/KMHyWsKcIhvDJ3tGdKu9oZNQvxaMg++1IKFdA==
+    dependencies:
+      "@types/koa" "*"
+  
   "@types/koa-router@^7.4.4":
     version "7.4.4"
     resolved "https://registry.yarnpkg.com/@types/koa-router/-/koa-router-7.4.4.tgz#db72bde3616365d74f00178d5f243c4fce7da572"
@@ -644,13 +658,21 @@ Lockfile:
     dependencies:
       "@types/koa" "*"
   
-  "@types/koa-session@^5.10.4":
-    version "5.10.4"
-    resolved "https://registry.yarnpkg.com/@types/koa-session/-/koa-session-5.10.4.tgz#d5f97532f6ef27d5c4e1b04c3fd3ff447693bf10"
-    integrity sha512-Xz9RPq+2raVvw6UN1JzDVL9/s2qr9E5AZOiiQti328HNhEj6IqT5rcssFQPNxCzh9bNG6uqqGMsACr5bdjylXA==
+  "@types/koa-send@*":
+    version "4.1.3"
+    resolved "https://registry.yarnpkg.com/@types/koa-send/-/koa-send-4.1.3.tgz#17193c6472ae9e5d1b99ae8086949cc4fd69179d"
+    integrity sha512-daaTqPZlgjIJycSTNjKpHYuKhXYP30atFc1pBcy6HHqB9+vcymDgYTguPdx9tO4HMOqNyz6bz/zqpxt5eLR+VA==
     dependencies:
-      "@types/cookies" "*"
       "@types/koa" "*"
+  
+  "export interface Response<ResBody = any, StatusCode extends number = number> extends http.ServerResponse, Express.Response {
+  types/koa-static@^4.0.2":
+    version "4.0.2"
+    resolved "https://registry.yarnpkg.com/@types/koa-static/-/koa-static-4.0.2.tgz#a199d2d64d2930755eb3ea370aeaf2cb6f501d67"
+    integrity sha512-ns/zHg+K6XVPMuohjpOlpkR1WLa4VJ9czgUP9bxkCDn0JZBtUWbD/wKDZzPGDclkQK1bpAEScufCHOy8cbfL0w==
+    dependencies:
+      "@types/koa" "*"
+      "@types/koa-send" "*"
   
   "@types/koa@*":
     version "2.11.6"

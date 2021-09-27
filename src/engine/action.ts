@@ -9,10 +9,10 @@ export default class Action {
   public method: string = 'index'
 
   constructor(route: string) {
-    const parts = split(replace(route, /[^a-zA-Z0-9_\/]/, ''), '/')
+    const parts = split(replace(route, /[^a-zA-Z0-9_\/]/, ''), /[\\\/]/)
 
     while (parts) {
-      let filename = DIR_CATALOG + 'controller/' + join(parts, '/')
+      let filename = DIR_CATALOG + '/controller/' + join(parts, '/')
 
       if (isEmpty(parts)) {
         break
@@ -31,11 +31,11 @@ export default class Action {
   }
 
   public async execute(registry: Registry, args: object = {}) {
-    const controllerName = 'Controller' + join(map(split(this.route, '/'), (value) => (capitalize(value))), '')
+    const controllerName = 'Controller' + join(map(split(this.route, /[\/\\]/), (value) => (capitalize(value))), '')
     // let controller = registry.get(controllerName)
 
     // if (!registry.has(controllerName)) {
-    let controller = require(DIR_CATALOG + 'controller/' + this.route)
+    let controller = require(DIR_CATALOG + '/controller/' + this.route)
     controller = controller[controllerName]
 
     controller = new controller(registry)

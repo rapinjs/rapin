@@ -32,11 +32,10 @@ tsConfigPaths.register({
 export let DIR_IMAGE: string = path.resolve('', './static/images/')
 export let DIR_STATIC: string = path.resolve('', './static/')
 export let DIR_CATALOG: string = fs.existsSync(DIR_ROOT + '/lib') ?
- DIR_ROOT + '/lib/' :
- DIR_ROOT + '/src/' 
+path.resolve(DIR_ROOT + '/lib/') :
+path.resolve(DIR_ROOT + '/src/') 
 let dirTemplate = ''
 let dirStylesheet = ''
-
 if (fs.existsSync(DIR_CATALOG+'/view')) {
   dirTemplate = path.resolve(DIR_CATALOG, './view')
   dirStylesheet = path.resolve(DIR_CATALOG, './view/stylesheet/')
