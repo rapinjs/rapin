@@ -1,6 +1,6 @@
 import * as fs from 'fs'
 import { isUndefined } from 'lodash'
-import {isDev, DIR_CATALOG } from '../common'
+import {isDev, DIR_CATALOG, DIR_ROOT } from '../common'
 
 export default class Config {
   public data: object
@@ -21,11 +21,18 @@ export default class Config {
   }
 
   public load(filename: string) {
-    const filepath: string = DIR_CATALOG + 'config/' + filename + '.js'
-
+    let filepath: string = DIR_CATALOG + '/config/' + filename
     let data: any = {}
-    if (fs.existsSync(filepath) && fs.lstatSync(filepath).isFile()) {
-      data = require('config/' + filename)
+    try {
+      filepath = require.resolve(filepath)
+      data = require(filepath)
+    } catch(e) {
+    }
+    filepath = DIR_ROOT + '/config/' + filename
+    try {
+      filepath = require.resolve(filepath)
+      data = require(filepath)
+    } catch(e) {
     }
 
     if(data.default) {
