@@ -92,7 +92,7 @@ let controllerPath: string = ''
     const controllers = glob.sync(DIR_CATALOG + '/controller/**/*.+(js|ts)')
 
     for (const value of controllers) {
-      let controllerPath = path.resolve(value)
+      controllerPath = path.resolve(value)
       controllerPath = replace(controllerPath, path.resolve(DIR_CATALOG + '/controller/'), '')
       controllerPath = replace(controllerPath, '.js', '')
       controllerPath = replace(controllerPath, '.ts', '')
