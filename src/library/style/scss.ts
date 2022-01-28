@@ -1,5 +1,5 @@
 import { DIR_STYLESHEET, HTTP_SERVER, NODE_ENV } from '../../common'
-import * as sass from 'node-sass'
+import sass from 'sass';
 import * as fs from 'fs'
 import * as path from 'path'
 
@@ -14,11 +14,9 @@ export default class Postcss {
 
     if (!fs.existsSync(filePath + '.css') || NODE_ENV !== 'production') {
       const fileContent = fs.readFileSync(filePath + '.scss').toString()
-      const result = sass.renderSync({
-        data: fileContent
-      }).css
+      const result = sass.compileString(fileContent)
 
-      fs.writeFileSync(filePath + '.css', result)
+      fs.writeFileSync(filePath + '.css', result.css)
     }
   }
 
