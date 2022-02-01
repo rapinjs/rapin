@@ -1,5 +1,5 @@
 import { DIR_STYLESHEET, HTTP_SERVER, NODE_ENV } from '../../common'
-import sass from 'sass';
+import * as sass from 'sass';
 import * as fs from 'fs'
 import * as path from 'path'
 
